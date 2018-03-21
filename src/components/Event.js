@@ -12,7 +12,7 @@ class Event extends Component {
   }
 
   render() {
-    if ( checkURL( this.props.match.params.id ) ) {
+    if ( isValidURL( this.props.match.params.id ) ) {
       return (
         <div>
           <h1>Hello from event profile</h1>
@@ -33,7 +33,7 @@ const mapStateToProps = function ( state , params ) {
   };
 };
 
-function checkURL( url ) {
+function isValidURL( url ) {
   return (url.match( /[^0-9]/ ) === null);
 }
 
