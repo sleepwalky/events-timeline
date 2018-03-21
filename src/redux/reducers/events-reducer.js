@@ -20,13 +20,14 @@ const eventReducer = function ( state = initialState , action ) {
       return Object.assign( {} , state , { eventsList : action.events } );
     case types.LOAD_EVENTS_LIST_FAILURE:
       return Object.assign( {} , state , { error : action.error } );
-    case types.LOAD_SINGLE_EVENT:
+    case types.LOAD_SINGLE_EVENT_SUCCESS:
       return Object.assign( {} , state , { eventProfile : action.event } );
+    case types.LOAD_SINGLE_EVENT_FAILURE:
+      return Object.assign( {} , state , { error : action.event } );
     default: {
+      return state;
     }
-
   }
-  return state;
 };
 
 export default eventReducer;

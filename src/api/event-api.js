@@ -1,6 +1,6 @@
 import axios from 'axios';
 import store from '../redux/store';
-import { getEventsSuccess, getEventsFailure } from '../redux/reducers/actions/event-action';
+import { getEventsSuccess, getEventsFailure, getSingleEventFailure, getSingleEventSuccess } from '../redux/reducers/actions/event-action';
 
 export function getEventsList() {
   return axios.get( '/events' )
@@ -10,6 +10,18 @@ export function getEventsList() {
     } )
     .catch( ( error ) => {
       store.dispatch( getEventsFailure( error.message ) );
+      return error.message;
+    } );
+}
+
+export function getSingleEvent() {
+  return axios.get( '/events/:id' )
+    .then( response => {
+      store.dispatch( getSingleEventSuccess( response.data ) );
+      return response;
+    } )
+    .catch( ( error ) => {
+      store.dispatch( getSingleEventFailure( error.message ) );
       return error.message;
     } );
 }

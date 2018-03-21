@@ -2,23 +2,16 @@ import React from 'react';
 import { Route , BrowserRouter , Switch } from 'react-router-dom';
 import App from '../App';
 import Main from '../components/Main';
+import Event from '../components/Event';
+import PageNotFound from '../components/PageNotFound';
 
 export default (
   <BrowserRouter>
     <App>
       <Switch>
         <Route exact path="/" component={ Main }/>
-        <Route exact path="/:id" render={ () => {
-          return (
-            <h1>Hello from event profile</h1>
-          );
-        } }/>
-        <Route render={ () => {
-          return (
-            <h1>Page not found</h1>
-          );
-        } }/>
-
+        <Route exact path="/:id" component={ Event }/>
+        <Route exact component={ PageNotFound }/>
       </Switch>
     </App>
   </BrowserRouter>
