@@ -13,15 +13,17 @@ class Main extends Component {
   render() {
     return (
       <span>
-            { this.props.events.eventsState.eventsList.ee }
+            { this.props.events.ee }
+        { this.props.error }
       </span>
     );
   }
 }
 
-const mapStateToProps = function ( state ) {
+const mapStateToProps = function ( state , params ) {
   return {
-    events : state
+    events : state.eventsState.eventsList ,
+    error : state.eventsState.error
   };
 };
 
