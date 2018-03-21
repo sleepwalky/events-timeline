@@ -8,6 +8,17 @@ export default (
     <App>
       <Switch>
         <Route exact path="/" component={ Main }/>
+        <Route exact path="/:id" render={ () => {
+          return (
+            <h1>Hello from event profile</h1>
+          );
+        } }/>
+        <Route render={ () => {
+          return (
+            <h1>Page not found</h1>
+          );
+        } }/>
+
       </Switch>
     </App>
   </BrowserRouter>

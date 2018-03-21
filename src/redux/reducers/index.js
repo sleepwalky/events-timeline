@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 import eventsReducer from './events-reducer'
 
 // Combine Reducers
-var reducers = combineReducers( {
+const reducers = combineReducers( {
                                   eventsState : eventsReducer
                                 } );
 export default reducers;
