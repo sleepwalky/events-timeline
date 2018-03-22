@@ -5,7 +5,7 @@ class PageNotFound extends Component {
 
   render() {
     return (
-      <div>
+      <div id='error_page'>
         <h1>Page not found</h1>
       </div>
     );

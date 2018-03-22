@@ -1,17 +1,17 @@
 import React from 'react';
 import { Route , BrowserRouter , Switch } from 'react-router-dom';
 import App from '../App';
-import Main from '../components/Main';
-import Event from '../components/Event';
+import MainPage from './MainPage';
+import SingleEventPage from './SingleEventPage';
 import PageNotFound from '../components/PageNotFound';
 
 export default (
   <BrowserRouter>
     <App>
       <Switch>
-        <Route exact path="/" component={ Main }/>
-        <Route exact path="/:id" component={ Event }/>
-        <Route exact component={ PageNotFound }/>
+        <Route exact path="/" component={ MainPage }/>
+        <Route exact path="/:id" component={ SingleEventPage }/>
+        <Route component={ PageNotFound }/>
       </Switch>
     </App>
   </BrowserRouter>
