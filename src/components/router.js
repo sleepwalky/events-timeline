@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route , BrowserRouter , Switch } from 'react-router-dom';
 import App from '../App';
-import MainPage from './MainPage';
-import SingleEventPage from './SingleEventPage';
+import MainPage from './Main';
+import SingleEventPage from './EventProfile';
 import PageNotFound from '../components/PageNotFound';
 
 export default (
