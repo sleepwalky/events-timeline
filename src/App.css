@@ -1,28 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px;
+  background: #eeeeee;
+}
+
+.table-header {
+  height: 40px;
+  padding-left: 100px;
+  display: flex;
+  align-items: center;
+  border-bottom: 15px solid #c0c0c0;
+}
+
+.table-header-item {
+  flex: 1;
+  padding: 10px 0;
   text-align: center;
+  color: #2c2c2c;
+  border-right: 2px solid #c0c0c0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.table-header-item:first-child {
+  border-left: 2px solid #c0c0c0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.table-places {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
 }
 
-.App-title {
-  font-size: 1.5em;
+.table-places-item {
+  color: #2c2c2c;
+  width: 100%;
+  border-bottom: 15px solid #c0c0c0;
 }
 
-.App-intro {
-  font-size: large;
+.table-places-item span {
+  display: inline-block;
+  width: 100px;
+  padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.event.js {
+  height: 10px;
+  width: 100%;
+  background: #7feeff;
 }
+
+.event.react {
+  height: 10px;
+  width: 100%;
+  background: #ffa5cd;
+}
+

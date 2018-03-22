@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "name": "event 1",
+      "type": "js",
+      "date": "2018-03-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 6",
+      "type": "js",
+      "date": "2018-03-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 2",
+      "type": "react",
+      "date": "2018-05-20T20:00:00.000Z",
+      "place": "Brest"
+    },
+    {
+      "name": "event 3",
+      "type": "react",
+      "date": "2018-07-20T20:00:00.000Z",
+      "place": "Vitebsk"
+    },
+    {
+      "name": "event 4",
+      "type": "js",
+      "date": "2018-04-20T20:00:00.000Z",
+      "place": "Mogilev"
+    },
+    {
+      "name": "event 5",
+      "type": "js",
+      "date": "2018-12-20T20:00:00.000Z",
+      "place": "Gomel"
+    }
+  ]
+}
