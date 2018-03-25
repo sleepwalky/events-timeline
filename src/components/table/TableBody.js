@@ -94,10 +94,16 @@ class TableBody extends Component {
       <div className = "table-body">
         { rowNames.map( placeName => {
           return (
-            <div key = { placeName } className = "table-body-row">
+            <div
+              key = { placeName }
+              className = "table-body-row"
+            >
               <span className = "table-row-name">{ placeName }</span>
               { this.props.cells.map( (c, ind) =>
-              <div key = { `${c}${ind}`} className = "table-cell">
+              <div
+                key = { `${c}${ind}` }
+                className = "table-cell"
+              >
                 { this.renderEvents(sortedEvents, ind, placeName.toLowerCase()) }
               </div>
               )}

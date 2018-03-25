@@ -133,10 +133,16 @@
       "place": "Minsk"
     },
     {
-      "name": "event 23",
+      "name": "event 24",
       "type": "angular",
-      "date": "2018-07-20T20:00:00.000Z",
+      "date": "2018-03-05T20:00:00.000Z",
       "place": "Vitebsk"
+    },
+    {
+      "name": "event 25",
+      "type": "react",
+      "date": "2018-03-13T20:00:00.000Z",
+      "place": "Grodno"
     }
   ]
 }

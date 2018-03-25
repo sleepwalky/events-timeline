@@ -37,18 +37,18 @@ class Table extends Component {
     return months
   };
 
-  //вот это дерьмище надо поменять!!!!!!!!!!
   getMonthsView = () => {
-    if (this.state.view !== 'months') {
-      this.setState({ view: 'months' });
-      this.setState({ display: this.headerCalc('months') })
-    }
+    this.changeView('months');
   };
 
   getWeeksView = () => {
-    if (this.state.view !== 'weeks') {
-      this.setState({ view: 'weeks' });
-      this.setState({ display: this.headerCalc('weeks') })
+    this.changeView('weeks');
+  };
+
+  changeView = (newView) => {
+    if (this.state.view !== newView) {
+      this.setState({ view: newView });
+      this.setState({ display: this.headerCalc(newView) })
     }
   };
 
