@@ -1,11 +1,9 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 class PageNotFound extends Component {
-
   render() {
     return (
-      <div id='error_page'>
+      <div id="error_page">
         <h1>Page not found</h1>
       </div>
     );
@@ -13,4 +11,3 @@ class PageNotFound extends Component {
 }
 
 export default PageNotFound;
-
