@@ -6,7 +6,7 @@ function Button (props) {
       className = 'button'
       onClick = { props.onClick }
     >
-      {props.value}
+      { props.value }
     </button>
   )
 }

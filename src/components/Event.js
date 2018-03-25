@@ -15,7 +15,7 @@ class Event extends Component {
     let classes = `${this.state.className} event`;
     return (
       <div className = { classes }>
-        {this.state.name}
+        { this.state.name }
       </div>
     )
   }
