@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Event(props) {
-  return (
-    <div className = { props.className }
-      data-place = { props.place }
-      data-time = { props.time }
-    >
-      {props.name}
-    </div>
-  )
+class Event extends Component {
+  constructor (props) {
+    super();
+    this.state = {
+      className: props.className,
+      place: props.place,
+      time: props.time,
+      name: props.name
+    }
+  }
+
+  render () {
+    let classes = `${this.state.className} event`;
+    return (
+      <div className = { classes }>
+        {this.state.name}
+      </div>
+    )
+  }
 }
 
 export default Event;

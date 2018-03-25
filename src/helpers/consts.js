@@ -23,12 +23,12 @@ const months = [
 ];
 
 const weekDays = [
+  "Sun",
   "Mon",
   "Tue",
   "Wed",
   "Thu",
   "Fri",
-  "Sat",
-  "Sun"
+  "Sat"
 ];
  export { places, months, weekDays };

@@ -6,7 +6,7 @@ import React, { Component } from 'react';
       <div className="table-header">
         { this.props.view.map((item, ind) =>
             <div key = { ind } className = "table-header-item">
-              {item}
+              { item }
             </div>
         )}
       </div>
