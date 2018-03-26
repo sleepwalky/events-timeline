@@ -3,31 +3,28 @@ import * as types from '../actions/action-types';
 const initialState = {
   eventsList: [],
   eventProfile: {
+    _id: '',
     id: '',
-    name: '',
-    date: '',
-    duration: '',
-    type: '',
-    speakers: []
+    title: '',
+    period: '',
+    start_date: '',
+    end_date: '',
+    url: '',
+    background_image_url: ''
   },
   error: ''
 };
 
-const eventReducer = function (state = initialState, action) {
+function eventReducer(state = initialState, action) {
   switch (action.type) {
-
     case types.LOAD_EVENTS_LIST_SUCCESS:
       return Object.assign({}, state, { eventsList: action.events });
     case types.LOAD_EVENTS_LIST_FAILURE:
       return Object.assign({}, state, { error: action.error });
-    case types.LOAD_SINGLE_EVENT_SUCCESS:
-      return Object.assign({}, state, { eventProfile: action.event });
-    case types.LOAD_SINGLE_EVENT_FAILURE:
-      return Object.assign({}, state, { error: action.event });
     default: {
       return state;
     }
   }
-};
+}
 
 export default eventReducer;

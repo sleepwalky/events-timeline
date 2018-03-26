@@ -27,7 +27,7 @@
     "server": "node ./server/www",
     "lint": "eslint ."
   },
-  "proxy": "http://localhost:9000/api",
+  "proxy": "http://localhost:9000/",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",

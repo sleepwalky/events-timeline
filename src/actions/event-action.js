@@ -13,18 +13,3 @@ export function getEventsFailure(error) {
     error
   };
 }
-
-export function getSingleEventSuccess(event) {
-  return {
-    type: types.LOAD_SINGLE_EVENT_SUCCESS,
-    event
-  };
-}
-
-export function getSingleEventFailure(error) {
-  return {
-    type: types.LOAD_SINGLE_EVENT_FAILURE,
-    error
-  };
-}
-
