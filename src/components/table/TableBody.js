@@ -6,8 +6,8 @@ import eventsJson from '../../events.json'
 import { places } from '../../helpers/consts';
 
 class TableBody extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       events: eventsJson.events
     };
@@ -71,7 +71,7 @@ class TableBody extends Component {
       <Event key = { initialArr[ind].name }
              className = { initialArr[ind].type }
              name = { initialArr[ind].name }
-             time = { initialArr[ind].time }
+             date = { initialArr[ind].date }
              place = { initialArr[ind].place }
       />
     )

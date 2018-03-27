@@ -83,12 +83,55 @@
 .event {
   height: 22px;
   width: 100%;
+  position: relative;
   border: 1px solid #fff;
   font-size: 11px;
   color: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  top: 35px;
+  background: #c5c5c5;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.tooltip:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -15px;
+  right: 50%;
+  margin-right: -15px;
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent #c5c5c5 transparent;
+}
+
+.modalBg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.3);
+  padding: 50px;
+}
+
+.modal {
+  background: #fff;
+  max-width: 300px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .js {
