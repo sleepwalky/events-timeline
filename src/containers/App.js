@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
 import { connect } from 'react-redux';
-//import Table from '../components/table/Table';
+// import Table from '../components/table/Table';
 import * as eventAPI from '../middleware/event-api';
 import logo from '../logo.svg';
 import './App.css';
@@ -31,7 +31,7 @@ App.propTypes = {};
 function mapStateToProps(state) {
   return {
     events: state.eventsState.eventsList,
-    error: state.eventsState.error
+    error: state.eventsState.error,
   };
 }
 

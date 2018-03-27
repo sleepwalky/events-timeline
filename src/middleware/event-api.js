@@ -2,10 +2,10 @@ import axios from 'axios';
 import store from '../store/store';
 import {
   getEventsSuccess,
-  getEventsFailure
+  getEventsFailure,
 } from '../actions/event-action';
 
-export function getEventsList() {
+export default function getEventsList() {
   return axios.get('/events')
     .then((response) => {
       store.dispatch(getEventsSuccess(response.data));
