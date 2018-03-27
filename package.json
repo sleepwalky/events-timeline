@@ -27,7 +27,7 @@
     "server": "nodemon ./server/www",
     "lint": "eslint ."
   },
-  "proxy": "http://localhost:9000/",
+  "proxy": "http://127.0.0.1:9000/",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",

@@ -1,30 +1,50 @@
 const { MongoClient } = require('mongodb');
+const eventsMock = require('./events.json');
 
-const url = 'mongodb://ami-db.documents.azure.com:10255';
+const dbUrl = 'mongodb://ami-db.documents.azure.com:10255';
 const dbName = 'events';
-let docs;
 
 async function getEvents() {
   let client;
 
   try {
-    client = await MongoClient.connect(url, {
-      ssl: true,
-      auth: {
-
-      },
-    });
+    // client = await MongoClient.connect(dbUrl, {
+    //   ssl: true,
+    //   auth: {
+    //     user: '',
+    //     password: '',
+    //   },
+    // });
     console.log('Connected correctly to server');
 
-    const db = client.db(dbName);
-    const col = db.collection('events');
+    // const db = client.db(dbName);
+    // const collection = db.collection('events');
+    // const events = await collection.find({}).toArray();
+    const events = eventsMock;
+    return events.map((item) => {
+      const {
+        id,
+        name,
+        city,
+        url,
+        startDate,
+        endDate,
+      } = item;
 
-    docs = await col.find({}).toArray();
-    return docs;
+      return {
+        id,
+        name,
+        city,
+        url,
+        startDate,
+        endDate,
+      };
+    });
   } catch (err) {
     console.log(err.stack);
+    // should throw be here?
   } finally {
-    client.close();
+    // client.close();
   }
 }
 
