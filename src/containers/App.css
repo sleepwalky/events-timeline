@@ -31,7 +31,25 @@
   border-radius: 15px 15px 15px 15px;
   transition: all 0.3s;
 }
-
+.table-footer{
+  height: 120px;
+}
+.footer-info-box:after{
+  clear: both;
+  content: '';
+  display: block;
+}
+.footer-info-box.total {
+  color: #8DC424;
+}
+.footer-info-box{
+  font-size: 20px;
+  padding-top: 20px;
+  float: left;
+  margin-left: 20px;
+  width: 250px;
+  text-align: left;
+}
 
 .table-header {
   padding-left: 130px;

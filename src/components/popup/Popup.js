@@ -23,6 +23,11 @@ class Popup extends Component {
         }
       }
     }, false);
+
+    (document).addEventListener('scroll', function (event) {
+            store.dispatch(hideEventPopup());
+            window.history.pushState({}, null, window.location.origin);
+    }, false);
   }
 
   closePopup = function (event) {

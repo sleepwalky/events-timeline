@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Button from './Button';
 import Header from './Header';
+import TableFooter from './Footer';
 import TableBody from './TableBody';
 
 import { months, weekDays } from '../../helpers/consts';
@@ -84,6 +85,7 @@ class Table extends Component {
             cells={this.state.display}
             view={this.state.view}
           />
+          <TableFooter />
         </div>
       </div>
     );
