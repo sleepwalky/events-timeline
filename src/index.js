@@ -8,9 +8,9 @@ import router from './components/router';
 
 ReactDOM.render(
   <Provider store={store}>
-    { router }
+    {router}
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 registerServiceWorker();

@@ -32,7 +32,6 @@ function mapStateToProps(state) {
   return {
     events: state.eventsState.eventsList,
     error: state.eventsState.error,
-
   };
 }
 
