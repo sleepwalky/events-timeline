@@ -3,13 +3,13 @@ import * as types from './action-types';
 export function getEventsSuccess(events) {
   return {
     type: types.LOAD_EVENTS_LIST_SUCCESS,
-    events
+    events,
   };
 }
 
-export function getEventsFailure(error) {
+export function showEventPopup(data) {
   return {
-    type: types.LOAD_EVENTS_LIST_FAILURE,
-    error
+    type: types.SHOW_EVENT_POPUP,
+    data,
   };
 }

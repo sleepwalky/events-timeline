@@ -1,18 +1,27 @@
 import axios from 'axios';
 import store from '../store/store';
-import {
-  getEventsSuccess,
-  getEventsFailure,
-} from '../actions/event-action';
+import { getEventsSuccess } from '../actions/event-action';
+import { showOverlay } from '../actions/overlay-action';
 
-export default function getEventsList() {
-  return axios.get('/events')
-    .then((response) => {
-      store.dispatch(getEventsSuccess(response.data));
-      return response;
-    })
-    .catch((error) => {
-      store.dispatch(getEventsFailure(error.message));
-      return error.message;
-    });
+const data = {
+  type: '',
+  class: '',
+  title: '',
+  content: '',
+  open: false,
+};
+
+export function getEventsList() {
+  return axios.get('/events').then((response) => {
+    store.dispatch(getEventsSuccess(response.data));
+    store.dispatch(showOverlay(data));
+  }).catch((error) => {
+    store.dispatch(showOverlay({
+      class: 'error',
+      title: 'Problems with fetching data',
+      content: error.message,
+      open: true,
+    }));
+    getEventsList();
+  });
 }

@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Button from './Button';
 import Header from './Header';
 import TableBody from './TableBody';
 
-import {months, weekDays} from "../../helpers/consts";
+import { months, weekDays } from '../../helpers/consts';
+import * as eventAPI from '../../middleware/event-api';
 
 class Table extends Component {
   constructor() {
@@ -12,7 +13,7 @@ class Table extends Component {
     this.state = {
       view: 'months',
       display: months
-    }
+    };
   }
 
   headerCalc = (view, date = new Date()) => {
@@ -27,7 +28,7 @@ class Table extends Component {
       let currentWeekDay = firstWeekDay;
 
       for (let i = 0; i < lastDay; i++) {
-        let weekDay = currentWeekDay > 6 ? currentWeekDay = 0 : currentWeekDay;
+        let weekDay = currentWeekDay > 6 ? currentWeekDay = 0: currentWeekDay;
         weekDaysArr[i] = `${i + 1} ${weekDays[weekDay]}`;
         currentWeekDay++;
       }
@@ -35,7 +36,7 @@ class Table extends Component {
       return weekDaysArr;
     }
 
-    return months
+    return months;
   };
 
   getMonthsView = () => {
@@ -49,21 +50,32 @@ class Table extends Component {
   changeView = (newView) => {
     if (this.state.view !== newView) {
       this.setState({view: newView});
-      this.setState({display: this.headerCalc(newView)})
+      this.setState({display: this.headerCalc(newView)});
     }
+  };
+
+  refreshEventsTable = () => {
+    eventAPI.getEventsList();
   };
 
   render() {
     return (
       <div>
-        <Button
-          onClick={this.getMonthsView}
-          value='Months'
-        />
-        <Button
-          onClick={this.getWeeksView}
-          value='Weeks'
-        />
+        <div className="buttons-box">
+          <Button
+            onClick={this.refreshEventsTable}
+            value='Refresh'
+            class="refresh-button"
+          />
+          <Button
+            onClick={this.getMonthsView}
+            value='Months'
+          />
+          <Button
+            onClick={this.getWeeksView}
+            value='Weeks'
+          />
+        </div>
         <div className="table">
           <Header
             view={this.state.display}
