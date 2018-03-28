@@ -1,0 +1,148 @@
+{
+  "events": [
+    {
+      "name": "event 1",
+      "type": "js",
+      "date": "2018-03-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 6",
+      "type": "js",
+      "date": "2018-03-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 2",
+      "type": "react",
+      "date": "2018-05-20T20:00:00.000Z",
+      "place": "Brest"
+    },
+    {
+      "name": "event 3",
+      "type": "react",
+      "date": "2018-07-20T20:00:00.000Z",
+      "place": "Vitebsk"
+    },
+    {
+      "name": "event 4",
+      "type": "js",
+      "date": "2018-04-20T20:00:00.000Z",
+      "place": "Mogilev"
+    },
+    {
+      "name": "event 5",
+      "type": "js",
+      "date": "2018-12-20T20:00:00.000Z",
+      "place": "Gomel"
+    },
+    {
+      "name": "event 7",
+      "type": "js",
+      "date": "2018-08-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 8",
+      "type": "js",
+      "date": "2018-11-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 9",
+      "type": "global",
+      "date": "2018-12-20T20:00:00.000Z",
+      "place": "global"
+    },
+    {
+      "name": "event 10",
+      "type": "nodejs",
+      "date": "2018-01-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 11",
+      "type": "nodejs",
+      "date": "2018-03-18T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 12",
+      "type": "nodejs",
+      "date": "2018-02-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 13",
+      "type": "angular",
+      "date": "2018-02-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 14",
+      "type": "angular",
+      "date": "2018-04-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 15",
+      "type": "nodejs",
+      "date": "2018-05-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 16",
+      "type": "react",
+      "date": "2018-06-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 17",
+      "type": "js",
+      "date": "2018-07-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 18",
+      "type": "react",
+      "date": "2018-08-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 19",
+      "type": "nodejs",
+      "date": "2018-09-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 20",
+      "type": "js",
+      "date": "2018-10-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 21",
+      "type": "js",
+      "date": "2018-11-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 22",
+      "type": "angular",
+      "date": "2018-12-20T20:00:00.000Z",
+      "place": "Minsk"
+    },
+    {
+      "name": "event 24",
+      "type": "angular",
+      "date": "2018-03-05T20:00:00.000Z",
+      "place": "Vitebsk"
+    },
+    {
+      "name": "event 25",
+      "type": "react",
+      "date": "2018-03-13T20:00:00.000Z",
+      "place": "Grodno"
+    }
+  ]
+}
