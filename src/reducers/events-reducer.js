@@ -3,10 +3,11 @@ import * as types from '../actions/action-types';
 const initialState = {
   eventsList: [],
   eventProfile: {},
-  display: false,
+  display: '',
   xPosCurrent: 0,
   yPosCurrent: 0,
 };
+
 
 function eventReducer(state = initialState, action) {
   switch (action.type) {
@@ -18,6 +19,10 @@ function eventReducer(state = initialState, action) {
         yPosCurrent: action.data.yPosCurrent,
         display: action.data.display === true ? 'block' : 'none',
         eventProfile: action.data.event,
+      });
+    case types.HIDE_EVENT_POPUP:
+      return Object.assign({}, state, {
+        display: 'none',
       });
     default: {
       return state;

@@ -6,3 +6,9 @@ export function showOverlay(data) {
     data,
   };
 }
+
+export function hideOverlay() {
+  return {
+    type: types.HIDE_OVERLAY,
+  };
+}

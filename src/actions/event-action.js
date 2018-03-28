@@ -13,3 +13,9 @@ export function showEventPopup(data) {
     data,
   };
 }
+
+export function hideEventPopup() {
+  return {
+    type: types.HIDE_EVENT_POPUP,
+  };
+}

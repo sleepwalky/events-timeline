@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Event from '../Event';
 import * as eventAPI from '../../middleware/event-api';
 import store from '../../store/store';
-import {places} from '../../helpers/consts';
 
 class TableBody extends Component {
   constructor(props) {

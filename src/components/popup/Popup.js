@@ -1,9 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
-import PopupComponent from 'reactjs-popup';
 import { connect } from 'react-redux';
 import store from '../../store/store';
-import { showEventPopup } from '../../actions/event-action';
+import { hideEventPopup } from '../../actions/event-action';
 import './popup.css';
 
 //https://react-popup.netlify.com/component-api/
@@ -18,14 +17,8 @@ class Popup extends Component {
     (document).addEventListener('click', function (event) {
       if (!event.target.classList.contains('event')) {
         let isDisplayed = store.getState().eventsState.display;
-        const data = {
-          xPosCurrent: 0,
-          yPosCurrent: 0,
-          display: false,
-          event: {}
-        };
         if (isDisplayed === 'block') {
-          store.dispatch(showEventPopup(data));
+          store.dispatch(hideEventPopup());
           window.history.pushState({}, null, window.location.origin);
         }
       }
@@ -34,13 +27,7 @@ class Popup extends Component {
 
   closePopup = function (event) {
     event.preventDefault();
-    const data = {
-      xPosCurrent: 0,
-      yPosCurrent: 0,
-      display: false,
-      event: {}
-    };
-    store.dispatch(showEventPopup(data));
+    store.dispatch(hideEventPopup());
     window.history.pushState({}, null, window.location.origin);
     window.open(this.props.event.url);
   };

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropType from 'prop-types';
 import { connect } from 'react-redux';
 import Table from '../components/table/Table';
 import logo from '../logo.svg';
@@ -24,7 +23,5 @@ class App extends Component {
     );
   }
 }
-
-App.propTypes = {};
 
 export default connect()(App);

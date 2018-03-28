@@ -1,20 +1,12 @@
 import axios from 'axios';
 import store from '../store/store';
 import { getEventsSuccess } from '../actions/event-action';
-import { showOverlay } from '../actions/overlay-action';
-
-const data = {
-  type: '',
-  class: '',
-  title: '',
-  content: '',
-  open: false,
-};
+import { hideOverlay, showOverlay } from '../actions/overlay-action';
 
 export function getEventsList() {
   return axios.get('/events').then((response) => {
     store.dispatch(getEventsSuccess(response.data));
-    store.dispatch(showOverlay(data));
+    store.dispatch(hideOverlay());
   }).catch((error) => {
     store.dispatch(showOverlay({
       class: 'error',
