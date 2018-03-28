@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-function Button (props) {
+const Button = (props) => {
+  const { value, onClick } = props;
   return (
     <button
-      className = 'button'
-      onClick = { props.onClick }
+      className="button"
+      onClick={onClick}
     >
-      { props.value }
+      {value}
     </button>
-  )
+  );
 }
 
 export default Button;

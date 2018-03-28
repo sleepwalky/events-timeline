@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Event from '../Event';
 
 import eventsJson from '../../events.json'
-import { places } from '../../helpers/consts';
+import {places} from '../../helpers/consts';
 
 class TableBody extends Component {
   constructor(props) {
@@ -15,30 +15,32 @@ class TableBody extends Component {
 
   sortAllEvents = (events) => {
     let sortedEvents = {};
-    for (let i = 0; i < events.length; i++) {
-      let place = events[i].place.toLowerCase();
+
+    events.forEach(event => {
+      let place = event.place.toLowerCase();
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
-      sortedEvents[place].push(events[i])
-    }
+      sortedEvents[place].push(event)
+    });
 
     return sortedEvents;
   };
 
   sortMonthEvents = (events) => {
     let sortedEvents = {};
-    for (let i = 0; i < events.length; i++) {
-      let place = events[i].place.toLowerCase();
+
+    events.forEach((event => {
+      let place = event.place.toLowerCase();
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
       let currentMonth = new Date().getMonth();
-      let eventMonth = new Date(events[i].date).getMonth();
+      let eventMonth = new Date(event.date).getMonth();
       if (currentMonth === eventMonth) {
-        sortedEvents[place].push(events[i])
+        sortedEvents[place].push(event)
       }
-    }
+    }));
 
     return sortedEvents;
   };
@@ -49,37 +51,38 @@ class TableBody extends Component {
     }
 
     let renderingEvents = [];
-    for (let i = 0; i < events[place].length; i++) {
-      let eventDate = new Date(events[place][i].date);
+
+    events[place].forEach((event) => {
+      let eventDate = new Date(event.date);
       let month = eventDate.getMonth();
       let day = eventDate.getDate();
 
       if (this.props.view === 'months' && month === timeInd) {
-        renderingEvents.push(this.addToEventsArr(events[place], i));
+        renderingEvents.push(this.addToEventsArr(event));
       }
 
-      if (this.props.view === 'weeks' &&  day === timeInd + 1) {
-          renderingEvents.push(this.addToEventsArr(events[place], i));
+      if (this.props.view === 'weeks' && day === timeInd + 1) {
+        renderingEvents.push(this.addToEventsArr(event));
       }
-    }
+    });
 
     return renderingEvents;
   };
 
-  addToEventsArr = (initialArr, ind) => {
+  addToEventsArr = (event) => {
     return (
-      <Event key = { initialArr[ind].name }
-             className = { initialArr[ind].type }
-             name = { initialArr[ind].name }
-             time = { initialArr[ind].time }
-             place = { initialArr[ind].place }
+      <Event key={event.name}
+             className={event.type}
+             name={event.name}
+             time={event.time}
+             place={event.place}
       />
     )
   };
 
   getRowNamesList = () => {
     const rowNames = places.slice();
-      rowNames.unshift('GLOBAL');
+    rowNames.unshift('GLOBAL');
 
     return rowNames;
   };
@@ -91,24 +94,25 @@ class TableBody extends Component {
       this.sortMonthEvents(this.state.events);
 
     return (
-      <div className = "table-body">
-        { rowNames.map( placeName => {
-          return (
-            <div
-              key = { placeName }
-              className = "table-body-row"
-            >
-              <span className = "table-row-name">{ placeName }</span>
-              { this.props.cells.map( (c, ind) =>
+      <div className="table-body">
+        {rowNames.map(placeName => {
+            return (
               <div
-                key = { `${c}${ind}` }
-                className = "table-cell"
+                key={placeName}
+                className="table-body-row"
               >
-                { this.renderEvents(sortedEvents, ind, placeName.toLowerCase()) }
+                <span className="table-row-name">{placeName}</span>
+                {this.props.cells.map((c, ind) =>
+                  <div
+                    key={`${c}${ind}`}
+                    className="table-cell"
+                  >
+                    {this.renderEvents(sortedEvents, ind, placeName.toLowerCase())}
+                  </div>
+                )}
               </div>
-              )}
-            </div>
-          )}
+            )
+          }
         )}
       </div>
     );

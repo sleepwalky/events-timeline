@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Button from './Button';
 import Header from './Header';
 import TableBody from './TableBody';
 
-import { months, weekDays } from "../../helpers/consts";
+import {months, weekDays} from "../../helpers/consts";
 
 class Table extends Component {
-  constructor () {
+  constructor() {
     super();
     this.state = {
       view: 'months',
@@ -25,9 +25,10 @@ class Table extends Component {
 
       let weekDaysArr = [];
       let currentWeekDay = firstWeekDay;
+
       for (let i = 0; i < lastDay; i++) {
         let weekDay = currentWeekDay > 6 ? currentWeekDay = 0 : currentWeekDay;
-        weekDaysArr[i] = `${i+1} ${weekDays[weekDay]}`;
+        weekDaysArr[i] = `${i + 1} ${weekDays[weekDay]}`;
         currentWeekDay++;
       }
 
@@ -47,8 +48,8 @@ class Table extends Component {
 
   changeView = (newView) => {
     if (this.state.view !== newView) {
-      this.setState({ view: newView });
-      this.setState({ display: this.headerCalc(newView) })
+      this.setState({view: newView});
+      this.setState({display: this.headerCalc(newView)})
     }
   };
 
@@ -56,20 +57,20 @@ class Table extends Component {
     return (
       <div>
         <Button
-          onClick = { this.getMonthsView }
-          value = 'Months'
+          onClick={this.getMonthsView}
+          value='Months'
         />
         <Button
-          onClick = { this.getWeeksView }
-          value = 'Weeks'
+          onClick={this.getWeeksView}
+          value='Weeks'
         />
-        <div className = "table">
+        <div className="table">
           <Header
-            view = { this.state.display }
+            view={this.state.display}
           />
           <TableBody
-            cells = { this.state.display }
-            view = { this.state.view }
+            cells={this.state.display}
+            view={this.state.view}
           />
         </div>
       </div>
