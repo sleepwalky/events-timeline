@@ -18,7 +18,7 @@ class Popup extends Component {
       }
     }, false);
 
-    (document).addEventListener('scroll', function () {
+    (document).addEventListener('scroll', () => {
       this.clearPopup();
     }, false);
   }
