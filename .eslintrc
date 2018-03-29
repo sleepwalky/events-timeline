@@ -3,31 +3,28 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "serviceworker": true
   },
   "extends": "airbnb",
   "rules": {
-    "comma-dangle": ["error", "never"],
     "consistent-return": "off",
     "new-cap": ["error", { "capIsNewExceptions": ["Router", "Schema", "URLSlugs"] }],
     "no-underscore-dangle": ["error", { "allow": ["_id"] }],
     "arrow-parens": ["error", "as-needed"],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
     "linebreak-style": "off",
     "no-mixed-operators": "off",
     "class-methods-use-this": "off",
-    "react/forbid-prop-types": "off",
+    "react/prop-types": "warn",
+    "react/jsx-first-prop-new-line": "off",
     "react/jsx-filename-extension": "off",
-    "react/jsx-indent": "off",
-    "react/self-closing-comp": "off",
-    "react/no-danger": "off",
-    "react/no-string-refs": "off",
+    "react/jsx-indent": ["error"],
+    "react/self-closing-comp": ["error", {"component": true}],
     "react/jsx-no-target-blank": "off",
-    "react/jsx-no-duplicate-props": "off",
-    "jsx-a11y/label-has-for": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "import/no-named-as-default": "off",
     "import/extensions": "off",
-    "import/imports-first": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off"
   }
