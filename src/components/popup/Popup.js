@@ -10,20 +10,12 @@ class Popup extends Component {
   componentDidMount() {
     (document).addEventListener('click', function (event) {
       if (!event.target.classList.contains('event')) {
-        const isDisplayed = store.getState().popupState.display;
-        if (isDisplayed === 'block') {
-          store.dispatch(hidePopup());
-          window.history.pushState({}, null, window.location.origin);
-        }
+        clearPopup();
       }
     }, false);
 
-    (document).addEventListener('scroll', function (event) {
-      const isDisplayed = store.getState().popupState.display;
-      if (isDisplayed === 'block') {
-        store.dispatch(hidePopup());
-        window.history.pushState({}, null, window.location.origin);
-      }
+    (document).addEventListener('scroll', function () {
+      clearPopup();
     }, false);
   }
 
@@ -33,10 +25,18 @@ class Popup extends Component {
       popupContent = <EventPopup />;
     }
     return (
-      <div className="popup" style={{ left: this.props.xPosCurrent, top: this.props.yPosCurrent, display: this.props.display }}>
+      <div className="popup" style={{left: this.props.xPosCurrent, top: this.props.yPosCurrent, display: this.props.display}}>
         {popupContent}
       </div>
     );
+  }
+}
+
+function clearPopup() {
+  const isDisplayed = store.getState().popupState.display;
+  if (isDisplayed === 'block') {
+    store.dispatch(hidePopup());
+    window.history.pushState({}, null, window.location.origin);
   }
 }
 

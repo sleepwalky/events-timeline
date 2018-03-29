@@ -7,9 +7,10 @@ import { hidePopup } from '../../actions/popup-action';
 class EventPopup extends Component{
   closePopup = function (event) {
     event.preventDefault();
+    const url = document.getElementById("event-url").getAttribute("href") || '';
     store.dispatch(hidePopup());
     window.history.pushState({}, null, window.location.origin);
-    window.open(this.props.eventProfile.url);
+    window.open(url);
   };
 
   render() {
@@ -30,7 +31,7 @@ class EventPopup extends Component{
         <div className="popup-url">
           <span className="url-title">More</span>
           <span>
-            <a className="event-url" onClick={this.closePopup} href={this.props.eventProfile.url}>information</a>
+            <a id="event-url" onClick={this.closePopup} href={this.props.eventProfile.url}>information</a>
           </span>
         </div>
       </div>
