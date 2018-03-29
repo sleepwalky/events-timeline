@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import { getEventsList } from '../../middleware/eventAPI';
 import Button from './Button';
 import Header from './Header';
 import TableFooter from './Footer';
 import TableBody from './TableBody';
 
 import { months, weekDays } from '../../helpers/consts';
-import * as eventAPI from '../../middleware/eventAPI';
 
 class Table extends Component {
   constructor() {
@@ -56,7 +57,7 @@ class Table extends Component {
   };
 
   refreshEventsTable = () => {
-    eventAPI.getEventsList();
+    this.props.onGetEvents();
   };
 
   render() {
@@ -92,4 +93,12 @@ class Table extends Component {
   }
 }
 
-export default Table;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onGetEvents: () => {
+      dispatch(getEventsList())
+    }
+  }
+};
+
+export default connect(null, mapDispatchToProps)(Table);
