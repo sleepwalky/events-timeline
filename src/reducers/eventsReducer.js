@@ -18,7 +18,7 @@ function eventReducer(state = initialState, action) {
     case SET_EVENT_PROFILE:
       return Object.assign({}, state, { eventProfile: action.data });
     case SET_EVENT_PROFILE_BY_ID:
-      filteredArray = state.eventsList.filter((item) => { return item.id.toString() === action.eventId; });
+      filteredArray = state.eventsList.filter(item => item.id.toString() === action.eventId);
       event = filteredArray.length > 0 ? filteredArray[0] : noEventFound;
       return Object.assign({}, state, { eventProfile: event });
     default: {

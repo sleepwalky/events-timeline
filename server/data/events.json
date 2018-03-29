@@ -47,7 +47,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17298/039-Business-Analysis-Benchmark.jpg",
+    "country": "Poland",
+    "topics": ["General concepts of estimating a Scrum Project"]
   },
   {
     "_id": "5ab90e5ff910b7407cdc8b5c",
@@ -60,7 +64,11 @@
     "startDate": "2018-05-03T00:00:00Z",
     "endDate": "2018-05-03T00:00:00Z",
     "datetime": "Thu, May 3, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": { "days": [] }
+    "agenda": { "days": [] },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15899/EE7489837D754053A3091FE0EA887171.jpg",
+    "country": "Belarus",
+    "topics": []
   },
   {
     "_id": "5ab90e60f910b7407cdc8b5d",
@@ -73,7 +81,11 @@
     "startDate": "2018-04-26T00:00:00Z",
     "endDate": "2018-04-26T00:00:00Z",
     "datetime": "Thu, April 26, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": { "days": [] }
+    "agenda": { "days": [] },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/14901/0B579C0DEDD9498E890E33CA779C0791.jpg",
+    "country": "Russia",
+    "topics": []
   },
   {
     "_id": "5ab90e61f910b7407cdc8b5e",
@@ -119,7 +131,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17207/039-Business-Analysis-Benchmark.jpg",
+    "country": "Poland",
+    "topics": ["Drawing Lots"]
   },
   {
     "_id": "5ab90e62f910b7407cdc8b5f",
@@ -194,7 +210,14 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15034/2F1032085C684082BFCE70D45BF5A042.jpg",
+    "country": "Russia",
+    "topics": [
+      "Spring Integration",
+      "Горзионтальное масштабирование микросервисов"
+    ]
   },
   {
     "_id": "5ab90e62f910b7407cdc8b60",
@@ -330,7 +353,18 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17034/iStock-545634390.jpg",
+    "country": "Hungary",
+    "topics": [
+      "Bemutatkozás, program ismertetése, a csapatok elfoglalják a munkaállomásaikat",
+      "Verseny kezdete - Projektmunka",
+      "Projektmunka",
+      "Projektmunka és felkészülés a projekt bemutatására",
+      "Projektek bemutatása csapatonként",
+      "Eredményhirdetés, díjátadó"
+    ]
   },
   {
     "_id": "5ab90e63f910b7407cdc8b61",
@@ -402,16 +436,22 @@
                   "language": "RUSSIAN",
                   "speakers": [
                     {
-                      "jobPosition": "Resource Development Lab Head",
-                      "name": "Александр Лоцманов",
+                      "jobPosition": "Business Analysis Team Leader",
+                      "name": "Николай Шемонаев",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/5273/thumb_kxTAm8zEoctfUiZOH5ReCnMl.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/241/thumb_Nikolay_Shemonaev.jpg"
+                    },
+                    {
+                      "jobPosition": "Director, Software Engineering",
+                      "name": "Alexander Kareev",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/4234/thumb_rMUPJBm4SYRFpq6WtfNc7l9a.jpg"
                     }
                   ]
                 },
                 {
                   "title":
-                    "Понедельник начинается в субботу. Когда и как определяться с профессией в IT",
+                    "Понедельник начинается в субботу. Когда и как определяться с профессией в IT?",
                   "duration": 55,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, 54, Рязань, Россия, Москва 1",
@@ -476,7 +516,7 @@
                 },
                 {
                   "title":
-                    "Как организовать рабочий процесс начинающего веб-программиста",
+                    "Как организовать рабочий процесс начинающего веб-программиста?",
                   "duration": 55,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, зал Москва 1",
@@ -491,30 +531,23 @@
                   ]
                 },
                 {
-                  "title":
-                    "Диджитализация: как современные цифровые технологии меняют взаимодействие с окружающим миром",
-                  "duration": 55,
+                  "title": "Что такое Docker? или Первые шаги в DevOps",
+                  "duration": 60,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, зал Москва 1",
                   "language": "RUSSIAN",
                   "speakers": [
                     {
-                      "jobPosition": "Business Analyst",
-                      "name": "Анастасия Гагина",
+                      "jobPosition": "Systems Engineer",
+                      "name": "Виктор Воронин",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9263/thumb_avatar_20160905-5891-1gvti0m.jpg"
-                    },
-                    {
-                      "jobPosition": "Business Analyst",
-                      "name": "Евгений Харитоненко",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1197/thumb_04vFC1Mpi5HjIoKyDuqUPfYB.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/32499/thumb_WJS16NXqfnjp5BmprglmNC-tt5z29xkt.jpg"
                     }
                   ]
                 },
                 {
                   "title": "Закрытие конференции. Лотерея",
-                  "duration": 30,
+                  "duration": 25,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, зал Москва 1",
                   "language": "RUSSIAN",
@@ -544,30 +577,31 @@
               "startTime": "12:00",
               "items": [
                 {
-                  "title": "RPG взгляд на аналитику в IT",
+                  "title":
+                    "Диджитализация: как современные цифровые технологии меняют взаимодействие с окружающим миром",
                   "duration": 55,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, Рязань, Рязанская область, Russia, Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, зал Москва 2",
                   "language": "RUSSIAN",
                   "speakers": [
                     {
-                      "jobPosition": "Senior Business Analyst",
-                      "name": "Сергей Громов",
+                      "jobPosition": "Business Analyst",
+                      "name": "Анастасия Гагина",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/20570/thumb_avatar_20170327-25477-k31cvn.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9263/thumb_avatar_20160905-5891-1gvti0m.jpg"
                     },
                     {
-                      "jobPosition": "Senior Business Analyst",
-                      "name": "Сергей Баранов",
+                      "jobPosition": "Business Analyst",
+                      "name": "Евгений Харитоненко",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/5909/thumb_BoSljaAndVresP07z3wqJRcD.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1197/thumb_04vFC1Mpi5HjIoKyDuqUPfYB.jpg"
                     }
                   ]
                 },
                 {
                   "title":
                     "Мобильная автоматизация: как научить смартфон находить баги?",
-                  "duration": 55,
+                  "duration": 60,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, Рязань, Рязанская область, Russia, Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, зал Москва 2",
                   "language": "RUSSIAN",
@@ -588,23 +622,29 @@
                 },
                 {
                   "title": null,
-                  "duration": 35,
+                  "duration": 30,
                   "location": null,
                   "language": null,
                   "speakers": []
                 },
                 {
-                  "title": "Что такое Docker или первые шаги в DevOps",
+                  "title": "RPG взгляд на аналитику в IT",
                   "duration": 55,
                   "location":
                     "Амакс Конгресс-отель, Первомайский проспект, Рязань, Рязанская область, Russia, Амакс Конгресс-отель, Первомайский проспект, Рязань, Россия, зал Москва 2",
                   "language": "RUSSIAN",
                   "speakers": [
                     {
-                      "jobPosition": "Systems Engineer",
-                      "name": "Виктор Воронин",
+                      "jobPosition": "Senior Business Analyst",
+                      "name": "Сергей Громов",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/32499/thumb_WJS16NXqfnjp5BmprglmNC-tt5z29xkt.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/20570/thumb_avatar_20170327-25477-k31cvn.jpg"
+                    },
+                    {
+                      "jobPosition": "Senior Business Analyst",
+                      "name": "Сергей Баранов",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/5909/thumb_BoSljaAndVresP07z3wqJRcD.jpg"
                     }
                   ]
                 }
@@ -613,7 +653,22 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16925/8E5578619EB24837AA30AB354A19B63A.jpg",
+    "country": "Russia",
+    "topics": [
+      "Открытие конференции",
+      "Понедельник начинается в субботу. Когда и как определяться с профессией в IT?",
+      "Дуров, верни стену! Создание чат-ботов в Telegram",
+      ".NET Core: место в мире и экосистеме дотнета",
+      "Как организовать рабочий процесс начинающего веб-программиста?",
+      "Что такое Docker? или Первые шаги в DevOps",
+      "Закрытие конференции. Лотерея",
+      "Диджитализация: как современные цифровые технологии меняют взаимодействие с окружающим миром",
+      "Мобильная автоматизация: как научить смартфон находить баги?",
+      "RPG взгляд на аналитику в IT"
+    ]
   },
   {
     "_id": "5ab90e64f910b7407cdc8b62",
@@ -661,7 +716,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16130/039-Business-Analysis-Benchmark.jpg",
+    "country": "Poland",
+    "topics": ["Future skillset needs in Project Management"]
   },
   {
     "_id": "5ab90e65f910b7407cdc8b63",
@@ -687,27 +746,6 @@
               "startTime": "16:30",
               "items": [
                 {
-                  "title": "Rendering 101",
-                  "duration": 30,
-                  "location": "Budapest, Futó utca, Hungary, Training Room 001",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Engineer",
-                      "name": "Szilveszter Harangozo",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/11129/thumb_Szilveszter_Harangozo_avatar.jpg"
-                    }
-                  ]
-                },
-                {
-                  "title": null,
-                  "duration": 5,
-                  "location": null,
-                  "language": null,
-                  "speakers": []
-                },
-                {
                   "title":
                     "Round Shapes and Destructible Environments With Voxels",
                   "duration": 30,
@@ -724,6 +762,27 @@
                 },
                 {
                   "title": null,
+                  "duration": 5,
+                  "location": null,
+                  "language": null,
+                  "speakers": []
+                },
+                {
+                  "title": "Rendering 101",
+                  "duration": 30,
+                  "location": "Budapest, Futó utca, Hungary, Training Room 001",
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Engineer",
+                      "name": "Szilveszter Harangozo",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/11129/thumb_Szilveszter_Harangozo_avatar.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title": null,
                   "duration": 25,
                   "location": null,
                   "language": null,
@@ -734,7 +793,14 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17478/ED2B8AD624F04255AFCBE0AD0CA03562.jpg",
+    "country": "Hungary",
+    "topics": [
+      "Round Shapes and Destructible Environments With Voxels",
+      "Rendering 101"
+    ]
   },
   {
     "_id": "5ab90e65f910b7407cdc8b64",
@@ -747,7 +813,11 @@
     "startDate": "2018-04-03T00:00:00Z",
     "endDate": "2018-04-03T00:00:00Z",
     "datetime": "Tue, April 3, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": { "days": [] }
+    "agenda": { "days": [] },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15871/F89969D9ECED405A858CAF5C2BAB84A3.jpg",
+    "country": "Belarus",
+    "topics": []
   },
   {
     "_id": "5ab90e66f910b7407cdc8b65",
@@ -822,7 +892,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17287/512ED4E78BE2448DAE3747446DE8F612.jpg",
+    "country": "Russia",
+    "topics": ["Как работает Rubocop", "Спасаем марсоходы от мутантов"]
   },
   {
     "_id": "5ab90e67f910b7407cdc8b66",
@@ -963,7 +1037,17 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/14043/7F0E80F56BC94C0DB63200F0938F981D.jpg",
+    "country": "Belarus",
+    "topics": [
+      "Keynote",
+      "Flutter.io",
+      "Учим GraphQL по-человечески",
+      "Web головного мозга",
+      "Atlas - фрэймворк для разработки гибких мобильных приложений"
+    ]
   },
   {
     "_id": "5ab90e68f910b7407cdc8b67",
@@ -1388,196 +1472,26 @@
           ]
         }
       ]
-    }
-  },
-  {
-    "_id": "5ab90e68f910b7407cdc8b68",
-    "id": 1748,
-    "name": "MiniQ Vitebsk",
-    "type": "epamevents",
-    "city": "Viciebsk",
-    "url": "https://events.epam.com/events/miniq-vitebsk-10",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "18:30",
-              "items": [
-                {
-                  "title": null,
-                  "duration": 30,
-                  "location": null,
-                  "language": null,
-                  "speakers": []
-                },
-                {
-                  "title":
-                    "Используем контейнеры, или Не дай заказчику повалить продакшн",
-                  "duration": 40,
-                  "location": "Stroiteley Avenue 1, Vitebsk, Belarus",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Engineer",
-                      "name": "Aleksandr Stasko",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9593/thumb__3FBCCEB1208A8F5D7EC38FCFBB69227949E2C6D2E52429D2C8_pimgpsh_fullsize_distr.jpg"
-                    },
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Aliaksandr Shynkevich",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/15211/thumb__99806B7B43111461EF955D199A4BAC52BFB75C5AEE69799209_pimgpsh_fullsize_distr.jpg"
-                    }
-                  ]
-                },
-                {
-                  "title": null,
-                  "duration": 20,
-                  "location": null,
-                  "language": null,
-                  "speakers": []
-                },
-                {
-                  "title": "Переход на DynamoDB. Есть ли жизнь после MongoDB?",
-                  "duration": 45,
-                  "location": "Stroiteley Avenue 1, Vitebsk, Belarus",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Engineer",
-                      "name": "Tsimur Vial",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/28406/thumb_IMG_1853.JPG"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab90e69f910b7407cdc8b69",
-    "id": 1804,
-    "name": "Gomel Solution Architecture Meetup #4",
-    "type": "epamevents",
-    "city": null,
-    "url": "https://events.epam.com/events/gomel-aei-meetup-89",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Gomel AEI Meetup",
-              "location": "площадь Ленина 2, Гомель, Belarus",
-              "room": "Мята Lounge",
-              "startTime": "18:45",
-              "items": [
-                {
-                  "title": "Case study: data ingestion pipeline for EBSCO",
-                  "duration": 60,
-                  "location": "площадь Ленина 2, Гомель, Belarus, Мята Lounge",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Software Engineer",
-                      "name": "Raman Auramau",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/10711/thumb_avatar_20160915-23842-qc8cz2.jpg"
-                    }
-                  ]
-                },
-                {
-                  "title": "The Server of Transport Transactions",
-                  "duration": 70,
-                  "location": "площадь Ленина 2, Гомель, Belarus, Мята Lounge",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Development Team Lead",
-                      "name": "Vasil Varabyou",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/40730/thumb______2.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab90e6af910b7407cdc8b6a",
-    "id": 1800,
-    "name": "Pro .Net Community  #8",
-    "type": "epamevents",
-    "city": "Minsk",
-    "url": "https://events.epam.com/events/pro-net-community-8",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "18:30",
-              "items": [
-                {
-                  "title": null,
-                  "duration": 30,
-                  "location": null,
-                  "language": null,
-                  "speakers": []
-                },
-                {
-                  "title": "RPA robotic process automation",
-                  "duration": 90,
-                  "location":
-                    "Imaguru Startup Hub, Ulitsa Fabritsiusa, Minsk, Belarus, Second floor",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Engineering Team Leader",
-                      "name": "Ivan Kryvaruchka",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/3572/thumb_yLwHCrO6pbo7qAmGvWjRtF51.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15152/7F5B4AE1E89C44849183618CB309213E.png",
+    "country": "Belarus",
+    "topics": [
+      "Registration",
+      "Keynote",
+      "Integration Testing Environment with Docker",
+      "EPAM Garage. Innovations area",
+      "FrontEnd - right choice",
+      "Fighting the BAD guys",
+      "Tradition Program Management vs. Agile in Scale. How to use together.",
+      "My story in IT",
+      "Closing ceremony",
+      "PHP Magento testing framework",
+      "Sauce Labs: Cloud-based platform for automated testing",
+      "Scrum in real life",
+      "Mistakes and their cost",
+      "Growing as a developer"
+    ]
   },
   {
     "_id": "5ab90e6bf910b7407cdc8b6c",
@@ -1841,7 +1755,20 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15424/E3B5D6E2661240DEA5FA85B8EE334067.jpg",
+    "country": "Hungary",
+    "topics": [
+      "Introduction to the course",
+      "Career as a Software Engineer",
+      "Unit testing fundamentals",
+      "Architectural overview of Java Web Applications",
+      "Office Tour at EPAM",
+      "Introduction to Spring Boot",
+      "Introduction to Web Applications and Web Services with Spring MVC",
+      "Introduction to Data Persistency with Spring Data"
+    ]
   },
   {
     "_id": "5ab91457f839dc28505ee9ae",
@@ -1849,14 +1776,15 @@
     "name": "The Rolling Scopes School. Introduction to Functional Programming",
     "type": "eventbrite",
     "description":
-      "<P><SPAN>Приглашаем всех желающих прослушать вводную лекцию бесплатного курса по функциональному программированию.</SPAN></P>\n<P>С полной программой курса можно ознакомиться тут - <A HREF=\"https://github.com/rolling-scopes-school/lectures/blob/master/lectures/fp.md\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">https://github.com/rolling-scopes-school/lectures/blob/master/lectures/fp.md</A></P>\n<P><STRONG>Расписание занятий:</STRONG> 2 раза в неделю. Вторник 20:00, Воскресенье 11:00. Всего 14 занятий. <STRONG> </STRONG>В расписании возможны изменения.</P>\n<P><STRONG>Формат обучения:</STRONG> онлайн. </P>\n<P><STRONG>Язык: </STRONG>Русский</P>\n<P CLASS=\"p1\"><STRONG>Тренер</STRONG>: Александр Герасимов. Front-end engineer в Wix.com Berlin.<SPAN CLASS=\"Apple-converted-space\"> </SPAN></P>\n<P CLASS=\"p2\"><SPAN CLASS=\"s1\">Сооснователь сообщества <A HREF=\"https://rollingscopes.com/\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\"><SPAN CLASS=\"s2\">https://rollingscopes.com/</SPAN></A> </SPAN></P>\n<P CLASS=\"p1\">Автор различных игр для гиков - <A HREF=\"https://github.com/21-23\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">https://github.com/21-23</A>.</P>\n<P CLASS=\"p1\">Активный участник берлинского Haskell сообщества.   </P>\n<P CLASS=\"p1\">Опытный тренер и ментор.</P>\n<P><BR></P>\n<P><BR></P>",
+      "<P><SPAN>Приглашаем всех желающих прослушать вводную лекцию бесплатного курса по функциональному программированию.</SPAN></P>\n<P>С полной программой курса можно ознакомиться тут - <A HREF=\"https://github.com/rolling-scopes-school/lectures/blob/master/lectures/fp.md\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">https://github.com/rolling-scopes-school/lectures/blob/master/lectures/fp.md</A></P>\n<P><STRONG>Расписание занятий:</STRONG> 2 раза в неделю. Вторник 20:00, Воскресенье 11:00. Всего 14 занятий. <STRONG> </STRONG>В расписании возможны изменения.</P>\n<P><STRONG>Формат обучения:</STRONG> онлайн. </P>\n<P><STRONG>Язык: </STRONG>Русский</P>\n<P CLASS=\"p1\"><STRONG>Тренер</STRONG>: Александр Герасимов. Front-end engineer в Wix.com Berlin.<SPAN CLASS=\"Apple-converted-space\"> </SPAN></P>\n<P CLASS=\"p2\"><SPAN CLASS=\"s1\">Сооснователь сообщества <A HREF=\"https://rollingscopes.com/\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\"><SPAN CLASS=\"s2\">https://rollingscopes.com/</SPAN></A> </SPAN></P>\n<P CLASS=\"p1\">Автор различных игр для гиков - <A HREF=\"https://github.com/21-23\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">https://github.com/21-23</A>.</P>\n<P CLASS=\"p1\">Активный участник берлинского Haskell сообщества.   </P>\n<P CLASS=\"p1\">Опытный тренер и ментор.</P>\n<P><BR></P>\n<P><BR></P>",
     "agenda": "",
     "startDate": "2018-04-17T17:00:00Z",
     "endDate": "2018-04-17T19:00:00Z",
     "datetime": "Tue, April 17, 2018 5:00 PM - 07:00 PM CEST",
     "url":
       "https://www.eventbrite.com/e/the-rolling-scopes-school-introduction-to-functional-programming-tickets-44325819720?aff=ebapi",
-    "venue": { "name": "", "address": "Вебинар" }
+    "venue": { "name": "", "address": "Вебинар" },
+    "topics": ["javascript"]
   },
   {
     "_id": "5ab91457f839dc28505ee9af",
@@ -1864,14 +1792,15 @@
     "name": "The Rolling Scopes School (2018-Q3): Introduction. ",
     "type": "eventbrite",
     "description":
-      "<P>Приглашаем всех желающих прослушать вводную лекцию бесплатного курса по JavaScript. </P>\r\n<P> </P>\r\n<P><STRONG>Место проведения</STRONG>:</P>\r\n<P>Онлайн. Ссылка на вебинар появится позже.<BR></P>\r\n<P>Обучение доступно для жителей Минска, Гродно, Гомеля, Могилева, Бреста и Брянска.</P>\r\n<P>Основной сайт: <A HREF=\"https://school.rollingscopes.com/\" TARGET=\"_blank\" REL=\"noopener nofollow noopener noreferrer nofollow nofollow nofollow noreferrer nofollow\">https://school.rollingscopes.com/</A></P>\r\n<P> </P>\r\n<H2>Описание тренинга</H2>\r\n<DIV CLASS=\"point\">\r\n<P>Тренинг посвящён современным подходам, технологиям и инструментальным средствам разработки веб-приложений с использованием языка программирования JavaScript.</P>\r\n<P><STRONG>Целевая аудитория:</STRONG> Выпускники и студенты 2-4 курсов технических и не технических специальностей.</P>\r\n<P><STRONG>Расписание:</STRONG> 3 занятия в неделю вечером (время будет уточняться перед непосредственным стартом).</P>\r\n<P><STRONG>Программа тренинга:</STRONG></P>\r\n<OL>\r\n<LI>\r\n<P>Современный JavaScript. HTML5 APIs.</P>\r\n</LI>\r\n<LI>\r\n<P>HTML. От отдельных тегов до Semantic Web.</P>\r\n</LI>\r\n<LI>\r\n<P>CSS3. Подходы к верстке страницы. Анимация. Responsive Web Design. CSS препроцессоры LESS и Stylus.</P>\r\n</LI>\r\n<LI>\r\n<P>Разработка через тестирование в JavaScript. Юнит-тестирование клиентского кода. Автоматизированное функциональное тестирование.</P>\r\n</LI>\r\n<LI>\r\n<P>Архитектура приложения. Single Page Application. AngularJS/ReactJS.</P>\r\n</LI>\r\n<LI>\r\n<P>Структура проекта. Модульность. Управление зависимостями и ресурсами. WebPack. AMD</P>\r\n</LI>\r\n</OL>\r\n<P> На вводном занятии будет расказано о процессе обучения.</P>\r\n<P> Ваши вопросы вы можете задать в чате <A HREF=\"https://gitter.im/rolling-scopes-school/padawans\" REL=\"nofollow\"><SPAN>https://gitter.im/rolling-scopes-school/padawans</SPAN></A><A TITLE=\"https://gitter.im/rolling-scopes-school/padawans\" HREF=\"https://gitter.im/rolling-scopes-school/padawans\" TARGET=\"_blank\" REL=\"noopener nofollow noopener noreferrer nofollow nofollow nofollow noreferrer nofollow\"><BR></A></P>\r\n<P><STRONG>Материалы предыдущего вводного занятия (Февраль 2018):</STRONG></P>\r\n<P><A HREF=\"https://github.com/rolling-scopes-school/lectures/blob/master/lectures/intro.md\" REL=\"nofollow\"><SPAN>https://github.com/rolling-scopes-school/lectures/blob/master/lectures/intro.md</SPAN></A></P>\r\n<P> </P>\r\n</DIV>",
+      "<P>Приглашаем всех желающих прослушать вводную лекцию бесплатного курса по JavaScript. </P>\r\n<P> </P>\r\n<P><STRONG>Место проведения</STRONG>:</P>\r\n<P>Онлайн. Ссылка на вебинар появится позже.<BR></P>\r\n<P>Обучение доступно для жителей Минска, Гродно, Гомеля, Могилева, Бреста и Брянска.</P>\r\n<P>Основной сайт: <A HREF=\"https://school.rollingscopes.com/\" TARGET=\"_blank\" REL=\"noopener nofollow noopener noreferrer nofollow nofollow nofollow noreferrer nofollow\">https://school.rollingscopes.com/</A></P>\r\n<P> </P>\r\n<H2>Описание тренинга</H2>\r\n<DIV CLASS=\"point\">\r\n<P>Тренинг посвящён современным подходам, технологиям и инструментальным средствам разработки веб-приложений с использованием языка программирования JavaScript.</P>\r\n<P><STRONG>Целевая аудитория:</STRONG> Выпускники и студенты 2-4 курсов технических и не технических специальностей.</P>\r\n<P><STRONG>Расписание:</STRONG> 3 занятия в неделю вечером (время будет уточняться перед непосредственным стартом).</P>\r\n<P><STRONG>Программа тренинга:</STRONG></P>\r\n<OL>\r\n<LI>\r\n<P>Современный JavaScript. HTML5 APIs.</P>\r\n</LI>\r\n<LI>\r\n<P>HTML. От отдельных тегов до Semantic Web.</P>\r\n</LI>\r\n<LI>\r\n<P>CSS3. Подходы к верстке страницы. Анимация. Responsive Web Design. CSS препроцессоры LESS и Stylus.</P>\r\n</LI>\r\n<LI>\r\n<P>Разработка через тестирование в JavaScript. Юнит-тестирование клиентского кода. Автоматизированное функциональное тестирование.</P>\r\n</LI>\r\n<LI>\r\n<P>Архитектура приложения. Single Page Application. AngularJS/ReactJS.</P>\r\n</LI>\r\n<LI>\r\n<P>Структура проекта. Модульность. Управление зависимостями и ресурсами. WebPack. AMD</P>\r\n</LI>\r\n</OL>\r\n<P> На вводном занятии будет расказано о процессе обучения.</P>\r\n<P> Ваши вопросы вы можете задать в чате <A HREF=\"https://gitter.im/rolling-scopes-school/padawans\" REL=\"nofollow\"><SPAN>https://gitter.im/rolling-scopes-school/padawans</SPAN></A><A TITLE=\"https://gitter.im/rolling-scopes-school/padawans\" HREF=\"https://gitter.im/rolling-scopes-school/padawans\" TARGET=\"_blank\" REL=\"noopener nofollow noopener noreferrer nofollow nofollow nofollow noreferrer nofollow\"><BR></A></P>\r\n<P><STRONG>Материалы предыдущего вводного занятия (Февраль 2018):</STRONG></P>\r\n<P><A HREF=\"https://github.com/rolling-scopes-school/lectures/blob/master/lectures/intro.md\" REL=\"nofollow\"><SPAN>https://github.com/rolling-scopes-school/lectures/blob/master/lectures/intro.md</SPAN></A></P>\r\n<P> </P>\r\n</DIV>",
     "agenda": "",
     "startDate": "2018-09-10T17:00:00Z",
     "endDate": "2018-09-10T20:00:00Z",
     "datetime": "Mon, September 10, 2018 5:00 PM - 08:00 PM CEST",
     "url":
       "https://www.eventbrite.com/e/the-rolling-scopes-school-2018-q3-introduction-tickets-43395172128?aff=ebapi",
-    "venue": { "name": "Онлайн вебинар", "address": "Минск" }
+    "venue": { "name": "Онлайн вебинар", "address": "Минск" },
+    "topics": ["javascript"]
   },
   {
     "_id": "5ab91458f839dc28505ee9b0",
@@ -1879,14 +1808,15 @@
     "name": "The Rolling Scopes #46. Mogilev",
     "type": "eventbrite",
     "description":
-      "<H2>АФИША</H2>\n<UL CLASS=\"event-schedule\">\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">15:00  MONADS - CODING FUNCTIONALLY</H2>\n<P CLASS=\"speaker-name\">Aliaksandr Famchankou</P>\n<P>Beyond the general approaches to coding as well as OOP designs, there is a pretty new functional wave to have your programs written in a neat and elegant way, especially when it comes to JavaScript. An extremely flexible architecture of the language allows us to take the full advantage of the functional programming and opens the gates to the constructions that this approach brings with it. We will consider some implementations of functional constructions, monads, functors, etc. and how they can be utilized in todays applications.</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">15:40  NODE.JS WORLD</H2>\n<P CLASS=\"speaker-name\">Artsiom Marozau</P>\n<P>NodeJs - это целая вселенная со своими пакетными менеджерами и редакторами кода, написанными на ней же. Я хочу погрузить вас в этот мир и показать, как этим можно пользоваться.</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">16:20  GROWING AS A DEVELOPER</H2>\n<P CLASS=\"speaker-name\">Paul Yuhnovich</P>\n<P>Каждый разработчик всегда думает на два шага вперед, поэтому рассмотрим основные методы развития специалиста</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">16:55  COFFEE BREAK</H2>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">17:10  HANDLING GRAPHQL WITH REACT AND APOLLO</H2>\n<P CLASS=\"speaker-name\">Aliaksandra Dauliash</P>\n<P>Tech talk covers the following points: what is GraphQL, why are people so excited about GraphQl and how to use GraphQL with React</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">17:50  CSS GRID LAYOUT - PRACTICE TRICKS</H2>\n<P CLASS=\"speaker-name\">Yauhen Kavalchuk</P>\n<P>Все еще не работал с сеткой CSS? Думаете, что это сложно? Я покажу вам, почему сетка CSS является лучшим инструментом создания макета и построения сложных систем сеток. Мы сравним её с другими методами построения лэйаута, такими как float, inline-block и flexbox</P>\n</LI>\n</UL>\n<H2>CALL FOR SPEAKERS!</H2>\n<P>Want to give a talk or conduct a workshop?<BR>Eager to give a shout-out for your open source project or share your success story?<BR>Ready to preach the must-know fundamentals of Web, JavaScript, CSS, etc.?<BR>We welcome all kinds of talk proposals, so do not hesitate to drop a short synopsis to <A HREF=\"mailto:rolling.scopes@gmail.com\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">rolling.scopes@gmail.com</A></P>",
+      "<H2>АФИША</H2>\n<UL CLASS=\"event-schedule\">\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">15:00  MONADS - CODING FUNCTIONALLY</H2>\n<P CLASS=\"speaker-name\">Aliaksandr Famchankou</P>\n<P>Beyond the general approaches to coding as well as OOP designs, there is a pretty new functional wave to have your programs written in a neat and elegant way, especially when it comes to JavaScript. An extremely flexible architecture of the language allows us to take the full advantage of the functional programming and opens the gates to the constructions that this approach brings with it. We will consider some implementations of functional constructions, monads, functors, etc. and how they can be utilized in todays applications.</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">15:40  NODE.JS WORLD</H2>\n<P CLASS=\"speaker-name\">Artsiom Marozau</P>\n<P>NodeJs - это целая вселенная со своими пакетными менеджерами и редакторами кода, написанными на ней же. Я хочу погрузить вас в этот мир и показать, как этим можно пользоваться.</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">16:20  GROWING AS A DEVELOPER</H2>\n<P CLASS=\"speaker-name\">Paul Yuhnovich</P>\n<P>Каждый разработчик всегда думает на два шага вперед, поэтому рассмотрим основные методы развития специалиста</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">16:55  COFFEE BREAK</H2>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">17:10  HANDLING GRAPHQL WITH REACT AND APOLLO</H2>\n<P CLASS=\"speaker-name\">Aliaksandra Dauliash</P>\n<P>Tech talk covers the following points: what is GraphQL, why are people so excited about GraphQl and how to use GraphQL with React</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H2 CLASS=\"speech-time\">17:50  CSS GRID LAYOUT - PRACTICE TRICKS</H2>\n<P CLASS=\"speaker-name\">Yauhen Kavalchuk</P>\n<P>Все еще не работал с сеткой CSS? Думаете, что это сложно? Я покажу вам, почему сетка CSS является лучшим инструментом создания макета и построения сложных систем сеток. Мы сравним её с другими методами построения лэйаута, такими как float, inline-block и flexbox</P>\n</LI>\n</UL>\n<H2>CALL FOR SPEAKERS!</H2>\n<P>Want to give a talk or conduct a workshop?<BR>Eager to give a shout-out for your open source project or share your success story?<BR>Ready to preach the must-know fundamentals of Web, JavaScript, CSS, etc.?<BR>We welcome all kinds of talk proposals, so do not hesitate to drop a short synopsis to <A HREF=\"mailto:rolling.scopes@gmail.com\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">rolling.scopes@gmail.com</A></P>",
     "agenda": "",
     "startDate": "2018-04-21T12:00:00Z",
     "endDate": "2018-04-21T17:00:00Z",
     "datetime": "Sat, April 21, 2018 12:00 PM - 05:00 PM CEST",
     "url":
       "https://www.eventbrite.com/e/the-rolling-scopes-46-mogilev-tickets-41817579506?aff=ebapi",
-    "venue": { "name": "", "address": "mogilev" }
+    "venue": { "name": "", "address": "mogilev" },
+    "topics": ["javascript"]
   },
   {
     "_id": "5ab91458f839dc28505ee9b1",
@@ -1894,9 +1824,9 @@
     "name": "The Rolling Scopes #47. Gdansk",
     "type": "eventbrite",
     "description":
-      "<P>Hoorah! The Rolling Scopes are coming to Gdańsk, Poland once again! The participation is free of charge. The Event is sponsored by <A HREF=\"https://www.epam.com/careers/poland\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">EPAM Poland</A>.</P>\n<P><A HREF=\"https://rollingscopes.com/\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">The Rolling Scopes</A> - Front-end/JavaScript developers community.<BR>Want to give a talk or conduct a workshop?<BR>Eager to give a shout-out for your open source project or share your success story?<BR>Ready to preach the must-know fundamentals of Web, JavaScript, CSS, etc.?<BR>We welcome all kinds of talk proposals, so do not hesitate to drop a short synopsis to <A HREF=\"mailto:rolling.scopes@gmail.com\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">rolling.scopes@gmail.com</A><BR><BR>This meetup is organized by developers and for developers. We do not generate any profit, just fun, and awesomeness! Let’s Roll!</P>\n<H2>Join Our Frontend Poland Community on Facebook</H2>\n<P><A HREF=\"https://www.facebook.com/groups/TheRollingScopesPoland/\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\"> The Rolling Scopes Poland</A></P>\n",
+      "<P>Hoorah! The Rolling Scopes are coming to Gdańsk, Poland once again! The participation is free of charge. The Event is sponsored by <A HREF=\"https://www.epam.com/careers/poland\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">EPAM Poland</A>.</P>\n<P><A HREF=\"https://rollingscopes.com/\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">The Rolling Scopes</A> - Front-end/JavaScript developers community.<BR>Want to give a talk or conduct a workshop?<BR>Eager to give a shout-out for your open source project or share your success story?<BR>Ready to preach the must-know fundamentals of Web, JavaScript, CSS, etc.?<BR>We welcome all kinds of talk proposals, so do not hesitate to drop a short synopsis to <A HREF=\"mailto:rolling.scopes@gmail.com\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\">rolling.scopes@gmail.com</A><BR><BR>This meetup is organized by developers and for developers. We do not generate any profit, just fun, and awesomeness! Let’s Roll!</P>\n<H2>Join Our Frontend Poland Community on Facebook</H2>\n<P><A HREF=\"https://www.facebook.com/groups/TheRollingScopesPoland/\" TARGET=\"_blank\" REL=\"noreferrer noopener nofollow noopener noreferrer nofollow\"> The Rolling Scopes Poland</A></P>\n",
     "agenda":
-      "<P>Agenda</P>\n<UL CLASS=\"event-schedule\">\n<LI CLASS=\"event-schedule-item\">\n<H3>17:40 REGISTRATION</H3>\n<P>Pizza &amp; Beverages &amp; Networking</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H3>18:00 “BACKEND FOR FRONTEND“ WITH NESTJS: USAGE PATTERNS</H3>\n<P CLASS=\"speaker-name\">Viachaslau Kudzinau | Gdańsk, Poland</P>\n<P>In recent years, thanks to Node.js, JavaScript has become the “lingua franca“ of the web for both front and backend applications, giving rise to awesome projects like Angular, React and Vue which improve developer productivity and enable the construction of fast, testable, extensible frontend applications. However, on the server-side, while there are a lot of superb libraries, helpers, and tools for Node, none of them effectively solve the main problem - the architecture.</P>\n<P>Nest aims to provide an application architecture out of the box which allows for the effortless creation of highly testable, scalable, loosely coupled and easily maintainable applications.</P>\n<P>About the speaker: <SPAN CLASS=\"italic\">“Hi my name is Slava, I'm a software architect and developer from Belarus living in Poland. I started working with EPAM back in 2000. My professional focus is Java/JavaScript technologies. I love coding and setting up new projects. In spare time I enjoy reading, traveling and spending time with my family.”</SPAN></P>\n</LI>\n</UL>\n<P><SPAN> </SPAN></P>\n<P> </P>\n<P><EM>The photos taken at the event will be posted on social media channels by the Rolling Scopes and the Sponsor of the event – EPAM Poland.</EM></P>",
+      "<P>Agenda</P>\n<UL CLASS=\"event-schedule\">\n<LI CLASS=\"event-schedule-item\">\n<H3>17:40 REGISTRATION</H3>\n<P>Pizza &amp; Beverages &amp; Networking</P>\n</LI>\n<LI CLASS=\"event-schedule-item\">\n<H3>18:00 “BACKEND FOR FRONTEND“ WITH NESTJS: USAGE PATTERNS</H3>\n<P CLASS=\"speaker-name\">Viachaslau Kudzinau | Gdańsk, Poland</P>\n<P>In recent years, thanks to Node.js, JavaScript has become the “lingua franca“ of the web for both front and backend applications, giving rise to awesome projects like Angular, React and Vue which improve developer productivity and enable the construction of fast, testable, extensible frontend applications. However, on the server-side, while there are a lot of superb libraries, helpers, and tools for Node, none of them effectively solve the main problem - the architecture.</P>\n<P>Nest aims to provide an application architecture out of the box which allows for the effortless creation of highly testable, scalable, loosely coupled and easily maintainable applications.</P>\n<P>About the speaker: <SPAN CLASS=\"italic\">“Hi my name is Slava, I'm a software architect and developer from Belarus living in Poland. I started working with EPAM back in 2000. My professional focus is Java/JavaScript technologies. I love coding and setting up new projects. In spare time I enjoy reading, traveling and spending time with my family.”</SPAN></P>\n</LI>\n</UL>\n<P><SPAN> </SPAN></P>\n<P> </P>\n<P><EM>The photos taken at the event will be posted on social media channels by the Rolling Scopes and the Sponsor of the event – EPAM Poland.</EM></P>",
     "startDate": "2018-05-08T16:00:00Z",
     "endDate": "2018-05-08T19:00:00Z",
     "datetime": "Tue, May 8, 2018 4:00 PM - 07:00 PM CEST",
@@ -1905,7 +1835,8 @@
     "venue": {
       "name": "OLIVIA BUSINESS CENTRE - OLIVIA FOUR",
       "address": "aleja Grunwaldzka 472b, 80-281 Gdańsk"
-    }
+    },
+    "topics": ["javascript"]
   },
   {
     "_id": "5ab91459f839dc28505ee9b2",
@@ -1913,14 +1844,15 @@
     "name": "FrontSpot HACKATHON",
     "type": "eventbrite",
     "description":
-      "<P>У тебя есть блестящая идея и команда, готовая свернуть горы? Идеи пока нет, команды тоже нет, но есть желание провести 24 часа в кругу новых друзей, занимаясь любимым делом и выиграть призы?</P>\r\n<P>Тогда мы ждем тебя на <A HREF=\"https://epa.ms/hackathon-frontspot-eventbrite\" TARGET=\"_blank\" REL=\"noopener noreferrer nofollow\"><STRONG>FrontSpot HACKATHON</STRONG></A>!</P>\r\n<P>Ты можешь быть опытным или не очень разработчиком, дизайнером, креатором или тем, кто объединит участников команды и поведет их за собой. Правила всего 3:</P>\r\n<UL>\r\n<LI>Реализовать свою идею любым способом</LI>\r\n<LI>Использовать для этого JavaScript</LI>\r\n<LI>Максимальный размер команды 4 человека</LI>\r\n</UL>\r\n<P>Победители получат билеты на крупнейшие Front-end конференций СНГ и возможность прокачать свои скилы на онлайн тренингах!</P>\r\n<UL>\r\n<LI>1 место - билеты на HolyJS конференцию в Санкт-Петербурге</LI>\r\n<LI>2 место - билеты на YGLF конференцию в Киеве</LI>\r\n<LI>3 место - сертификаты на онлайн тренинги на ваш выбор</LI>\r\n</UL>\r\n<P><A HREF=\"https://epa.ms/hackathon-frontspot-registration-eventbrite\" TARGET=\"_blank\" REL=\"noopener noreferrer nofollow\">Регистрируйся</A> и приходи! Количество участников ограничено.</P>\r\n<P CLASS=\"MsoNormal\"><SPAN><STRONG>Партнеры</STRONG>:</SPAN></P>\r\n<P CLASS=\"MsoNormal\"><A HREF=\"https://careers.epam.by/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33135/content_epam-100x100.png\" HEIGHT=\"100\" WIDTH=\"100\"></IMG></A>   <A HREF=\"http://yglf.com.ua/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33170/content_yglf-secondary-logo-128.png\" HEIGHT=\"101\" WIDTH=\"101\"></IMG></A>  <A HREF=\"https://holyjs-piter.ru/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33171/content_holyjs_gradient_svg.png\" HEIGHT=\"104\" WIDTH=\"104\"></IMG></A></P>\r\n<P CLASS=\"MsoNormal\"><A HREF=\"https://github.com/beerjs\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33202/content_untitled.png\" HEIGHT=\"93\" WIDTH=\"93\"></IMG></A>  <A HREF=\"http://webnotbombs.net/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33201/content_webnotbombs-logo.png\" HEIGHT=\"86\" WIDTH=\"182\"></IMG></A></P>\r\n<P CLASS=\"MsoNormal\"><STRONG>Инфопартнер</STRONG></P>\r\n<P CLASS=\"MsoNormal\"><STRONG>  <A HREF=\"http://dev.by/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33139/content_1aff76589ab621348d50c02b4ac2034c56f1b12c2246ddb744_pimgpsh_mobile_save_distr_-_copy.jpg\" HEIGHT=\"41\" WIDTH=\"109\"></IMG></A></STRONG></P>\r\n<P CLASS=\"MsoNormal\"> </P>",
+      "<P>У тебя есть блестящая идея и команда, готовая свернуть горы? Идеи пока нет, команды тоже нет, но есть желание провести 24 часа в кругу новых друзей, занимаясь любимым делом и выиграть призы?</P>\r\n<P>Тогда мы ждем тебя на <A HREF=\"https://epa.ms/hackathon-frontspot-eventbrite\" TARGET=\"_blank\" REL=\"noopener noreferrer nofollow\"><STRONG>FrontSpot HACKATHON</STRONG></A>!</P>\r\n<P>Ты можешь быть опытным или не очень разработчиком, дизайнером, креатором или тем, кто объединит участников команды и поведет их за собой. Правила всего 3:</P>\r\n<UL>\r\n<LI>Реализовать свою идею любым способом</LI>\r\n<LI>Использовать для этого JavaScript</LI>\r\n<LI>Максимальный размер команды 4 человека</LI>\r\n</UL>\r\n<P>Победители получат билеты на крупнейшие Front-end конференций СНГ и возможность прокачать свои скилы на онлайн тренингах!</P>\r\n<UL>\r\n<LI>1 место - билеты на HolyJS конференцию в Санкт-Петербурге</LI>\r\n<LI>2 место - билеты на YGLF конференцию в Киеве</LI>\r\n<LI>3 место - сертификаты на онлайн тренинги на ваш выбор</LI>\r\n</UL>\r\n<P><A HREF=\"https://epa.ms/hackathon-frontspot-registration-eventbrite\" TARGET=\"_blank\" REL=\"noopener noreferrer nofollow\">Регистрируйся</A> и приходи! Количество участников ограничено.</P>\r\n<P CLASS=\"MsoNormal\"><SPAN><STRONG>Партнеры</STRONG>:</SPAN></P>\r\n<P CLASS=\"MsoNormal\"><A HREF=\"https://careers.epam.by/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33135/content_epam-100x100.png\" HEIGHT=\"100\" WIDTH=\"100\"></IMG></A>   <A HREF=\"http://yglf.com.ua/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33170/content_yglf-secondary-logo-128.png\" HEIGHT=\"101\" WIDTH=\"101\"></IMG></A>  <A HREF=\"https://holyjs-piter.ru/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33171/content_holyjs_gradient_svg.png\" HEIGHT=\"104\" WIDTH=\"104\"></IMG></A></P>\r\n<P CLASS=\"MsoNormal\"><A HREF=\"https://github.com/beerjs\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33202/content_untitled.png\" HEIGHT=\"93\" WIDTH=\"93\"></IMG></A>  <A HREF=\"http://webnotbombs.net/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33201/content_webnotbombs-logo.png\" HEIGHT=\"86\" WIDTH=\"182\"></IMG></A></P>\r\n<P CLASS=\"MsoNormal\"><STRONG>Инфопартнер</STRONG></P>\r\n<P CLASS=\"MsoNormal\"><STRONG>  <A HREF=\"http://dev.by/\" REL=\"nofollow\"><IMG ALT=\"\" SRC=\"https://events.dev.by/ckeditor_assets/pictures/33139/content_1aff76589ab621348d50c02b4ac2034c56f1b12c2246ddb744_pimgpsh_mobile_save_distr_-_copy.jpg\" HEIGHT=\"41\" WIDTH=\"109\"></IMG></A></STRONG></P>\r\n<P CLASS=\"MsoNormal\"> </P>",
     "agenda": "",
     "startDate": "2018-03-31T07:00:00Z",
     "endDate": "2018-04-01T17:00:00Z",
     "datetime": "Sat, March 31, 2018 7:00 AM - Sun, April 1, 2018 5:00 PM CEST",
     "url":
       "https://www.eventbrite.com/e/frontspot-hackathon-tickets-44158936568?aff=ebapi",
-    "venue": { "name": "", "address": "ул. Ак.Купревича 3B , Минск" }
+    "venue": { "name": "", "address": "ул. Ак.Купревича 3B , Минск" },
+    "topics": ["javascript"]
   },
   {
     "_id": "5ab922cd47f9f52634be95a2",
@@ -1933,7 +1865,11 @@
     "startDate": "2018-04-26T00:00:00Z",
     "endDate": "2018-04-26T00:00:00Z",
     "datetime": "Thu, April 26, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": { "days": [] }
+    "agenda": { "days": [] },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17142/B005E9B67FD24467BFD131C4BB42B61E.jpg",
+    "country": "Hungary",
+    "topics": []
   },
   {
     "_id": "5ab922cf47f9f52634be95a4",
@@ -1976,7 +1912,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17136/B005E9B67FD24467BFD131C4BB42B61E.jpg",
+    "country": "Hungary",
+    "topics": []
   },
   {
     "_id": "5ab922d147f9f52634be95a5",
@@ -2021,7 +1961,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17763/78C495B94F0E45959AB38DBCDD8154E3.png",
+    "country": null,
+    "topics": ["Test strategy and planning in Automated testing"]
   },
   {
     "_id": "5ab922d347f9f52634be95a6",
@@ -2066,7 +2010,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16314/33E7CF106E3F40D6A3E8435B00FCCDFD.jpg",
+    "country": "Switzerland",
+    "topics": ["Basics of Go Lang"]
   },
   {
     "_id": "5ab922d6258bbd4d38d0f302",
@@ -2112,7 +2060,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17670/DB780C8ECB8E4976B16522D8714DD6E8.jpg",
+    "country": "Ukraine",
+    "topics": ["Professional Burnout"]
   },
   {
     "_id": "5ab922d747f9f52634be95a8",
@@ -2158,7 +2110,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17722/7EFFF054CA3C4D83A614DCCABAA84A9F.jpg",
+    "country": null,
+    "topics": ["Test automation framework elements and their purpose"]
   },
   {
     "_id": "5ab922db47f9f52634be95a9",
@@ -2210,7 +2166,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17856/AA188CBAE3A2433191B3AB07D3ED147D.jpg",
+    "country": "Hungary",
+    "topics": ["Handling dependencies in Scala"]
   },
   {
     "_id": "5ab922dc258bbd4d38d0f304",
@@ -2255,7 +2215,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17468/86DDF9B4FE0A4EBAAACEE320805D61D0.jpg",
+    "country": null,
+    "topics": ["Test Management (Part4) based on ISTQB"]
   },
   {
     "_id": "5ab922dc47f9f52634be95aa",
@@ -2299,12 +2263,16 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17485/5AA9C7F90D2740FFA13F220C5F6E0F19.jpg",
+    "country": "Ukraine",
+    "topics": ["Cargo Cult of Scrum"]
   },
   {
     "_id": "5ab922dd258bbd4d38d0f305",
     "id": 1830,
-    "name": "Tech Talk:  IT Kitchen - 2",
+    "name": "Tech Talk:  IT Kitchen - 2",
     "type": "epamevents",
     "city": "Izhevsk",
     "url": "https://events.epam.com/events/microsoft-trends-2018",
@@ -2351,7 +2319,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17654/7E8C86C0C52A43E89DD5AB4EAAC87491.jpg",
+    "country": "Russia",
+    "topics": ["Microsoft Trends 2018"]
   },
   {
     "_id": "5ab922e0258bbd4d38d0f306",
@@ -2396,7 +2368,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17450/192E487D324E447F9A07FF0189BB3841.jpg",
+    "country": null,
+    "topics": ["Test Management (Part3) based on ISTQB"]
   },
   {
     "_id": "5ab922e4258bbd4d38d0f308",
@@ -2444,7 +2420,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17863/4C6B2C49029D4A928BD3C9CD8FB46E59.jpg",
+    "country": "Ukraine",
+    "topics": ["\"Best practices for installing & configuring SQL Server\""]
   },
   {
     "_id": "5ab92728f839dc28505ee9f3",
@@ -2454,13 +2434,13 @@
     "city": null,
     "url": "https://events.epam.com/events/digitalization",
     "registrationAvailability": false,
-    "startDate": "2018-03-30T00:00:00Z",
-    "endDate": "2018-03-30T00:00:00Z",
-    "datetime": "Fri, March 30, 2018 12:00 AM - 12:00 AM CEST",
+    "startDate": "2018-04-05T00:00:00Z",
+    "endDate": "2018-04-05T00:00:00Z",
+    "datetime": "Thu, April 5, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-30T00:00:00Z",
+          "date": "2018-04-05T00:00:00Z",
           "day": 1,
           "streams": [
             {
@@ -2494,7 +2474,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/14625/04E2A2FE1B3047E9BB4ECCE0B88BEE4A.jpeg",
+    "country": null,
+    "topics": ["Digitalization"]
   },
   {
     "_id": "5ab92728f839dc28505ee9f4",
@@ -2541,946 +2525,11 @@
           ]
         }
       ]
-    }
-  },
-  {
-    "_id": "5ab92729f839dc28505ee9f5",
-    "id": 1715,
-    "name": "Test Management (Part2) based on ISTQB",
-    "type": "epamevents",
-    "city": null,
-    "url":
-      "https://events.epam.com/events/test-management-part2-based-on-istqb",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Test Management (Part2) based on ISTQB",
-              "location": "Kiev, Ukraine",
-              "room": null,
-              "startTime": "10:00",
-              "items": [
-                {
-                  "title": "Test Managemnt (Part2) based on ISTQB",
-                  "duration": 120,
-                  "location": "Kiev, Ukraine",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Software Testing Engineer",
-                      "name": "Iryna Zhylinska",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/2242/thumb_RN8Cpe4o1wqHsUcDhryXOZmI.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92729f839dc28505ee9f6",
-    "id": 1778,
-    "name": "Blockchain Brainstorm",
-    "type": "epamevents",
-    "city": "L'viv",
-    "url": "https://events.epam.com/events/blockchain-brainstorm",
-    "registrationAvailability": true,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "16:00",
-              "items": [
-                {
-                  "title": "Blockchain Meet & Greet",
-                  "duration": 60,
-                  "location":
-                    "EPAM Systems, Storozhenka Street, Lviv, Lviv Oblast, Ukraine",
-                  "language": "UKRAINIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Project Manager",
-                      "name": "Anatolii Manko",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/26/thumb_Anatolii_Manko2jpg.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272af839dc28505ee9f8",
-    "id": 1776,
-    "name": "Отказываемся от RxJava в пользу корутин в Kotlin",
-    "type": "epamevents",
-    "city": "Sankt-Peterburg",
-    "url":
-      "https://events.epam.com/events/otkazivaemsya-ot-rxjava-v-polzu-korutin-v-kotlin",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "14:00",
-              "items": [
-                {
-                  "title": "Отказываемся от RxJava в пользу корутин в Kotlin",
-                  "duration": 60,
-                  "location": "Заставская улица, Saint Petersburg, Russia",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Software Engineer",
-                      "name": "Vladimir Ivanov",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/23253/thumb_avatar_20170406-25541-1sgblup.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272bf839dc28505ee9fa",
-    "id": 1810,
-    "name": "Solution Architecture Kyiv Meetup#5: Architecture Kata",
-    "type": "epamevents",
-    "city": "Kyiv",
-    "url":
-      "https://events.epam.com/events/solution-architecture-kyiv-meetup5-architecture-katas",
-    "registrationAvailability": true,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": "Fizkul'tury Street, 30b, Kyiv, Ukraine",
-              "room": "Nagano",
-              "startTime": "18:30",
-              "items": [
-                {
-                  "title": "Architecture Kata",
-                  "duration": 150,
-                  "location": "Fizkul'tury Street, 30b, Kyiv, Ukraine, Nagano",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Solution Architect",
-                      "name": "Stepan Novikov",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/38133/thumb_avatar_20180201-25843-1dj01ki.jpg"
-                    },
-                    {
-                      "jobPosition": "Lead Software Engineer",
-                      "name": "Maksym Kharchenko",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/27055/thumb_avatar_20170623-32630-1ufv77y.jpg"
-                    },
-                    {
-                      "jobPosition": "Lead Software Engineer",
-                      "name": "Yuriy Pogorzhelskiy",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/16107/thumb_avatar_20161201-21675-x0o9fd.jpg"
-                    },
-                    {
-                      "jobPosition": "Solution Architect",
-                      "name": "Izzet Mustafayev",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/337/thumb_me_EPAM_SEC2015.jpg"
-                    }
-                  ]
-                },
-                {
-                  "title": null,
-                  "duration": 30,
-                  "location": null,
-                  "language": null,
-                  "speakers": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272cf839dc28505ee9fb",
-    "id": 1817,
-    "name": "BLOCKCHAIN FOR ENTERPRISES",
-    "type": "epamevents",
-    "city": "Kyiv",
-    "url": "https://events.epam.com/events/blockchain-for-enterprises",
-    "registrationAvailability": true,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "BLOCKCHAIN FOR ENTERPRISES",
-              "location": "Kudryashova Street, 14b, Kyiv, Ukraine",
-              "room": "601",
-              "startTime": "17:00",
-              "items": [
-                {
-                  "title": "BLOCKCHAIN FOR ENTERPRISES",
-                  "duration": 90,
-                  "location": "Kudryashova Street, 14b, Kyiv, Ukraine, 601",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Solution Architect",
-                      "name": "Illya Havsiyevych",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/2548/thumb_mSAPa8JOTF59EoRvfhxpqg7l.jpg"
-                    },
-                    {
-                      "jobPosition": "Director, Delivery Management",
-                      "name": "Roman Polupanov",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/523/thumb_MyPhoto.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272cf839dc28505ee9fc",
-    "id": 1831,
-    "name": "Technical demo of Cloudinary",
-    "type": "epamevents",
-    "city": null,
-    "url": "https://events.epam.com/events/technical-demo-of-cloudinary",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "16:00",
-              "items": [
-                {
-                  "title": "Technical demo of Cloudinary",
-                  "duration": 90,
-                  "location": null,
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Director, Technology Solutions",
-                      "name": "Elvin Rakhmankulov",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1101/thumb_elvin-green-red2.png"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272df839dc28505ee9fd",
-    "id": 1835,
-    "name": "Easter Workshop at Shevchenka Office",
-    "type": "epamevents",
-    "city": "L'viv",
-    "url": "https://events.epam.com/events/easter-workshop-shevchenko-office",
-    "registrationAvailability": true,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Easter",
-              "location": "Shevchenka Street, 111a, Lviv, Lviv Oblast, Ukraine",
-              "room": "Kitchen",
-              "startTime": "18:00",
-              "items": [
-                {
-                  "title": "How to create Easter eggs",
-                  "duration": 120,
-                  "location":
-                    "Shevchenka Street, 111a, Lviv, Lviv Oblast, Ukraine, Kitchen",
-                  "language": "UKRAINIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Junior Software Engineer",
-                      "name": "Viktoriya Nazarevych",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/4248/thumb_FxWchXr87U5kBIdZPwgzs16y.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272ef839dc28505ee9fe",
-    "id": 1838,
-    "name": "EPAM Shenzhen BA Community #1",
-    "type": "epamevents",
-    "city": "Shenzhen",
-    "url":
-      "https://events.epam.com/events/agile-group-dynamics---build-a-great-working-team",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Community",
-              "location": null,
-              "room": null,
-              "startTime": "15:00",
-              "items": [
-                {
-                  "title": "Agile Group Dynamics - Build a great working team",
-                  "duration": 60,
-                  "location": "Shenzhen, Guangdong, China, Stadium, building 5",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Business Analyst",
-                      "name": "Saurabh Gupta",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/17354/thumb_avatar_20170114-3666-wi8jk9.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272ef839dc28505ee9ff",
-    "id": 1841,
-    "name":
-      "[JAVA] IT Share Kharkiv \"Reactive Services with Spring Boot 2.0 and Webflux\"",
-    "type": "epamevents",
-    "city": "Kharkiv",
-    "url":
-      "https://events.epam.com/events/java-it-share-kharkiv-reactive-services-with-spring-boot-20",
-    "registrationAvailability": true,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location":
-                "23-ho Serpnya Street, Kharkiv, Kharkiv Oblast, Ukraine",
-              "room": "805",
-              "startTime": "18:00",
-              "items": [
-                {
-                  "title":
-                    "\"Reactive Services with Spring Boot 2.0 and Webflux\"",
-                  "duration": 60,
-                  "location":
-                    "23-ho Serpnya Street, Kharkiv, Kharkiv Oblast, Ukraine, 805",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Engineer",
-                      "name": "The Viet Nguyen",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1464/thumb_9GSMkqZp1AUOXg2FLm7xaul3.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272ff839dc28505eea00",
-    "id": 1847,
-    "name": "App Maker Solution Practice and Business Value",
-    "type": "epamevents",
-    "city": "Kraków",
-    "url":
-      "https://events.epam.com/events/app-maker-solution-practice-and-business-value",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": "Opolska 114, Kraków, Poland",
-              "room": "11th floor, Educational area",
-              "startTime": "14:00",
-              "items": [
-                {
-                  "title": "App Maker Solution Practice and Business Value",
-                  "duration": 45,
-                  "location":
-                    "Opolska 114, Kraków, Poland, 11th floor, Educational area",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Vasilii Iakovlev",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/35683/thumb_avatar_20171127-1775-xxc2dq.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab9272ff839dc28505eea01",
-    "id": 1853,
-    "name": "Media and Telco: Provisioning for TV & Broadband",
-    "type": "epamevents",
-    "city": null,
-    "url":
-      "https://events.epam.com/events/media-and-telco-provisioning-for-tv-broadband",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Provisioning for TV & Broadband",
-              "location": null,
-              "room": null,
-              "startTime": "18:00",
-              "items": [
-                {
-                  "title": "Provisioning for TV & Broadband",
-                  "duration": 60,
-                  "location": null,
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Solution Architect",
-                      "name": "Frank Groot",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/20806/thumb_1.jpg.png"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92730f839dc28505eea02",
-    "id": 1732,
-    "name": "Lviv Script Community Tech Talk #4: Golang",
-    "type": "epamevents",
-    "city": "L'viv",
-    "url":
-      "https://events.epam.com/events/lviv-script-community-tech-talk-3-golang",
-    "registrationAvailability": true,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "17:00",
-              "items": [
-                {
-                  "title": "Golang Introduction",
-                  "duration": 90,
-                  "location":
-                    "EPAM Systems, Storozhenka Street, Lviv, Lviv Oblast, Ukraine",
-                  "language": "UKRAINIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Software Engineer",
-                      "name": "Yaroslav Hnatiuk",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/4299/thumb_4060741400035732240.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92730f839dc28505eea03",
-    "id": 1798,
-    "name": "Front-End Community Gdańsk Meetup #1",
-    "type": "epamevents",
-    "city": "Gdańsk",
-    "url": "https://events.epam.com/events/front-end-community-gdask-meetup-1",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": "Olivia Business Centre, Gdańsk, Poland",
-              "room": "Olivia Six, Room Gdańsk",
-              "startTime": "14:30",
-              "items": [
-                {
-                  "title": "2017 in numbers",
-                  "duration": 45,
-                  "location":
-                    "Olivia Business Centre, Gdańsk, Poland, Olivia Six, 7th Floor, Room Gdańsk",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Bartosz Sojka",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/840/thumb_Bartosz_Sojka1.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92731f839dc28505eea04",
-    "id": 1828,
-    "name":
-      "Lviv .NET Meetup #4: Containerized ASP.NET Core Apps with Kubernetes",
-    "type": "epamevents",
-    "city": "L'viv",
-    "url":
-      "https://events.epam.com/events/lviv-net-meetup-4-containerized-aspnet-core-apps-with-kubernetes",
-    "registrationAvailability": true,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": null,
-              "room": null,
-              "startTime": "18:00",
-              "items": [
-                {
-                  "title": "Containerized ASP.NET Core Apps with Kubernetes",
-                  "duration": 55,
-                  "location":
-                    "EPAM Systems, Storozhenka Street, Lviv, Lviv Oblast, Ukraine",
-                  "language": "UKRAINIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Andrii Soltys",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/27598/thumb_avatar_20170714-32638-17ntsnb.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92731f839dc28505eea05",
-    "id": 1717,
-    "name": "BA Community. Self-Presentation as a Negotiation Technique",
-    "type": "epamevents",
-    "city": "Kyiv",
-    "url":
-      "https://events.epam.com/events/ba-community-self-presentation-as-a-negotiation-technique",
-    "registrationAvailability": true,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": "Fizkul'tury Street, 30b, Kyiv, Ukraine",
-              "room": "Nagano",
-              "startTime": "18:35",
-              "items": [
-                {
-                  "title": "Self-Presentation as a Negotiation Technique",
-                  "duration": 85,
-                  "location": "Fizkul'tury Street, 30b, Kyiv, Ukraine, Nagano",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Business Analyst",
-                      "name": "Raihan Islam",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/17532/thumb_download.png"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92732f839dc28505eea06",
-    "id": 1786,
-    "name": "E-commerce Tech Talk № 9",
-    "type": "epamevents",
-    "city": null,
-    "url": "https://events.epam.com/events/e-commerce-tech-talk-9",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "E-commerce Tech Talk #9",
-              "location": "Internatsionalnaya Street 13, Gomel, Belarus",
-              "room": "508",
-              "startTime": "18:30",
-              "items": [
-                {
-                  "title": "Reimplementation of the internet shop from scratch",
-                  "duration": 60,
-                  "location":
-                    "Internatsionalnaya Street 13, Gomel, Belarus, 508",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Yauhen Lisimau",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/10664/thumb_avatar_20160914-20109-1hhxyhb.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92733f839dc28505eea07",
-    "id": 1794,
-    "name": "NativeScript: angular, practical application, news",
-    "type": "epamevents",
-    "city": "Izhevsk",
-    "url":
-      "https://events.epam.com/events/nativescript-angular-practical-application-news",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "main",
-              "location": "Izhevsk, Russia",
-              "room":
-                "Room - Izhevsk, V. Sivkova, 150, 407, Creative - for Conference <RFC_IZHVSivk150-407@epam.com>",
-              "startTime": "16:15",
-              "items": [
-                {
-                  "title": "NativeScript: angular, practical application, news",
-                  "duration": 105,
-                  "location": "Izhevsk, Russia",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Junior Software Engineer",
-                      "name": "Vladislav Danilov",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/13306/thumb_avatar_20161018-5866-p6aq4r.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92734f839dc28505eea09",
-    "id": 1833,
-    "name": "Easter Workshop at Stepanivny Office",
-    "type": "epamevents",
-    "city": "L'viv",
-    "url":
-      "https://events.epam.com/events/easter-workshop-at-stepanivny-office",
-    "registrationAvailability": true,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Easter",
-              "location":
-                "Oleny Stepanivny Street, 45, Lviv, Lviv Oblast, Ukraine",
-              "room": "Kitchen Area E / D",
-              "startTime": "18:00",
-              "items": [
-                {
-                  "title": "How to create Easter eggs",
-                  "duration": 120,
-                  "location":
-                    "Oleny Stepanivny Street, 45, Lviv, Lviv Oblast, Ukraine",
-                  "language": "UKRAINIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Engineer",
-                      "name": "Oksana Olkhova",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/27817/thumb_avatar_20170720-23438-1g87dap.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92734f839dc28505eea0a",
-    "id": 1836,
-    "name": "EPAM Shenzhen Java Community #7",
-    "type": "epamevents",
-    "city": "Shenzhen",
-    "url": "https://events.epam.com/events/spring-cloud-overview-practice",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Java Community",
-              "location": "Shenzhen, Guangdong, China",
-              "room": "Conference Room, building 5",
-              "startTime": "17:00",
-              "items": [
-                {
-                  "title": "Spring Cloud overview & practice",
-                  "duration": 60,
-                  "location":
-                    "Shenzhen, Guangdong, China, Conference Room, building 5",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Francis Peng",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/15081/thumb_avatar_20161104-20047-xddyn6.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5ab92735f839dc28505eea0b",
-    "id": 1844,
-    "name": "Multithreading in C#",
-    "type": "epamevents",
-    "city": "Kraków",
-    "url": "https://events.epam.com/events/multithreading-in-csharp",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Main",
-              "location": "Opolska 114, Kraków, Poland",
-              "room": "Zeus I and II",
-              "startTime": "12:00",
-              "items": [
-                {
-                  "title": "Multithreading in C#",
-                  "duration": 90,
-                  "location": "Opolska 114, Kraków, Poland, Zeus I and II",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Yevhen Mordak",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/33859/thumb_avatar_20171102-4299-1d4bfxk.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17163/EAC7C98BE2D043EBA1C8D160DD97EA30.jpg",
+    "country": "Ukraine",
+    "topics": ["\"Getting rid of SELinuxophobia\""]
   },
   {
     "_id": "5ab9273af839dc28505eea15",
@@ -3568,7 +2617,14 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16889/7A57EA7E53A644E199CACD5493A3D1C9.jpg",
+    "country": "India",
+    "topics": [
+      "Docker & Micro Services Orchestration (СI/CD pipeline Implementation)",
+      "Radian : Continuous Security Testing (Case Study)"
+    ]
   },
   {
     "_id": "5ab9273bf839dc28505eea17",
@@ -3713,7 +2769,14 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15582/E02E50C49D9F47119687C26D9C74EBA5.jpg",
+    "country": "Russia",
+    "topics": [
+      "BDD библиотека для написания автотестов",
+      "Selenium - взгляд изнутри"
+    ]
   },
   {
     "_id": "5ab9273cf839dc28505eea18",
@@ -3923,9 +2986,54 @@
               "items": []
             }
           ]
+        },
+        { "date": "2018-03-29T00:00:00Z", "day": 58, "streams": [] },
+        { "date": "2018-03-30T00:00:00Z", "day": 59, "streams": [] },
+        { "date": "2018-03-31T00:00:00Z", "day": 60, "streams": [] },
+        { "date": "2018-04-01T00:00:00Z", "day": 61, "streams": [] },
+        { "date": "2018-04-02T00:00:00Z", "day": 62, "streams": [] },
+        { "date": "2018-04-03T00:00:00Z", "day": 63, "streams": [] },
+        {
+          "date": "2018-04-04T00:00:00Z",
+          "day": 64,
+          "streams": [
+            {
+              "title": "Java Meet-up",
+              "location": null,
+              "room": null,
+              "startTime": "18:30",
+              "items": [
+                {
+                  "title":
+                    "Legacy в облачном окружении, или рассказ о том, как мы Kubernetes внедряли",
+                  "duration": 45,
+                  "location": "1-й Нагатинский проезд 10/1, Москва, Россия",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Systems Engineer",
+                      "name": "Arkadii Emelianov",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/34311/thumb_Arkadii_Emelianov.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/14535/1879E8F747AA429C91421E07B79F7CBB.jpg",
+    "country": "Russia",
+    "topics": [
+      "Spring 5 overview",
+      "Reactive Programming with Spring 5",
+      "Test containers",
+      "Graph Database",
+      "Legacy в облачном окружении, или рассказ о том, как мы Kubernetes внедряли"
+    ]
   },
   {
     "_id": "5ab9273cf839dc28505eea19",
@@ -4162,7 +3270,16 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/14542/B5AE0DF441DA4548B19FC78B02D7DBD5.jpg",
+    "country": "Russia",
+    "topics": [
+      "SPA Architecture",
+      "Frontend minification",
+      "Монады и Javascript",
+      "Прикладная Архитектура"
+    ]
   },
   {
     "_id": "5ab9273df839dc28505eea1a",
@@ -4176,7 +3293,11 @@
     "endDate": "2018-04-19T00:00:00Z",
     "datetime":
       "Fri, January 12, 2018 12:00 AM - Thu, April 19, 2018 12:00 AM CEST",
-    "agenda": { "days": [] }
+    "agenda": { "days": [] },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/13693/imageI5I1QT2M.jpg",
+    "country": "Hungary",
+    "topics": []
   },
   {
     "_id": "5ab9273df839dc28505eea1b",
@@ -4230,7 +3351,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/3203/iStock_000068291903_720x450_72.jpg",
+    "country": null,
+    "topics": []
   },
   {
     "_id": "5ab9ec83f910b7407cdc8bc0",
@@ -4275,7 +3400,7 @@
                         "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/3760/thumb_sFmvCoB9aZfA2LY1hEQ6DRcb.jpg"
                     },
                     {
-                      "jobPosition": "Senior Software Engineer",
+                      "jobPosition": "Scrum Master",
                       "name": "Łukasz Koziel",
                       "avatar":
                         "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/917/thumb_DSC_6405.jpg"
@@ -4287,7 +3412,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17884/4E04F899030D480BBAACFD4C3B5E90D2.jpg",
+    "country": "Poland",
+    "topics": ["Business Value Game"]
   },
   {
     "_id": "5ab9fa90f910b7407cdc8c0b",
@@ -4362,7 +3491,14 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17840/melanga_dissanayake_1.jpg",
+    "country": "Ukraine",
+    "topics": [
+      "Microservices Versioning",
+      "Designing RESTful services: tips and tricks"
+    ]
   },
   {
     "_id": "5aba08aaf910b7407cdc8c37",
@@ -4414,7 +3550,11 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17631/F795E9461F284D92BCD8C5ED995535B1.jpg",
+    "country": "Hungary",
+    "topics": ["Practical testing in Epam"]
   },
   {
     "_id": "5aba08abf910b7407cdc8c38",
@@ -4460,65 +3600,11 @@
           ]
         }
       ]
-    }
-  },
-  {
-    "_id": "5aba08c44e581619f0daa9f4",
-    "id": 1860,
-    "name": "FrontSpot Talks#92",
-    "type": "epamevents",
-    "city": "Minsk",
-    "url": "https://events.epam.com/events/frontspot-talks92",
-    "registrationAvailability": false,
-    "startDate": "2018-03-28T00:00:00Z",
-    "endDate": "2018-03-28T00:00:00Z",
-    "datetime": "Wed, March 28, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "FrontSpot Talks #92",
-              "location": "проспект Жукова 29, Minsk, Belarus",
-              "room": "С 1.2",
-              "startTime": "12:30",
-              "items": [
-                {
-                  "title": "Business Architecture in Javascript",
-                  "duration": 30,
-                  "location": "проспект Жукова 29, Minsk, Belarus, С 1.2",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Lead Software Engineer",
-                      "name": "Aliaksei Bahachuk",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/878/thumb_Aliaksei_Bahachuk.jpg"
-                    }
-                  ]
-                },
-                {
-                  "title": "Soft Skills",
-                  "duration": 30,
-                  "location": "проспект Жукова 29, Minsk, Belarus, С 1.2",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Maksim Yuzva",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1104/thumb_logo.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17906/2576B863C63147E8B59BC8A3815CA819.jpg",
+    "country": "Kazakhstan",
+    "topics": ["Kubernetes"]
   },
   {
     "_id": "5aba16b0f839dc28505eea30",
@@ -4575,59 +3661,11 @@
           ]
         }
       ]
-    }
-  },
-  {
-    "_id": "5aba16bdf839dc28505eea3c",
-    "id": 1863,
-    "name": "Vinnytsia Android Meetup#2018.1",
-    "type": "epamevents",
-    "city": null,
-    "url":
-      "https://events.epam.com/events/vinnytsia-android-community-meetup20181",
-    "registrationAvailability": false,
-    "startDate": "2018-03-29T00:00:00Z",
-    "endDate": "2018-03-29T00:00:00Z",
-    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Flutter — 5 reasons why you may love it",
-              "location": "Vinnytsia, Vinnyts'ka oblast, Ukraine",
-              "room": "Conference Room#304",
-              "startTime": "18:00",
-              "items": [
-                {
-                  "title": "Flutter — 5 reasons why you may love it",
-                  "duration": 60,
-                  "location":
-                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
-                  "language": "RUSSIAN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Pavlo Stavytskyi",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/36762/thumb_avatar_20171213-20931-14yizzn.jpg"
-                    },
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Maksym Yermakov",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/34038/thumb_avatar_20171106-4299-9l5t7l.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17869/384E1F75FF104BB9BF90DD962C4955EC.jpg",
+    "country": "Ukraine",
+    "topics": ["Meet and Learn"]
   },
   {
     "_id": "5aba5d0c66fa5b4bec66a0e7",
@@ -4679,43 +3717,193 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17930/melanga_dissanayake_1.jpg",
+    "country": "Belarus",
+    "topics": ["How we play Golf"]
   },
   {
-    "_id": "5aba873e8dac1a4b904fc06f",
-    "id": 1714,
-    "name": "ASMT in Testing - How to prevent possible faults",
+    "_id": "5abb2ff88dac1a4b904fc083",
+    "id": 1480,
+    "name": "Business Analysts Meetup",
     "type": "epamevents",
-    "city": null,
-    "url": "https://events.epam.com/events/asmt-in-testing-part1",
+    "city": "Sankt-Peterburg",
+    "url": "https://events.epam.com/events/business-analysts-meetup",
     "registrationAvailability": false,
-    "startDate": "2018-03-27T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime": "Tue, March 27, 2018 12:00 AM - 12:00 AM CEST",
+    "startDate": "2018-04-18T00:00:00Z",
+    "endDate": "2018-04-18T00:00:00Z",
+    "datetime": "Wed, April 18, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-27T00:00:00Z",
+          "date": "2018-04-18T00:00:00Z",
           "day": 1,
           "streams": [
             {
-              "title": "ASMT in Testing - How to prevent possible faults...",
-              "location": "Saratov, Russia",
+              "title": "Meetup",
+              "location":
+                "Мегапарк, бизнес-центр, Заставская улица, Санкт-Петербург, Россия",
+              "room": null,
+              "startTime": "19:00",
+              "items": [
+                {
+                  "title": null,
+                  "duration": 10,
+                  "location": null,
+                  "language": null,
+                  "speakers": []
+                },
+                {
+                  "title": "Вступительное слово",
+                  "duration": 10,
+                  "location":
+                    "Мегапарк, бизнес-центр, Zastavskaya Ulitsa, Saint Petersburg, Russia",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Business Analyst",
+                      "name": "Евгения Павлова",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/30696/thumb_pic.JPG.png"
+                    }
+                  ]
+                },
+                {
+                  "title": "Что я несу? Как сделать толковую презентацию",
+                  "duration": 35,
+                  "location":
+                    "Мегапарк, бизнес-центр, Заставская улица, Санкт-Петербург, Россия",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Business Analyst",
+                      "name": "Константин Семенов",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/40871/thumb_konstantin.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title": null,
+                  "duration": 15,
+                  "location": null,
+                  "language": null,
+                  "speakers": []
+                },
+                {
+                  "title": "Как развиваться быстрее всех?",
+                  "duration": 45,
+                  "location":
+                    "Мегапарк, бизнес-центр, Заставская улица, Санкт-Петербург, Россия",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": null,
+                      "name": "Анна Гасраталиева",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/41442/thumb_anna.png"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/14428/E21D57016E014F2389B64F83CD1D2B0C.jpeg",
+    "country": "Russia",
+    "topics": [
+      "Вступительное слово",
+      "Что я несу? Как сделать толковую презентацию",
+      "Как развиваться быстрее всех?"
+    ]
+  },
+  {
+    "_id": "5abb30018dac1a4b904fc093",
+    "id": 1862,
+    "name": "Effective self learning: My Experience",
+    "type": "epamevents",
+    "city": "Karagandy",
+    "url":
+      "https://events.epam.com/events/effective-self-learning-my-experience",
+    "registrationAvailability": false,
+    "startDate": "2018-04-05T00:00:00Z",
+    "endDate": "2018-04-05T00:00:00Z",
+    "datetime": "Thu, April 5, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-05T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Effective self learning: My Experience",
+              "location": "Yermekov Street, Karagandy, Kazakhstan",
+              "room": "405",
+              "startTime": "18:05",
+              "items": [
+                {
+                  "title": "Effective self learning: My Experience",
+                  "duration": 40,
+                  "location": "Yermekov Street, Karagandy, Kazakhstan, 405",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Testing Engineer",
+                      "name": "Yuriy Jurayev",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/23375/thumb_avatar_20170407-18593-b863dr.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17913/6F8F5145538143008664046F6D44F138.jpg",
+    "country": "Kazakhstan",
+    "topics": ["Effective self learning: My Experience"]
+  },
+  {
+    "_id": "5abb59ac9374ee2e048b8923",
+    "id": 1713,
+    "name": "JBehave in practice",
+    "type": "epamevents",
+    "city": null,
+    "url": "https://events.epam.com/events/jbehave-in-practice",
+    "registrationAvailability": false,
+    "startDate": "2018-04-26T00:00:00Z",
+    "endDate": "2018-04-26T00:00:00Z",
+    "datetime": "Thu, April 26, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-26T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "JBehave in practice",
+              "location": "Hyderabad, Telangana, India",
               "room": null,
               "startTime": "10:00",
               "items": [
                 {
-                  "title":
-                    "ASMT in Testing - How to prevent possible faults...",
-                  "duration": 90,
-                  "location": "Saratov, Russia",
+                  "title": "JBehave in practice",
+                  "duration": 60,
+                  "location": "Hyderabad, Telangana, India",
                   "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "Senior Software Testing Manager",
-                      "name": "Andrew Below",
+                      "jobPosition": "Chief Software Test Automation Engineer",
+                      "name": "Anand Topu",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/311/thumb_AB.png"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/18044/thumb_IMG_20171004_193929.jpg"
                     }
                   ]
                 }
@@ -4724,206 +3912,313 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16580/FE792A8E90AB4CAEA02802E15BF8D3DA.jpg",
+    "country": null,
+    "topics": ["JBehave in practice"]
   },
   {
-    "_id": "5aba873f8dac1a4b904fc070",
-    "id": 569,
-    "name": "QR scanner test (each)",
+    "_id": "5abb59ae9374ee2e048b8927",
+    "id": 1635,
+    "name": "Agile Economy Meet up",
+    "type": "epamevents",
+    "city": "Minsk",
+    "url": "https://events.epam.com/events/agile-economy",
+    "registrationAvailability": false,
+    "startDate": "2018-04-18T00:00:00Z",
+    "endDate": "2018-04-18T00:00:00Z",
+    "datetime": "Wed, April 18, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": { "days": [] },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/15880/E614C89589AC4B12BF1A5732B0219243.jpg",
+    "country": "Belarus",
+    "topics": []
+  },
+  {
+    "_id": "5abb67c266fa5b4bec66a251",
+    "id": 1868,
+    "name": ".NET Krakow meetup",
     "type": "epamevents",
     "city": null,
-    "url": "https://events.epam.com/events/test---each",
-    "registrationAvailability": true,
-    "startDate": "2018-03-27T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime": "Tue, March 27, 2018 12:00 AM - 12:00 AM CEST",
+    "url": "https://events.epam.com/events/net-krakow-meetup",
+    "registrationAvailability": false,
+    "startDate": "2018-04-12T00:00:00Z",
+    "endDate": "2018-04-12T00:00:00Z",
+    "datetime": "Thu, April 12, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-27T00:00:00Z",
+          "date": "2018-04-12T00:00:00Z",
           "day": 1,
           "streams": [
             {
-              "title": "Keynote",
-              "location": null,
+              "title": "Main ",
+              "location": "Podgórska 16, Kraków, Poland",
               "room": null,
-              "startTime": "09:00",
+              "startTime": "18:00",
               "items": [
                 {
-                  "title": "A- talk for test 2",
+                  "title": "OWIN",
+                  "duration": 30,
+                  "location": "Podgórska 16, Kraków, Poland",
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Artyom Avetisyan",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/2854/thumb_D4sZdFMEBHIQbcw2aJNnU0lp.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title": null,
                   "duration": 15,
                   "location": null,
+                  "language": null,
+                  "speakers": []
+                },
+                {
+                  "title": "Case study: Moving from MS SQL server to MongoDb",
+                  "duration": 40,
+                  "location": "Podgórska 16, Kraków, Poland",
                   "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "Senior Software Testing Engineer",
-                      "name": "Aksana Bakovets",
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Evgenii Kuzmin",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/3673/thumb_z.png"
-                    },
-                    {
-                      "jobPosition": "test",
-                      "name": "Aksana  Gmail test",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/10467/thumb_2_-_Copy.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/11607/thumb_avatar_20160923-31179-pmr1lr.jpg"
                     }
                   ]
                 },
                 {
-                  "title": "talk for test 7",
+                  "title": null,
                   "duration": 15,
                   "location": null,
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": null,
-                      "name": "epmgthb",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9544/thumb_avatar_20160906-26403-19m4fnx.png"
-                    },
-                    {
-                      "jobPosition": null,
-                      "name": "Fortest Epam",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9517/thumb_avatar_20160906-25616-17tp7kj.jpg"
-                    }
-                  ]
+                  "language": null,
+                  "speakers": []
                 },
                 {
-                  "title": "555 - talk for test 9",
-                  "duration": 45,
-                  "location": null,
+                  "title":
+                    "Bootstrap 4: The best CSS framework for ASP.NET application?",
+                  "duration": 40,
+                  "location": "Podgórska 16, Kraków, Poland",
                   "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "CEO & President",
-                      "name": "Test Epam",
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Oleksii Potiekhin",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9532/thumb_avatar_20160906-25616-1bg3l6i.png"
-                    }
-                  ]
-                },
-                {
-                  "title": "talk for test 5",
-                  "duration": 20,
-                  "location": null,
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": null,
-                      "name": "Even Portepam",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9540/thumb_avatar_20160906-27148-g5mv3f.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/3008/thumb_1T87g0htw4Wu3qPcob5O9Y2m.jpg"
                     }
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "date": "2018-03-28T00:00:00Z",
-          "day": 2,
-          "streams": [
-            {
-              "title": "Stream3",
-              "location": "Москва, город Москва, Россия",
-              "room": "test1",
-              "startTime": "13:00",
-              "items": [
-                {
-                  "title": "Talk for test 4",
-                  "duration": 45,
-                  "location": "Москва, город Москва, Россия, test1",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": null,
-                      "name": "epmgthb",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9544/thumb_avatar_20160906-26403-19m4fnx.png"
-                    }
-                  ]
-                },
-                {
-                  "title": "B-talk for test 8",
-                  "duration": 15,
-                  "location": "Москва, город Москва, Россия, test1",
-                  "language": "MANDARIN",
-                  "speakers": [
-                    {
-                      "jobPosition": "Software Testing Engineer",
-                      "name": "Oksana Ioskevich",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/16087/thumb_Oksana_Ioskevich.png"
-                    },
-                    {
-                      "jobPosition": null,
-                      "name": "Even Portepam",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9540/thumb_avatar_20160906-27148-g5mv3f.jpg"
-                    }
-                  ]
-                },
-                {
-                  "title": "talk for test 6",
-                  "duration": 45,
-                  "location": "Москва, город Москва, Россия, test1",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": null,
-                      "name": "Fortest Epam",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9517/thumb_avatar_20160906-25616-17tp7kj.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date": "2018-03-29T00:00:00Z",
-          "day": 3,
-          "streams": [
-            {
-              "title": "Stream3",
-              "location": "Москва, город Москва, Россия",
-              "room": "test1",
-              "startTime": "09:00",
-              "items": []
             }
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17961/27330A97E42E473E8D7ECCD061B13022.jpg",
+    "country": null,
+    "topics": [
+      "OWIN",
+      "Case study: Moving from MS SQL server to MongoDb",
+      "Bootstrap 4: The best CSS framework for ASP.NET application?"
+    ]
   },
   {
-    "_id": "5aba873f8dac1a4b904fc071",
-    "id": 1787,
-    "name": "Test Automation Meetup Saint-Petersburg",
+    "_id": "5abb67c766fa5b4bec66a25b",
+    "id": 1867,
+    "name": "Deploying Micro-services",
     "type": "epamevents",
-    "city": "Sankt-Peterburg",
-    "url": "https://events.epam.com/events/test-auto-meetup-spb",
+    "city": "Kraków",
+    "url": "https://events.epam.com/events/jcktt-talk-deploying-micro-services",
     "registrationAvailability": false,
-    "startDate": "2018-03-27T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime": "Tue, March 27, 2018 12:00 AM - 12:00 AM CEST",
+    "startDate": "2018-04-05T00:00:00Z",
+    "endDate": "2018-04-05T00:00:00Z",
+    "datetime": "Thu, April 5, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-27T00:00:00Z",
+          "date": "2018-04-05T00:00:00Z",
           "day": 1,
           "streams": [
             {
-              "title": "Программа",
-              "location":
-                "Мегапарк, бизнес-центр, Zastavskaya Ulitsa, Saint Petersburg, Russia",
-              "room": null,
-              "startTime": "19:00",
-              "items": []
-            },
+              "title": "Tech Talk",
+              "location": "Opolska 114, Kraków, Poland",
+              "room": "11th floor, Educational zone",
+              "startTime": "16:00",
+              "items": [
+                {
+                  "title": "Deploying Micro-services",
+                  "duration": 60,
+                  "location":
+                    "Opolska 114, Kraków, Poland, 11th floor, Educational zone",
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Lukasz Zielinski",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/18326/thumb_avatar_20170202-1207-43fukn.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17955/B87475EF40AE469491E79342471EE93D.jpg",
+    "country": "Poland",
+    "topics": ["Deploying Micro-services"]
+  },
+  {
+    "_id": "5abb91e666fa5b4bec66a299",
+    "id": 1870,
+    "name": "Vinnytsia Android Meetup #2018.2",
+    "type": "epamevents",
+    "city": "Vinnytsia",
+    "url": "https://events.epam.com/events/vinnytsia-android-meetup-20182",
+    "registrationAvailability": false,
+    "startDate": "2018-04-19T00:00:00Z",
+    "endDate": "2018-04-19T00:00:00Z",
+    "datetime": "Thu, April 19, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-19T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Okta SSO for Android",
+              "location": "Vinnytsia, Vinnyts'ka oblast, Ukraine",
+              "room": "Conference Room#304",
+              "startTime": "17:30",
+              "items": [
+                {
+                  "title": "Okta SSO for Android",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Engineer",
+                      "name": "Roman Gorenko",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/10343/thumb_avatar_20160912-25690-19q5dw8.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17979/42393A4F629F444BB3DADB2266716B7B.jpg",
+    "country": "Ukraine",
+    "topics": ["Okta SSO for Android"]
+  },
+  {
+    "_id": "5abb91f266fa5b4bec66a2b0",
+    "id": 1869,
+    "name": "DesignSpot Talk #21",
+    "type": "epamevents",
+    "city": "Minsk",
+    "url": "https://events.epam.com/events/designspot-talk-21",
+    "registrationAvailability": false,
+    "startDate": "2018-03-30T00:00:00Z",
+    "endDate": "2018-03-30T00:00:00Z",
+    "datetime": "Fri, March 30, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-30T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "DesignSpot Talk#21",
+              "location": "vulісa Akadеmіka Kuprеvіča 3в, Minsk, Belarus",
+              "room": "Open Space,  6fl",
+              "startTime": "16:00",
+              "items": [
+                {
+                  "title": "Practical cases on redesign of Learn Portal",
+                  "duration": 25,
+                  "location":
+                    "vulісa Akadеmіka Kuprеvіča 3в, Minsk, Belarus, Open Space,  6fl",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Associate Experience Designer",
+                      "name": "Krystsina Svirydzenka",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/30209/thumb_avatar_20170830-20052-1k8s78l.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title":
+                    "About «Design Thinking» workshops and difficulties with it",
+                  "duration": 30,
+                  "location":
+                    "vulісa Akadеmіka Kuprеvіča 3в, Minsk, Belarus, Open Space,  6fl",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Associate Experience Designer",
+                      "name": "Svetlana Jeltok",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/37058/thumb_e9bc2e5f-ab67-4abb-af58-66a0e418f88a.jpg"
+                    },
+                    {
+                      "jobPosition": "Experience Designer",
+                      "name": "Hanna Kolesava",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/14938/thumb_avatar_20161102-4836-jg2db.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17967/iStock_87618379_print.jpg",
+    "country": "Belarus",
+    "topics": [
+      "Practical cases on redesign of Learn Portal",
+      "About «Design Thinking» workshops and difficulties with it"
+    ]
+  },
+  {
+    "_id": "5abbbc21cfd9364dc8de94f5",
+    "id": 1865,
+    "name": "Mobile Meetup Saint-Petersburg",
+    "type": "epamevents",
+    "city": "Sankt-Peterburg",
+    "url": "https://events.epam.com/events/mobile-meetup-spb",
+    "registrationAvailability": false,
+    "startDate": "2018-04-10T00:00:00Z",
+    "endDate": "2018-04-10T00:00:00Z",
+    "datetime": "Tue, April 10, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-10T00:00:00Z",
+          "day": 1,
+          "streams": [
             {
               "title": "Программа",
               "location":
@@ -4940,39 +4235,39 @@
                 },
                 {
                   "title":
-                    "Строим эффективную команду автоматического тестирования. Руководство.",
+                    "Как получить доступ ко всем возможностям мобильной платформы в React Native",
                   "duration": 45,
                   "location":
                     "Мегапарк, бизнес-центр, Zastavskaya Ulitsa, Saint Petersburg, Russia",
-                  "language": "Русский",
+                  "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "Chief Software Test Automation Engineer",
-                      "name": "Антон Шапин",
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Владимир Иванов",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1007/thumb_avatar.png"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/23253/thumb_avatar_20170406-25541-1sgblup.jpg"
                     }
                   ]
                 },
                 {
                   "title": null,
-                  "duration": 15,
+                  "duration": 10,
                   "location": null,
                   "language": null,
                   "speakers": []
                 },
                 {
-                  "title": "Epam Engineers' Factory. TestSystem",
+                  "title": "Unity как iOS Framework",
                   "duration": 45,
                   "location":
                     "Мегапарк, бизнес-центр, Zastavskaya Ulitsa, Saint Petersburg, Russia",
-                  "language": "Русский",
+                  "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "Senior Software Test Automation Engineer",
-                      "name": "Андрей Звездин",
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Максим Купецкий",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/40724/thumb_EHQFMS9BihLWkzf4jJP6uAwU.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/41430/thumb_0yh5Zw9ft7nJ82oLBQmjPpRs.jpg"
                     }
                   ]
                 }
@@ -4981,45 +4276,650 @@
           ]
         }
       ]
-    }
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17939/CA086BA9A55D4B38800954D82E1380BD.jpg",
+    "country": "Russia",
+    "topics": [
+      "Как получить доступ ко всем возможностям мобильной платформы в React Native",
+      "Unity как iOS Framework"
+    ]
   },
   {
-    "_id": "5aba87408dac1a4b904fc072",
-    "id": 1815,
-    "name":
-      "Lviv QA Community # 4: Applying Agile Testing in a Waterfall World",
+    "_id": "5abbca22f839dc28505eecf4",
+    "id": 1738,
+    "name": "EPAM INSIDER Nizhniy Novgorod",
     "type": "epamevents",
-    "city": "L'viv",
-    "url":
-      "https://events.epam.com/events/lviv-qa-community-4-applying-agile-testing-in-a-waterfall-world",
-    "registrationAvailability": true,
-    "startDate": "2018-03-27T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime": "Tue, March 27, 2018 12:00 AM - 12:00 AM CEST",
+    "city": "Nizhnij Novgorod",
+    "url": "https://events.epam.com/events/insider_nn",
+    "registrationAvailability": false,
+    "startDate": "2018-04-21T00:00:00Z",
+    "endDate": "2018-04-21T00:00:00Z",
+    "datetime": "Sat, April 21, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-27T00:00:00Z",
+          "date": "2018-04-21T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "JAVA | BIG DATA",
+              "location": null,
+              "room": null,
+              "startTime": "11:30",
+              "items": [
+                {
+                  "title": "Приветственное слово",
+                  "duration": 45,
+                  "location":
+                    "улица Советская, 12, Нижний Новгород, Nizhny Novgorod Oblast, Russia",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Director",
+                      "name": "Артём Торосян",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1041/thumb_Artem_Torosyan.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16790/D328FF4D488C44B19B459DB5834F1741.jpg",
+    "country": "Russia",
+    "topics": ["Приветственное слово"]
+  },
+  {
+    "_id": "5abcc76e258bbd4d38d0fd19",
+    "id": 1875,
+    "name": "Lviv DevOps Meetup #7",
+    "type": "epamevents",
+    "city": "L'viv",
+    "country": "Ukraine",
+    "url": "https://events.epam.com/events/lviv-devops-meetup-7",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18014/melanga_dissanayake_1.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-03-30T00:00:00Z",
+    "endDate": "2018-03-30T00:00:00Z",
+    "datetime": "Fri, March 30, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-30T00:00:00Z",
           "day": 1,
           "streams": [
             {
               "title": "Main",
               "location": null,
               "room": null,
-              "startTime": "17:30",
+              "startTime": "17:00",
               "items": [
                 {
-                  "title": "Applying Agile Testing in a Waterfall world",
+                  "title": "Docker SWARM Intro",
+                  "duration": 45,
+                  "location":
+                    "EPAM Systems, Storozhenka Street, Lviv, Lviv Oblast, Ukraine",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Junior Systems Engineer",
+                      "name": "Maksym Musiienko",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/16019/thumb_avatar_20161130-11448-qtz349.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Docker SWARM Intro"]
+  },
+  {
+    "_id": "5abce373cfd9364dc8de95eb",
+    "id": 1841,
+    "name":
+      "[JAVA] IT Share Kharkiv \"Reactive Services with Spring Boot 2.0 and Webflux\"",
+    "type": "epamevents",
+    "city": "Kharkiv",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/java-it-share-kharkiv-reactive-services-with-spring-boot-20",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17738/EC294EA6EBB04E3887A4D1964611CA70.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-04-16T00:00:00Z",
+    "endDate": "2018-04-16T00:00:00Z",
+    "datetime": "Mon, April 16, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-16T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location":
+                "23-ho Serpnya Street, Kharkiv, Kharkiv Oblast, Ukraine",
+              "room": "805",
+              "startTime": "18:00",
+              "items": [
+                {
+                  "title":
+                    "\"Reactive Services with Spring Boot 2.0 and Webflux\"",
+                  "duration": 60,
+                  "location":
+                    "23-ho Serpnya Street, Kharkiv, Kharkiv Oblast, Ukraine, 805",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Engineer",
+                      "name": "The Viet Nguyen",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1464/thumb_9GSMkqZp1AUOXg2FLm7xaul3.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["\"Reactive Services with Spring Boot 2.0 and Webflux\""]
+  },
+  {
+    "_id": "5abcf17547f9f52634be9f06",
+    "id": 1881,
+    "name": "True Story: SAP-WEB. Quality Assurance",
+    "type": "epamevents",
+    "city": "Vinnytsia",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/true-story-sap-web-quality-assurance",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18063/CE49CE3D5F914A41B1B1BBC981269FC2.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-26T00:00:00Z",
+    "endDate": "2018-04-26T00:00:00Z",
+    "datetime": "Thu, April 26, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-26T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "True Story: SAP-WEB. Quality Assurance",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia National Medical University, Pyrohova Street, Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Software Testing Engineer",
+                      "name": "Dmytro Oksymchuk",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/24909/thumb_avatar_20170517-13719-37a6u9.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["True Story: SAP-WEB. Quality Assurance"]
+  },
+  {
+    "_id": "5abcf17647f9f52634be9f07",
+    "id": 1882,
+    "name": "True Story: SAP-WEB. Business Communication",
+    "type": "epamevents",
+    "city": "Vinnytsia",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/true-story-sap-web-business-communication",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18071/6379EC197EA34389952A048BB5404B5D.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-24T00:00:00Z",
+    "endDate": "2018-04-24T00:00:00Z",
+    "datetime": "Tue, April 24, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-24T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "True Story: SAP-WEB. Business Communication",
+              "location": "Vinnytsia Oblast, Ukraine",
+              "room": "Conference Room#304",
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "True Story: SAP-WEB. Business Communication",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Business Analyst",
+                      "name": "Pavlo Byshovets",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/6822/thumb_mWM6RkXyt8UA4u5FqZzEVTdc.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["True Story: SAP-WEB. Business Communication"]
+  },
+  {
+    "_id": "5abcf17847f9f52634be9f0c",
+    "id": 1880,
+    "name": "True Story: SAP-WEB - Backend",
+    "type": "epamevents",
+    "city": "Vinnytsia",
+    "country": "Ukraine",
+    "url": "https://events.epam.com/events/true-story-sap-web---backend",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18055/2C48366CEDE64287A6F5305E531BF124.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-19T00:00:00Z",
+    "endDate": "2018-04-19T00:00:00Z",
+    "datetime": "Thu, April 19, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-19T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "True Story: SAP-WEB. Backend",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Serhiy Piddubchak",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/19659/thumb_ctx7TNpCAJZL3BPG1jYHzIXQ.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["True Story: SAP-WEB. Backend"]
+  },
+  {
+    "_id": "5abcf17e47f9f52634be9f16",
+    "id": 1831,
+    "name": "Technical demo of Cloudinary",
+    "type": "epamevents",
+    "city": null,
+    "country": null,
+    "url": "https://events.epam.com/events/technical-demo-of-cloudinary",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17663/52A8BDEB58C1431EB7763146345756CA.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-12T00:00:00Z",
+    "endDate": "2018-04-12T00:00:00Z",
+    "datetime": "Thu, April 12, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-12T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "16:00",
+              "items": [
+                {
+                  "title": "Technical demo of Cloudinary",
+                  "duration": 90,
+                  "location": null,
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Director, Technology Solutions",
+                      "name": "Elvin Rakhmankulov",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1101/thumb_elvin-green-red2.png"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Technical demo of Cloudinary"]
+  },
+  {
+    "_id": "5abcf17f47f9f52634be9f19",
+    "id": 1879,
+    "name": "True Story: SAP-WEB. Frontend",
+    "type": "epamevents",
+    "city": "Vinnytsia",
+    "country": "Ukraine",
+    "url": "https://events.epam.com/events/true-story-sap-web-frontend",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18047/1C23AD1BDB8F4D73AAA58772EB3650F2.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-12T00:00:00Z",
+    "endDate": "2018-04-12T00:00:00Z",
+    "datetime": "Thu, April 12, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-12T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "True Story: SAP-WEB. Frontend",
+              "location": "Vinnytsia, Vinnyts'ka oblast, Ukraine",
+              "room": "Conference Room#304",
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "True Story: SAP-WEB. Frontend",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Engineer",
+                      "name": "Oleksandr Zubov",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/6969/thumb_IMG_5756.JPG"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["True Story: SAP-WEB. Frontend"]
+  },
+  {
+    "_id": "5abcf18647f9f52634be9f26",
+    "id": 1876,
+    "name": "Agile meetup 5th of April 2018",
+    "type": "epamevents",
+    "city": null,
+    "country": null,
+    "url": "https://events.epam.com/events/agile-meetup-5th-of-april-2018",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18025/8DF8473AD59945A98AE7160237D461E5.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-05T00:00:00Z",
+    "endDate": "2018-04-05T00:00:00Z",
+    "datetime": "Thu, April 5, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-05T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Persentation",
+              "location": null,
+              "room": null,
+              "startTime": "12:00",
+              "items": [
+                {
+                  "title": "Agile at Scale - Inspired by Spotify",
+                  "duration": 60,
+                  "location":
+                    "Budapest, Futó utca, Hungary, 001-a - for Training",
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Agile Coach",
+                      "name": "Jonathan Moss",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/987/thumb_Unknown.png"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Agile at Scale - Inspired by Spotify"]
+  },
+  {
+    "_id": "5abcf18747f9f52634be9f28",
+    "id": 1878,
+    "name": "True Story: SAP-WEB. Overview and Agile",
+    "type": "epamevents",
+    "city": "Vinnytsia",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/true-story-sap-web---overview-and-agile",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18037/44D2C8071FD84C6B8184AE1F35490975.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-04-04T00:00:00Z",
+    "endDate": "2018-04-04T00:00:00Z",
+    "datetime": "Wed, April 4, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-04T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "True Story: SAP-WEB. Overview and Agile",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Oleksandr Pavlovskyi",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/19311/thumb_ava-2017-2.png"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["True Story: SAP-WEB. Overview and Agile"]
+  },
+  {
+    "_id": "5abcf18a47f9f52634be9f2e",
+    "id": 1877,
+    "name":
+      "[DevOps] IT Share Kharkiv \"Solr for Hybris inside Kubernetes cluster\"",
+    "type": "epamevents",
+    "city": "Kharkiv",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/devops-it-share-kharkiv-solr-for-hybris-inside-kubernetes",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/18031/F806A3BA6A4F4912B1A888A6C92BCC9C.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-04-03T00:00:00Z",
+    "endDate": "2018-04-03T00:00:00Z",
+    "datetime": "Tue, April 3, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-04-03T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location":
+                "23-ho Serpnya Street, Kharkiv, Kharkiv Oblast, Ukraine",
+              "room": "805",
+              "startTime": "18:00",
+              "items": [
+                {
+                  "title": "\"Solr for Hybris inside Kubernetes cluster\"",
+                  "duration": 60,
+                  "location":
+                    "23-ho Serpnya Street, Kharkiv, Kharkiv Oblast, Ukraine, 805",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Student",
+                      "name": "Dmytro Kabachenko",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/27210/thumb_avatar_20170703-32626-whp82u.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["\"Solr for Hybris inside Kubernetes cluster\""]
+  },
+  {
+    "_id": "5abd29ca8dac1a4b904fc20e",
+    "id": 1715,
+    "name": "Test Management (Part2) based on ISTQB",
+    "type": "epamevents",
+    "city": null,
+    "country": null,
+    "url":
+      "https://events.epam.com/events/test-management-part2-based-on-istqb",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16592/E4DCB23939014911A5ABB7043C2B48A4.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Test Management (Part2) based on ISTQB",
+              "location": "Kiev, Ukraine",
+              "room": null,
+              "startTime": "10:00",
+              "items": [
+                {
+                  "title": "Test Management (Part2) based on ISTQB",
+                  "duration": 120,
+                  "location": "Kiev, Ukraine",
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Lead Software Testing Engineer",
+                      "name": "Iryna Zhylinska",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/2242/thumb_RN8Cpe4o1wqHsUcDhryXOZmI.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Test Management (Part2) based on ISTQB"]
+  },
+  {
+    "_id": "5abd29ce8dac1a4b904fc20f",
+    "id": 1778,
+    "name": "Blockchain Brainstorm",
+    "type": "epamevents",
+    "city": "L'viv",
+    "country": "Ukraine",
+    "url": "https://events.epam.com/events/blockchain-brainstorm",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17174/79E55E36A3974C3DB91051281E9E2852.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "16:00",
+              "items": [
+                {
+                  "title": "Blockchain Meet & Greet",
                   "duration": 60,
                   "location":
                     "EPAM Systems, Storozhenka Street, Lviv, Lviv Oblast, Ukraine",
                   "language": "UKRAINIAN",
                   "speakers": [
                     {
-                      "jobPosition": "Lead Software Testing Engineer",
-                      "name": "Nataliya Vedernikova",
+                      "jobPosition": "Project Manager",
+                      "name": "Anatolii Manko",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/19234/thumb_avatar_20170221-23533-l0ykaz.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/26/thumb_Anatolii_Manko2jpg.jpg"
                     }
                   ]
                 }
@@ -5028,87 +4928,475 @@
           ]
         }
       ]
-    }
+    },
+    "topics": ["Blockchain Meet & Greet"]
   },
   {
-    "_id": "5aba87408dac1a4b904fc073",
-    "id": 1819,
-    "name": "BA Meetup: Lean Coffee - 27th of March",
+    "_id": "5abd29cf8dac1a4b904fc210",
+    "id": 1732,
+    "name": "Lviv Script Community Tech Talk #4: Golang",
     "type": "epamevents",
-    "city": "Budapest",
-    "url": "https://events.epam.com/events/ba-meetup-lean-coffee-27th-of-march",
-    "registrationAvailability": false,
-    "startDate": "2018-03-27T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime": "Tue, March 27, 2018 12:00 AM - 12:00 AM CEST",
+    "city": "L'viv",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/lviv-script-community-tech-talk-3-golang",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16738/3231283FA7B04812B43945F267B68D06.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-27T00:00:00Z",
+          "date": "2018-03-29T00:00:00Z",
           "day": 1,
           "streams": [
             {
-              "title": "BA Lean Coffee",
-              "location": "Budapest, Futó utca 31, Hungary",
-              "room": "Corvin Corner 1st floor - Ritchie Room",
-              "startTime": "12:00",
-              "items": [
-                {
-                  "title": "BA Lean Coffee",
-                  "duration": 60,
-                  "location":
-                    "Budapest, Futó utca 31, Hungary, Corvin Corner 1st floor - Ritchie Room",
-                  "language": "ENGLISH",
-                  "speakers": [
-                    {
-                      "jobPosition": "Senior Business Analyst",
-                      "name": "Balazs Nemes",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/27159/thumb_avatar_20170629-32630-yxnvez.jpg"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "_id": "5aba87418dac1a4b904fc074",
-    "id": 1840,
-    "name": "EPAM Shenzhen Automation Community #1",
-    "type": "epamevents",
-    "city": "Shenzhen",
-    "url": "https://events.epam.com/events/mobile-automation---appium",
-    "registrationAvailability": false,
-    "startDate": "2018-03-27T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime": "Tue, March 27, 2018 12:00 AM - 12:00 AM CEST",
-    "agenda": {
-      "days": [
-        {
-          "date": "2018-03-27T00:00:00Z",
-          "day": 1,
-          "streams": [
-            {
-              "title": "Community",
+              "title": "Main",
               "location": null,
               "room": null,
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "Golang Introduction",
+                  "duration": 90,
+                  "location":
+                    "EPAM Systems, Storozhenka Street, Lviv, Lviv Oblast, Ukraine",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Yaroslav Hnatiuk",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/4299/thumb_4060741400035732240.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Golang Introduction"]
+  },
+  {
+    "_id": "5abd29cf8dac1a4b904fc211",
+    "id": 1748,
+    "name": "MiniQ Vitebsk",
+    "type": "epamevents",
+    "city": "Viciebsk",
+    "country": "Belarus",
+    "url": "https://events.epam.com/events/miniq-vitebsk-10",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/16895/762AFA7BA9E2473BB151A0943F3CD78F.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "18:30",
+              "items": [
+                {
+                  "title": null,
+                  "duration": 30,
+                  "location": null,
+                  "language": null,
+                  "speakers": []
+                },
+                {
+                  "title":
+                    "Используем контейнеры, или Не дай заказчику повалить продакшн",
+                  "duration": 40,
+                  "location": "Stroiteley Avenue 1, Vitebsk, Belarus",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Engineer",
+                      "name": "Aleksandr Stasko",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/9593/thumb__3FBCCEB1208A8F5D7EC38FCFBB69227949E2C6D2E52429D2C8_pimgpsh_fullsize_distr.jpg"
+                    },
+                    {
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Aliaksandr Shynkevich",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/15211/thumb__99806B7B43111461EF955D199A4BAC52BFB75C5AEE69799209_pimgpsh_fullsize_distr.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title": null,
+                  "duration": 20,
+                  "location": null,
+                  "language": null,
+                  "speakers": []
+                },
+                {
+                  "title": "Переход на DynamoDB. Есть ли жизнь после MongoDB?",
+                  "duration": 45,
+                  "location": "Stroiteley Avenue 1, Vitebsk, Belarus",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Software Engineer",
+                      "name": "Tsimur Vial",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/28406/thumb_IMG_1853.JPG"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": [
+      "Используем контейнеры, или Не дай заказчику повалить продакшн",
+      "Переход на DynamoDB. Есть ли жизнь после MongoDB?"
+    ]
+  },
+  {
+    "_id": "5abd29d08dac1a4b904fc212",
+    "id": 1776,
+    "name": "Отказываемся от RxJava в пользу корутин в Kotlin",
+    "type": "epamevents",
+    "city": "Sankt-Peterburg",
+    "country": "Russia",
+    "url":
+      "https://events.epam.com/events/otkazivaemsya-ot-rxjava-v-polzu-korutin-v-kotlin",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17161/71E8B8177CF84820B7EE936F731637B9.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": null,
+              "room": null,
+              "startTime": "14:00",
+              "items": [
+                {
+                  "title": "Отказываемся от RxJava в пользу корутин в Kotlin",
+                  "duration": 60,
+                  "location": "Заставская улица, Saint Petersburg, Russia",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Владимир Иванов",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/23253/thumb_avatar_20170406-25541-1sgblup.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Отказываемся от RxJava в пользу корутин в Kotlin"]
+  },
+  {
+    "_id": "5abd29d08dac1a4b904fc213",
+    "id": 1804,
+    "name": "Gomel Solution Architecture Meetup #4",
+    "type": "epamevents",
+    "city": null,
+    "country": null,
+    "url": "https://events.epam.com/events/gomel-aei-meetup-89",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17400/AF2D73F448CE4287BABA7207714A7101.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Gomel AEI Meetup",
+              "location": "площадь Ленина 2, Гомель, Belarus",
+              "room": "Мята Lounge",
+              "startTime": "18:45",
+              "items": [
+                {
+                  "title": "Case study: data ingestion pipeline for EBSCO",
+                  "duration": 60,
+                  "location": "площадь Ленина 2, Гомель, Belarus, Мята Lounge",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Raman Auramau",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/10711/thumb_avatar_20160915-23842-qc8cz2.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title": "The Server of Transport Transactions",
+                  "duration": 70,
+                  "location": "площадь Ленина 2, Гомель, Belarus, Мята Lounge",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Development Team Lead",
+                      "name": "Vasil Varabyou",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/40730/thumb______2.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": [
+      "Case study: data ingestion pipeline for EBSCO",
+      "The Server of Transport Transactions"
+    ]
+  },
+  {
+    "_id": "5abd29d18dac1a4b904fc214",
+    "id": 1810,
+    "name": "Solution Architecture Kyiv Meetup#5: Architecture Kata",
+    "type": "epamevents",
+    "city": "Kyiv",
+    "country": "Ukraine",
+    "url":
+      "https://events.epam.com/events/solution-architecture-kyiv-meetup5-architecture-katas",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17455/46EB22722AF34099AB771A97B0AA04EC.jpeg",
+    "registrationAvailability": true,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Main",
+              "location": "Fizkul'tury Street, 30b, Kyiv, Ukraine",
+              "room": "Nagano",
+              "startTime": "18:30",
+              "items": [
+                {
+                  "title": "Architecture Kata",
+                  "duration": 150,
+                  "location": "Fizkul'tury Street, 30b, Kyiv, Ukraine, Nagano",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Solution Architect",
+                      "name": "Stepan Novikov",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/38133/thumb_avatar_20180201-25843-1dj01ki.jpg"
+                    },
+                    {
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Maksym Kharchenko",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/27055/thumb_avatar_20170623-32630-1ufv77y.jpg"
+                    },
+                    {
+                      "jobPosition": "Lead Software Engineer",
+                      "name": "Yuriy Pogorzhelskiy",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/16107/thumb_avatar_20161201-21675-x0o9fd.jpg"
+                    },
+                    {
+                      "jobPosition": "Solution Architect",
+                      "name": "Izzet Mustafayev",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/337/thumb_me_EPAM_SEC2015.jpg"
+                    }
+                  ]
+                },
+                {
+                  "title": null,
+                  "duration": 30,
+                  "location": null,
+                  "language": null,
+                  "speakers": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Architecture Kata"]
+  },
+  {
+    "_id": "5abd29d18dac1a4b904fc215",
+    "id": 1817,
+    "name": "BLOCKCHAIN FOR ENTERPRISES",
+    "type": "epamevents",
+    "city": "Kyiv",
+    "country": "Ukraine",
+    "url": "https://events.epam.com/events/blockchain-for-enterprises",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17527/99B8CC9076554C77A8DD00F363340810.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "BLOCKCHAIN FOR ENTERPRISES",
+              "location": "Kudryashova Street, 14b, Kyiv, Ukraine",
+              "room": "601",
+              "startTime": "17:00",
+              "items": [
+                {
+                  "title": "BLOCKCHAIN FOR ENTERPRISES",
+                  "duration": 90,
+                  "location": "Kudryashova Street, 14b, Kyiv, Ukraine, 601",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Solution Architect",
+                      "name": "Illya Havsiyevych",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/2548/thumb_mSAPa8JOTF59EoRvfhxpqg7l.jpg"
+                    },
+                    {
+                      "jobPosition": "Director, Delivery Management",
+                      "name": "Roman Polupanov",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/523/thumb_MyPhoto.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["BLOCKCHAIN FOR ENTERPRISES"]
+  },
+  {
+    "_id": "5abd29d28dac1a4b904fc216",
+    "id": 1835,
+    "name": "Easter Workshop at Shevchenka Office",
+    "type": "epamevents",
+    "city": "L'viv",
+    "country": "Ukraine",
+    "url": "https://events.epam.com/events/easter-workshop-shevchenko-office",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17687/0F875789AA244C288C2878EFBAF3BBD2.jpg",
+    "registrationAvailability": true,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Easter",
+              "location": "Shevchenka Street, 111a, Lviv, Lviv Oblast, Ukraine",
+              "room": "Kitchen",
+              "startTime": "18:00",
+              "items": [
+                {
+                  "title": "How to create Easter eggs",
+                  "duration": 120,
+                  "location":
+                    "Shevchenka Street, 111a, Lviv, Lviv Oblast, Ukraine, Kitchen",
+                  "language": "UKRAINIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Junior Software Engineer",
+                      "name": "Viktoriya Nazarevych",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/4248/thumb_FxWchXr87U5kBIdZPwgzs16y.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["How to create Easter eggs"]
+  },
+  {
+    "_id": "5abd29d28dac1a4b904fc217",
+    "id": 1838,
+    "name": "EPAM Shenzhen BA Community #1",
+    "type": "epamevents",
+    "city": "Shenzhen",
+    "country": "China",
+    "url":
+      "https://events.epam.com/events/agile-group-dynamics---build-a-great-working-team",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17712/DA014403ED6C4A8CAE2EA49E4F7E15C8.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "BA Community",
+              "location": "Shenzhen, Guangdong, China",
+              "room": "Conference Room, block 5",
               "startTime": "15:00",
               "items": [
                 {
-                  "title": "Mobile Automation - Appium",
+                  "title": "Agile Group Dynamics - Build a great working team",
                   "duration": 60,
-                  "location": "Shenzhen, Guangdong, China, Stadium, building 5",
+                  "location":
+                    "Shenzhen, Guangdong, China, Conference Room, block 5 (next to reception desk)",
                   "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "Senior Software Testing Engineer",
-                      "name": "Justin Luo",
+                      "jobPosition": "Lead Business Analyst",
+                      "name": "Saurabh Gupta",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/29755/thumb_avatar_20170828-23122-16qznv5.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/17354/thumb_avatar_20170114-3666-wi8jk9.jpg"
                     }
                   ]
                 }
@@ -5117,72 +5405,48 @@
           ]
         }
       ]
-    }
+    },
+    "topics": ["Agile Group Dynamics - Build a great working team"]
   },
   {
-    "_id": "5aba87418dac1a4b904fc075",
-    "id": 1843,
-    "name": "Garage in Poland. Kick-off meeting",
+    "_id": "5abd29d38dac1a4b904fc218",
+    "id": 1847,
+    "name": "App Maker Solution Practice and Business Value",
     "type": "epamevents",
     "city": "Kraków",
-    "url": "https://events.epam.com/events/garage-in-poland-kick-off-meeting",
+    "country": "Poland",
+    "url":
+      "https://events.epam.com/events/app-maker-solution-practice-and-business-value",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17774/F038901FE2414A879256514A578053B1.jpg",
     "registrationAvailability": false,
-    "startDate": "2018-03-26T00:00:00Z",
-    "endDate": "2018-03-27T00:00:00Z",
-    "datetime":
-      "Mon, March 26, 2018 12:00 AM - Tue, March 27, 2018 12:00 AM CEST",
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
     "agenda": {
       "days": [
         {
-          "date": "2018-03-26T00:00:00Z",
+          "date": "2018-03-29T00:00:00Z",
           "day": 1,
           "streams": [
             {
               "title": "Main",
               "location": "Opolska 114, Kraków, Poland",
-              "room": "Pacific",
-              "startTime": "15:00",
+              "room": "11th floor, Educational area",
+              "startTime": "14:00",
               "items": [
                 {
-                  "title": "Garage Poland. Kick-off meeting",
-                  "duration": 30,
-                  "location": "Opolska 114, Kraków, Poland, Pacific",
+                  "title": "App Maker Solution Practice and Business Value",
+                  "duration": 45,
+                  "location":
+                    "Opolska 114, Kraków, Poland, 11th floor, Educational area",
                   "language": "ENGLISH",
                   "speakers": [
                     {
-                      "jobPosition": "Business Analyst",
-                      "name": "Joanna Jarosz",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/41249/thumb_0RndLvCQ8MaxUAKgzjB1JoYu.jpg"
-                    },
-                    {
-                      "jobPosition": "Solution Architect",
-                      "name": "Jakub Wierzchoslawski",
-                      "avatar": null
-                    },
-                    {
                       "jobPosition": "Senior Software Engineer",
-                      "name": "Evgenii Kuzmin",
+                      "name": "Vasilii Iakovlev",
                       "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/11607/thumb_avatar_20160923-31179-pmr1lr.jpg"
-                    },
-                    {
-                      "jobPosition": "Business Analyst",
-                      "name": "Emilia Branny-Jankowska",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/3755/thumb_kDqhy4KLe3TingAUWmt2xblu.jpg"
-                    },
-                    {
-                      "jobPosition": "Senior Software Engineer",
-                      "name": "Vyacheslav Trushkin",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/1074/thumb_Vyacheslav_Trushkin.jpg"
-                    },
-                    {
-                      "jobPosition": "Lead Software Test Automation Engineer",
-                      "name": "Przemyslaw Kabacinski",
-                      "avatar":
-                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/827/thumb_Przemyslaw_Kabacinski.jpg"
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/35683/thumb_avatar_20171127-1775-xxc2dq.jpg"
                     }
                   ]
                 }
@@ -5191,6 +5455,112 @@
           ]
         }
       ]
-    }
+    },
+    "topics": ["App Maker Solution Practice and Business Value"]
+  },
+  {
+    "_id": "5abd29d48dac1a4b904fc219",
+    "id": 1853,
+    "name": "Media and Telco: Provisioning for TV & Broadband",
+    "type": "epamevents",
+    "city": null,
+    "country": null,
+    "url":
+      "https://events.epam.com/events/media-and-telco-provisioning-for-tv-broadband",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17833/2FB916F5CE644E31B54065464FBCA5EE.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Provisioning for TV & Broadband",
+              "location": null,
+              "room": null,
+              "startTime": "18:00",
+              "items": [
+                {
+                  "title": "Provisioning for TV & Broadband",
+                  "duration": 60,
+                  "location": null,
+                  "language": "ENGLISH",
+                  "speakers": [
+                    {
+                      "jobPosition": "Solution Architect",
+                      "name": "Frank Groot",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/20806/thumb_1.jpg.png"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Provisioning for TV & Broadband"]
+  },
+  {
+    "_id": "5abd29d48dac1a4b904fc21a",
+    "id": 1863,
+    "name": "Vinnytsia Android Meetup#2018.1",
+    "type": "epamevents",
+    "city": null,
+    "country": null,
+    "url":
+      "https://events.epam.com/events/vinnytsia-android-community-meetup20181",
+    "backgroundImageUrl":
+      "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/event_page_part/17923/F0884A8CD81F423DB4D0659BD55B4BCD.jpg",
+    "registrationAvailability": false,
+    "startDate": "2018-03-29T00:00:00Z",
+    "endDate": "2018-03-29T00:00:00Z",
+    "datetime": "Thu, March 29, 2018 12:00 AM - 12:00 AM CEST",
+    "agenda": {
+      "days": [
+        {
+          "date": "2018-03-29T00:00:00Z",
+          "day": 1,
+          "streams": [
+            {
+              "title": "Flutter — 5 reasons why you may love it",
+              "location": "Vinnytsia, Vinnyts'ka oblast, Ukraine",
+              "room": "Conference Room#304",
+              "startTime": "18:00",
+              "items": [
+                {
+                  "title": "Flutter — 5 reasons why you may love it",
+                  "duration": 60,
+                  "location":
+                    "Vinnytsia, Vinnyts'ka oblast, Ukraine, Conference Room#304",
+                  "language": "RUSSIAN",
+                  "speakers": [
+                    {
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Pavlo Stavytskyi",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/36762/thumb_avatar_20171213-20931-14yizzn.jpg"
+                    },
+                    {
+                      "jobPosition": "Senior Software Engineer",
+                      "name": "Maksym Yermakov",
+                      "avatar":
+                        "https://d1ujii9cn3t0u4.cloudfront.net/uploads/production/user/avatar/34038/thumb_avatar_20171106-4299-9l5t7l.jpg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "topics": ["Flutter — 5 reasons why you may love it"]
   }
 ]

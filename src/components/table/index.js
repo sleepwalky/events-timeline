@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { getEventsList } from '../../middleware/eventAPI';
-import Button from './Button';
-import Header from './Header';
-import TableFooter from './Footer';
-import TableBody from './TableBody';
+import Button from './button';
+import Header from './header';
+import TableFooter from './footer';
+import TableBody from './tableBody';
 
 import { months, weekDays } from '../../helpers/consts';
 
@@ -14,32 +14,9 @@ class Table extends Component {
     super();
     this.state = {
       view: 'months',
-      display: months
+      display: months,
     };
   }
-
-  headerCalc = (view, date = new Date()) => {
-    if (view === 'weeks') {
-      let year = date.getFullYear();
-      let month = date.getMonth();
-
-      let firstWeekDay = new Date(year, month, 1).getDay();
-      let lastDay = new Date(year, month + 1, 0).getDate();
-
-      let weekDaysArr = [];
-      let currentWeekDay = firstWeekDay;
-
-      for (let i = 0; i < lastDay; i++) {
-        let weekDay = currentWeekDay > 6 ? currentWeekDay = 0: currentWeekDay;
-        weekDaysArr[i] = `${i + 1} ${weekDays[weekDay]}`;
-        currentWeekDay++;
-      }
-
-      return weekDaysArr;
-    }
-
-    return months;
-  };
 
   getMonthsView = () => {
     this.changeView('months');
@@ -49,10 +26,33 @@ class Table extends Component {
     this.changeView('weeks');
   };
 
+  headerCalc = (view, date = new Date()) => {
+    if (view === 'weeks') {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+
+      const firstWeekDay = new Date(year, month, 1).getDay();
+      const lastDay = new Date(year, month + 1, 0).getDate();
+
+      const weekDaysArr = [];
+      let currentWeekDay = firstWeekDay;
+
+      for (let i = 0; i < lastDay; i += 1) {
+        const weekDay = currentWeekDay > 6 ? currentWeekDay = 0 : currentWeekDay;
+        weekDaysArr[i] = `${i + 1} ${weekDays[weekDay]}`;
+        currentWeekDay += 1;
+      }
+
+      return weekDaysArr;
+    }
+
+    return months;
+  };
+
   changeView = (newView) => {
     if (this.state.view !== newView) {
-      this.setState({view: newView});
-      this.setState({display: this.headerCalc(newView)});
+      this.setState({ view: newView });
+      this.setState({ display: this.headerCalc(newView) });
     }
   };
 
@@ -66,16 +66,16 @@ class Table extends Component {
         <div className="buttons-box">
           <Button
             onClick={this.refreshEventsTable}
-            value='Refresh'
+            value="Refresh"
             class="refresh-button"
           />
           <Button
             onClick={this.getMonthsView}
-            value='Months'
+            value="Months"
           />
           <Button
             onClick={this.getWeeksView}
-            value='Weeks'
+            value="Weeks"
           />
         </div>
         <div className="table">
@@ -93,12 +93,10 @@ class Table extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onGetEvents: () => {
-      dispatch(getEventsList())
-    }
-  }
-};
+const mapDispatchToProps = dispatch => ({
+  onGetEvents: () => {
+    dispatch(getEventsList());
+  },
+});
 
 export default connect(null, mapDispatchToProps)(Table);

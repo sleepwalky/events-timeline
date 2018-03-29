@@ -3,39 +3,42 @@ import { connect } from 'react-redux';
 
 import { hidePopup } from '../../actions/popupActions';
 
-class EventPopup extends Component{
-  constructor(props){
+class EventPopup extends Component {
+  constructor(props) {
     super(props);
     this.closePopup = this.closePopup.bind(this);
   }
 
-  closePopup = function () {
+  closePopup() {
     this.props.onHideEventPopup();
     window.history.pushState({}, null, window.location.origin);
-  };
+  }
 
   render() {
+    const {
+      name,
+      city,
+      startDate,
+      endDate,
+      url,
+    } = this.props;
     return (
       <div>
         <div className="popup-name">
-          <span><b>Event name: </b> {this.props.name}</span>
+          <span><b>Event name: </b> {name}</span>
         </div>
         <div className="popup-city">
-          {this.props.city ? <span>Location: {this.props.city}</span> : '' }
+          {city && <span>Location: {city}</span>}
         </div>
         <div className="popup-startDate">
-          {this.props.startDate ? <span>Date: {this.props.startDate}</span> : '' }
+          {startDate && <span>Date: {startDate}</span>}
         </div>
         <div className="popup-endDate">
-          {this.props.endDate ? <span>Date: {this.props.endDate}</span> : '' }
+          {endDate && <span>Date: {endDate}</span>}
         </div>
         <div className="popup-url">
-          {this.props.url ?
-          <span className="url-title">More</span> : '' }
-          {this.props.url ?
-          <span>
-            <a id="event-url" target="_blank" onClick={this.closePopup} href={this.props.url}>information</a>
-          </span> : '' }
+          {url &&
+            <a id="event-url" target="_blank" onClick={this.closePopup} href={url}>More information</a>}
         </div>
       </div>
     );

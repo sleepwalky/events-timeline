@@ -1,16 +1,16 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import store from '../../store/store';
+import store from '../../store';
 import { hidePopup } from '../../actions/popupActions';
 import './popup.css';
-import EventPopup from './EventPopup';
+import EventPopup from './eventPopup';
 
 class Popup extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.clearPopup = this.clearPopup.bind(this);
   }
+
   componentDidMount() {
     (document).addEventListener('click', (event) => {
       if (!event.target.classList.contains('event')) {
@@ -37,7 +37,14 @@ class Popup extends Component {
       popupContent = <EventPopup />;
     }
     return (
-      <div className="popup" style={{left: this.props.xPosCurrent, top: this.props.yPosCurrent, display: this.props.display}}>
+      <div
+        className="popup"
+        style={{
+          left: this.props.xPosCurrent,
+          top: this.props.yPosCurrent,
+          display: this.props.display,
+        }}
+      >
         {popupContent}
       </div>
     );

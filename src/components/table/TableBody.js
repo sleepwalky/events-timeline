@@ -1,42 +1,40 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Event from '../Event';
+import Event from '../event';
 import { getEventsList } from '../../middleware/eventAPI';
 
 class TableBody extends Component {
-
   componentDidMount() {
     this.props.onGetEvents();
   }
 
   sortAllEvents = (events) => {
-    let sortedEvents = {};
+    const sortedEvents = {};
 
-    events.forEach(event => {
-      let place = event.city ? event.city.toLowerCase() : 'no_city';
+    events.forEach((event) => {
+      const place = event.city ? event.city.toLowerCase() : 'no_city';
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
-      sortedEvents[place].push(event)
+      sortedEvents[place].push(event);
     });
 
     return sortedEvents;
   };
 
   sortMonthEvents = (events) => {
-    let sortedEvents = {};
+    const sortedEvents = {};
 
-    events.forEach((event => {
-
-      let place = event.city ? event.city.toLowerCase() : 'no_city';
+    events.forEach(((event) => {
+      const place = event.city ? event.city.toLowerCase() : 'no_city';
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
-      let currentMonth = new Date().getMonth();
-      let eventMonth = new Date(event.startDate).getMonth();
+      const currentMonth = new Date().getMonth();
+      const eventMonth = new Date(event.startDate).getMonth();
       if (currentMonth === eventMonth) {
-        sortedEvents[place].push(event)
+        sortedEvents[place].push(event);
       }
     }));
 
@@ -48,12 +46,12 @@ class TableBody extends Component {
       return;
     }
 
-    let renderingEvents = [];
+    const renderingEvents = [];
 
     events[place].forEach((event) => {
-      let eventDate = new Date(event.startDate);
-      let month = eventDate.getMonth();
-      let day = eventDate.getDate();
+      const eventDate = new Date(event.startDate);
+      const month = eventDate.getMonth();
+      const day = eventDate.getDate();
 
       if (this.props.view === 'months' && month === timeInd) {
         renderingEvents.push(this.addToEventsArr(event));
@@ -67,27 +65,26 @@ class TableBody extends Component {
     return renderingEvents;
   };
 
-  addToEventsArr = (event) => {
-    return (
-      <Event key={event.id}
-             id={event.id}
-             className="js"
-             name={event.name}
-             startDate={event.startDate}
-             endDate={event.endDate}
-             city={event.city}
-             url={event.url}
-      />
-    )
-  };
+  addToEventsArr = event => (
+    <Event
+      key={event.id}
+      id={event.id}
+      className="js"
+      name={event.name}
+      startDate={event.startDate}
+      endDate={event.endDate}
+      city={event.city}
+      url={event.url}
+    />
+  );
 
   getRowNamesList = (events) => {
     const rowNames = [];
 
-    events.forEach(event => {
-      let place = event.city ? event.city : 'No_city';
+    events.forEach((event) => {
+      const place = event.city ? event.city : 'No_city';
       if (rowNames.indexOf(place) === -1) {
-        rowNames.push(place)
+        rowNames.push(place);
       }
     });
     rowNames.unshift('GLOBAL');
@@ -102,25 +99,21 @@ class TableBody extends Component {
 
     return (
       <div className="table-body">
-        {rowNames.map(placeName => {
-            return (
-              <div
-                key={placeName}
-                className="table-body-row"
-              >
-                <span className="table-row-name">{placeName}</span>
-                {this.props.cells.map((c, ind) =>
-                  <div
+        {rowNames.map(placeName => (
+          <div
+            key={placeName}
+            className="table-body-row"
+          >
+            <span className="table-row-name">{placeName}</span>
+            {this.props.cells.map((c, ind) =>
+                  (<div
                     key={`${c}${ind}`}
                     className="table-cell"
                   >
                     {this.renderEvents(sortedEvents, ind, placeName.toLowerCase())}
-                  </div>
-                )}
-              </div>
-            )
-          }
-        )}
+                  </div>))}
+          </div>
+            ))}
       </div>
     );
   }
@@ -132,12 +125,10 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onGetEvents: () => {
-     dispatch(getEventsList())
-    }
-  }
-};
+const mapDispatchToProps = dispatch => ({
+  onGetEvents: () => {
+    dispatch(getEventsList());
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(TableBody);
