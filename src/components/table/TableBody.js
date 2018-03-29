@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import Event from '../Event';
-import * as eventAPI from '../../middleware/eventAPI';
+import { getEventsList } from '../../middleware/eventAPI';
 
 class TableBody extends Component {
 
   componentDidMount() {
-    eventAPI.getEventsList();
+    this.props.onGetEvents();
   }
 
   sortAllEvents = (events) => {
@@ -132,4 +132,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(TableBody);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onGetEvents: () => {
+     dispatch(getEventsList())
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TableBody);
