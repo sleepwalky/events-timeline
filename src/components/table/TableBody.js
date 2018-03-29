@@ -3,21 +3,11 @@ import { connect } from 'react-redux';
 
 import Event from '../Event';
 import * as eventAPI from '../../middleware/eventAPI';
-import store from '../../store/store';
 
 class TableBody extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      events: []
-    };
-  }
 
   componentDidMount() {
     eventAPI.getEventsList();
-    store.subscribe(()=>{
-      this.setState({events: store.getState().event.eventsList});
-    })
   }
 
   sortAllEvents = (events) => {
@@ -105,10 +95,10 @@ class TableBody extends Component {
   };
 
   render() {
-    const rowNames = this.getRowNamesList(this.state.events);
+    const rowNames = this.getRowNamesList(this.props.events);
     const sortedEvents = this.props.view === 'months' ?
-      this.sortAllEvents(this.state.events) :
-      this.sortMonthEvents(this.state.events);
+      this.sortAllEvents(this.props.events) :
+      this.sortMonthEvents(this.props.events);
 
     return (
       <div className="table-body">

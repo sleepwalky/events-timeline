@@ -7,17 +7,29 @@ import './popup.css';
 import EventPopup from './EventPopup';
 
 class Popup extends Component {
+  constructor(props){
+    super(props);
+    this.clearPopup = this.clearPopup.bind(this);
+  }
   componentDidMount() {
-    (document).addEventListener('click', function (event) {
+    (document).addEventListener('click', (event) => {
       if (!event.target.classList.contains('event')) {
-        clearPopup();
+        this.clearPopup();
       }
     }, false);
 
     (document).addEventListener('scroll', function () {
-      clearPopup();
+      this.clearPopup();
     }, false);
   }
+
+  clearPopup = () => {
+    const isDisplayed = store.getState().popup.display;
+    if (isDisplayed === 'block') {
+      this.props.onHidePopup();
+      window.history.pushState({}, null, window.location.origin);
+    }
+  };
 
   render() {
     let popupContent;
@@ -32,14 +44,6 @@ class Popup extends Component {
   }
 }
 
-function clearPopup() {
-  const isDisplayed = store.getState().popup.display;
-  if (isDisplayed === 'block') {
-    store.dispatch(hidePopup());
-    window.history.pushState({}, null, window.location.origin);
-  }
-}
-
 function mapStateToProps(state) {
   return {
     component: state.popup.component,
@@ -49,4 +53,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Popup);
+function mapDispatchToProps(dispatch) {
+  return {
+    onHidePopup: () => {
+      dispatch(hidePopup());
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Popup);

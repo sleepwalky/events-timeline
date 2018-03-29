@@ -10,10 +10,9 @@ export function getEventsList() {
   }).catch((error) => {
     store.dispatch(showOverlay({
       class: 'error',
-      title: 'Problems with fetching data',
-      content: error.message,
+      title: 'Loading data',
+      content: 'An error occurred while loading the calendar. Please, try to refresh later!',
       open: true,
     }));
-    getEventsList();
   });
 }

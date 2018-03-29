@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import store from '../../store/store';
 import { hidePopup } from '../../actions/popupActions';
 
 class EventPopup extends Component{
-  closePopup = function (event) {
-    event.preventDefault();
-    const url = document.getElementById("event-url").getAttribute("href") || '';
-    store.dispatch(hidePopup());
+  constructor(props){
+    super(props);
+    this.closePopup = this.closePopup.bind(this);
+  }
+
+  closePopup = function () {
+    this.props.onHideEventPopup();
     window.history.pushState({}, null, window.location.origin);
-    window.open(url);
   };
 
   render() {
@@ -20,19 +21,21 @@ class EventPopup extends Component{
           <span><b>Event name: </b> {this.props.name}</span>
         </div>
         <div className="popup-city">
-          <span>Location: {this.props.city}</span>
+          {this.props.city ? <span>Location: {this.props.city}</span> : '' }
         </div>
         <div className="popup-startDate">
-          <span>Date: {this.props.startDate}</span>
+          {this.props.startDate ? <span>Date: {this.props.startDate}</span> : '' }
         </div>
         <div className="popup-endDate">
-          <span>Date: {this.props.endDate}</span>
+          {this.props.endDate ? <span>Date: {this.props.endDate}</span> : '' }
         </div>
         <div className="popup-url">
-          <span className="url-title">More</span>
+          {this.props.url ?
+          <span className="url-title">More</span> : '' }
+          {this.props.url ?
           <span>
-            <a id="event-url" onClick={this.closePopup} href={this.props.url}>information</a>
-          </span>
+            <a id="event-url" target="_blank" onClick={this.closePopup} href={this.props.url}>information</a>
+          </span> : '' }
         </div>
       </div>
     );
@@ -49,4 +52,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(EventPopup);
+function mapDispatchToProps(dispatch) {
+  return {
+    onHideEventPopup: () => {
+      dispatch(hidePopup());
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EventPopup);

@@ -2,22 +2,19 @@ import React from 'react';
 import { Component } from 'react';
 import ModalPopup from 'reactjs-popup';
 import { connect } from 'react-redux';
-import store from '../../store/store';
-import { showOverlay } from '../../actions/overlayActions';
+import {  hideOverlay } from '../../actions/overlayActions';
 import './overlay.css';
 
 //store.dispatch({ type: 'SHOW_OVERLAY', class:'error', title:'Hello', content:'This is a content', open: true});
 
 class Overlay extends Component {
+  constructor(props) {
+    super(props);
+    this.closeOverlay = this.closeOverlay.bind(this);
+  }
+
   closeOverlay = function () {
-    let data = {
-      type: '',
-      class: '',
-      title: '',
-      content: '',
-      open: false,
-    };
-    store.dispatch(showOverlay(data));
+    this.props.onHideOverlay();
   };
 
   render() {
@@ -60,4 +57,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Overlay);
+function mapDispatchToProps(dispatch) {
+  return {
+    onHideOverlay: () => {
+      dispatch(hideOverlay());
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Overlay);
