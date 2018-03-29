@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { showEventPopup } from '../actions/event-action';
+import { showPopup } from '../actions/popup-action';
+import { setEventProfile } from '../actions/event-action';
 import store from '../store/store';
 
 class Event extends Component {
@@ -16,21 +17,22 @@ class Event extends Component {
       url: props.url,
       id: props.id
     };
-    this.showPopup = this.showPopup.bind(this);
+    this.onShowPopup = this.onShowPopup.bind(this);
   }
 
-  showPopup = function (event) {
-    let xPosState = store.getState().eventsState.x;
-    let yPosState = store.getState().eventsState.y;
+  onShowPopup = function (event) {
+    let xPosState = store.getState().popupState.xPosCurrent;
+    let yPosState = store.getState().popupState.yPosCurrent;
     let data = {
       xPosCurrent: event.clientX - 120,
       yPosCurrent: event.clientY + 20,
       display: true,
-      event: this.state
+      content: this.state,
     };
 
     if (xPosState !== (event.clientX - 120 ) && yPosState !== (event.clientY + 20)) {
-      store.dispatch(showEventPopup(data));
+      store.dispatch(setEventProfile(this.props));
+      store.dispatch(showPopup(data));
     }
   };
 
@@ -38,7 +40,7 @@ class Event extends Component {
     const {name, id, className} = this.state;
     const classes = `${className} event`;
     return (
-      <Link to={'eventId=' + this.state.id} className={classes} onClick={this.showPopup}>
+      <Link to={'eventId=' + this.state.id} className={classes} onClick={this.onShowPopup}>
         {id}
       </Link>
     );

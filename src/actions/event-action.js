@@ -7,15 +7,9 @@ export function getEventsSuccess(events) {
   };
 }
 
-export function showEventPopup(data) {
+export function setEventProfile(data) {
   return {
-    type: types.SHOW_EVENT_POPUP,
+    type: types.SET_EVENT_PROFILE,
     data,
-  };
-}
-
-export function hideEventPopup() {
-  return {
-    type: types.HIDE_EVENT_POPUP,
   };
 }

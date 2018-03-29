@@ -7,7 +7,7 @@ const initialState = {
   class: '',
 };
 
-function eventReducer(state = initialState, action) {
+function overlayReducer(state = initialState, action) {
   switch (action.type) {
     case types.SHOW_OVERLAY:
       return Object.assign({}, state, {
@@ -17,13 +17,11 @@ function eventReducer(state = initialState, action) {
         open: action.data.open,
       });
     case types.HIDE_OVERLAY:
-      return Object.assign({}, state, {
-        open: false,
-      });
+      return Object.assign({}, state, initialState);
     default: {
       return state;
     }
   }
 }
 
-export default eventReducer;
+export default overlayReducer;
