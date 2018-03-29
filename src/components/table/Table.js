@@ -6,7 +6,7 @@ import TableFooter from './Footer';
 import TableBody from './TableBody';
 
 import { months, weekDays } from '../../helpers/consts';
-import * as eventAPI from '../../middleware/event-api';
+import * as eventAPI from '../../middleware/eventAPI';
 
 class Table extends Component {
   constructor() {

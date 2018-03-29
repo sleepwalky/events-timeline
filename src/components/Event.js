@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { showPopup } from '../actions/popup-action';
-import { setEventProfile } from '../actions/event-action';
+import { showPopup } from '../actions/popupActions';
+import { setEventProfile } from '../actions/eventActions';
 import store from '../store/store';
 
 class Event extends Component {
   constructor(props) {
     super();
-    this.state = {
-      className: props.className,
-      city: props.city,
-      startDate: props.startDate,
-      endDate: props.endDate,
-      name: props.name,
-      url: props.url,
-      id: props.id
-    };
     this.onShowPopup = this.onShowPopup.bind(this);
   }
 
   onShowPopup = function (event) {
-    let xPosState = store.getState().popupState.xPosCurrent;
-    let yPosState = store.getState().popupState.yPosCurrent;
+    let xPosState = store.getState().popup.xPosCurrent;
+    let yPosState = store.getState().popup.yPosCurrent;
     let data = {
       xPosCurrent: event.clientX - 120,
       yPosCurrent: event.clientY + 20,
@@ -37,11 +28,10 @@ class Event extends Component {
   };
 
   render() {
-    const {name, id, className} = this.state;
-    const classes = `${className} event`;
+    const classes = `${this.props.className} event`;
     return (
-      <Link to={'eventId=' + this.state.id} className={classes} onClick={this.onShowPopup}>
-        {id}
+      <Link to={'eventId=' + this.props.id} className={classes} onClick={this.onShowPopup}>
+        {this.props.id}
       </Link>
     );
   }

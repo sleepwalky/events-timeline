@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import Event from '../Event';
-import * as eventAPI from '../../middleware/event-api';
+import * as eventAPI from '../../middleware/eventAPI';
 import store from '../../store/store';
 
 class TableBody extends Component {
@@ -16,7 +16,7 @@ class TableBody extends Component {
   componentDidMount() {
     eventAPI.getEventsList();
     store.subscribe(()=>{
-      this.setState({events: store.getState().eventsState.eventsList});
+      this.setState({events: store.getState().event.eventsList});
     })
   }
 
@@ -138,7 +138,7 @@ class TableBody extends Component {
 
 function mapStateToProps(state) {
   return {
-    events: state.eventsState.eventsList,
+    events: state.event.eventsList,
   };
 }
 

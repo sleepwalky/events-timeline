@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
 
 // Reducers
-import eventsReducer from './events-reducer';
-import overlayReducer from './overlay-reducer';
-import popupReducer from './popup-reducer';
+import eventsReducer from './eventsReducer';
+import overlayReducer from './overlayReducer';
+import popupReducer from './popupReducer';
 
 // Combine Reducers
 const reducers = combineReducers({
-  eventsState: eventsReducer,
-  overlayState: overlayReducer,
-  popupState: popupReducer,
+  event: eventsReducer,
+  overlay: overlayReducer,
+  popup: popupReducer,
 });
 export default reducers;

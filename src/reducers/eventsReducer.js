@@ -1,4 +1,4 @@
-import * as types from '../actions/action-types';
+import { SET_EVENT_PROFILE, LOAD_EVENTS_LIST_SUCCESS } from '../actions/eventActions';
 
 const initialState = {
   eventsList: [],
@@ -7,9 +7,9 @@ const initialState = {
 
 function eventReducer(state = initialState, action) {
   switch (action.type) {
-    case types.LOAD_EVENTS_LIST_SUCCESS:
+    case LOAD_EVENTS_LIST_SUCCESS:
       return Object.assign({}, state, { eventsList: action.events });
-    case types.SET_EVENT_PROFILE:
+    case SET_EVENT_PROFILE:
       return Object.assign({}, state, { eventProfile: action.data });
     default: {
       return state;

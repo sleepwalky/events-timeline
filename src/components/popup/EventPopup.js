@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import store from '../../store/store';
-import { hidePopup } from '../../actions/popup-action';
+import { hidePopup } from '../../actions/popupActions';
 
 class EventPopup extends Component{
   closePopup = function (event) {
@@ -17,21 +17,21 @@ class EventPopup extends Component{
     return (
       <div>
         <div className="popup-name">
-          <span><b>Event name: </b> {this.props.eventProfile.name}</span>
+          <span><b>Event name: </b> {this.props.name}</span>
         </div>
         <div className="popup-city">
-          <span>Location: {this.props.eventProfile.city}</span>
+          <span>Location: {this.props.city}</span>
         </div>
         <div className="popup-startDate">
-          <span>Date: {this.props.eventProfile.startDate}</span>
+          <span>Date: {this.props.startDate}</span>
         </div>
         <div className="popup-endDate">
-          <span>Date: {this.props.eventProfile.endDate}</span>
+          <span>Date: {this.props.endDate}</span>
         </div>
         <div className="popup-url">
           <span className="url-title">More</span>
           <span>
-            <a id="event-url" onClick={this.closePopup} href={this.props.eventProfile.url}>information</a>
+            <a id="event-url" onClick={this.closePopup} href={this.props.url}>information</a>
           </span>
         </div>
       </div>
@@ -41,7 +41,11 @@ class EventPopup extends Component{
 
 function mapStateToProps(state) {
   return {
-    eventProfile: state.eventsState.eventProfile,
+    name: state.event.eventProfile.name,
+    city: state.event.eventProfile.city,
+    startDate: state.event.eventProfile.startDate,
+    endDate: state.event.eventProfile.endDate,
+    url: state.event.eventProfile.url,
   };
 }
 

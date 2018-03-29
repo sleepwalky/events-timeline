@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import store from '../../store/store';
-import { hidePopup } from '../../actions/popup-action';
+import { hidePopup } from '../../actions/popupActions';
 import './popup.css';
 import EventPopup from './EventPopup';
 
@@ -33,7 +33,7 @@ class Popup extends Component {
 }
 
 function clearPopup() {
-  const isDisplayed = store.getState().popupState.display;
+  const isDisplayed = store.getState().popup.display;
   if (isDisplayed === 'block') {
     store.dispatch(hidePopup());
     window.history.pushState({}, null, window.location.origin);
@@ -42,10 +42,10 @@ function clearPopup() {
 
 function mapStateToProps(state) {
   return {
-    component: state.popupState.component,
-    xPosCurrent: state.popupState.xPosCurrent,
-    yPosCurrent: state.popupState.yPosCurrent,
-    display: state.popupState.display,
+    component: state.popup.component,
+    xPosCurrent: state.popup.xPosCurrent,
+    yPosCurrent: state.popup.yPosCurrent,
+    display: state.popup.display,
   };
 }
 

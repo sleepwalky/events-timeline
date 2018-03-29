@@ -1,4 +1,4 @@
-import * as types from '../actions/action-types';
+import { SHOW_OVERLAY, HIDE_OVERLAY } from '../actions/overlayActions';
 
 const initialState = {
   title: '',
@@ -9,14 +9,14 @@ const initialState = {
 
 function overlayReducer(state = initialState, action) {
   switch (action.type) {
-    case types.SHOW_OVERLAY:
+    case SHOW_OVERLAY:
       return Object.assign({}, state, {
         title: action.data.title,
         content: action.data.content,
         class: action.data.class,
         open: action.data.open,
       });
-    case types.HIDE_OVERLAY:
+    case HIDE_OVERLAY:
       return Object.assign({}, state, initialState);
     default: {
       return state;

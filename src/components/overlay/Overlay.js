@@ -3,7 +3,7 @@ import { Component } from 'react';
 import ModalPopup from 'reactjs-popup';
 import { connect } from 'react-redux';
 import store from '../../store/store';
-import { showOverlay } from '../../actions/overlay-action';
+import { showOverlay } from '../../actions/overlayActions';
 import './overlay.css';
 
 //store.dispatch({ type: 'SHOW_OVERLAY', class:'error', title:'Hello', content:'This is a content', open: true});
@@ -53,10 +53,10 @@ class Overlay extends Component {
 
 function mapStateToProps(state) {
   return {
-    title: state.overlayState.title,
-    content: state.overlayState.content,
-    open: state.overlayState.open,
-    class: state.overlayState.class,
+    title: state.overlay.title,
+    content: state.overlay.content,
+    open: state.overlay.open,
+    class: state.overlay.class,
   };
 }
 
