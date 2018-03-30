@@ -22,6 +22,21 @@ const months = [
   'Dec',
 ];
 
+const fullMonths = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
 const weekDays = [
   'Sun',
   'Mon',
@@ -31,4 +46,4 @@ const weekDays = [
   'Fri',
   'Sat',
 ];
-export { places, months, weekDays };
+export { places, months, weekDays, fullMonths };

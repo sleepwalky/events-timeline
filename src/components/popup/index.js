@@ -8,18 +8,19 @@ import EventPopup from './eventPopup';
 class Popup extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      initScroll: false,
+    };
     this.clearPopup = this.clearPopup.bind(this);
   }
 
   componentDidMount() {
-    (document).addEventListener('click', (event) => {
-      if (!event.target.classList.contains('event')) {
-        this.clearPopup();
-      }
-    }, false);
-
     (document).addEventListener('scroll', () => {
-      this.clearPopup();
+      if (this.state.initScroll) {
+        this.clearPopup();
+      } else {
+        this.setState({ initScroll: true });
+      }
     }, false);
   }
 
@@ -40,11 +41,12 @@ class Popup extends Component {
       <div
         className="popup"
         style={{
-          left: this.props.xPosCurrent,
-          top: this.props.yPosCurrent,
           display: this.props.display,
         }}
       >
+        <a className="modal-close" onClick={this.clearPopup}>
+          &times;
+        </a>
         {popupContent}
       </div>
     );
@@ -54,8 +56,6 @@ class Popup extends Component {
 function mapStateToProps(state) {
   return {
     component: state.popup.component,
-    xPosCurrent: state.popup.xPosCurrent,
-    yPosCurrent: state.popup.yPosCurrent,
     display: state.popup.display,
   };
 }

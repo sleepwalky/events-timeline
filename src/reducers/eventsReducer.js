@@ -3,6 +3,7 @@ import { SET_EVENT_PROFILE, LOAD_EVENTS_LIST_SUCCESS, SET_EVENT_PROFILE_BY_ID } 
 const initialState = {
   eventsList: [],
   eventProfile: {},
+  monthDisplayed: '',
 };
 
 const noEventFound = {

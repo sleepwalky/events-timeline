@@ -31,7 +31,7 @@ class TableBody extends Component {
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
-      const currentMonth = new Date().getMonth();
+      const currentMonth = this.props.month;
       const eventMonth = new Date(event.startDate).getMonth();
       if (currentMonth === eventMonth) {
         sortedEvents[place].push(event);
@@ -57,7 +57,7 @@ class TableBody extends Component {
         renderingEvents.push(this.addToEventsArr(event));
       }
 
-      if (this.props.view === 'weeks' && day === timeInd + 1) {
+      if ((this.props.view === 'weeks' || this.props.view === 'nextweeks' || this.props.view === 'prevweeks')  && day === timeInd + 1) {
         renderingEvents.push(this.addToEventsArr(event));
       }
     });
@@ -122,6 +122,7 @@ class TableBody extends Component {
 function mapStateToProps(state) {
   return {
     events: state.event.eventsList,
+    month: state.table.monthDisplayed,
   };
 }
 

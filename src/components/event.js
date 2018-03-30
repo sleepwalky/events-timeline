@@ -4,22 +4,20 @@ import { connect } from 'react-redux';
 
 import { showPopup } from '../actions/popupActions';
 import { setEventProfile, setEventProfileById } from '../actions/eventActions';
-import store from '../store';
 
 class Event extends Component {
   constructor(props) {
     super(props);
-    this.onShowPopup = this.onShowPopup.bind(this);
+    this.state = {
+      isTooltipShown: false,
+    };
   }
-
   componentDidMount() {
     const url = window.location.pathname.split('/')[1].split('=');
     const param = url[0];
     const value = url[1];
     if (param === 'eventId') {
       const data = {
-        xPosCurrent: window.outerWidth / 2 - 120,
-        yPosCurrent: window.outerHeight / 2 - 50,
         display: true,
       };
       this.props.onSetEventProfileById(value);
@@ -27,28 +25,46 @@ class Event extends Component {
     }
   }
 
-  onShowPopup = function (event) {
-    const xPosState = store.getState().popup.xPosCurrent;
-    const yPosState = store.getState().popup.yPosCurrent;
+  onShowPopup = () => {
     const data = {
-      xPosCurrent: event.clientX - 120,
-      yPosCurrent: event.clientY + 20,
       display: true,
     };
+    this.props.onSetEventProfile(this.props);
+    this.props.onShowPopup(data);
+  };
 
-    if (xPosState !== (event.clientX - 120) && yPosState !== (event.clientY + 20)) {
-      this.props.onSetEventProfile(this.props);
-      this.props.onShowPopup(data);
-    }
+  mouseOverEvent = () => {
+    this.setState({ isTooltipShown: true });
+  };
+
+  mouseOutEvent = () => {
+    this.setState({ isTooltipShown: false });
   };
 
   render() {
-    const { id, name, className } = this.props;
+    const { id, name, className, city, startDate } = this.props;
     const classes = `${className} event`;
     return (
-      <Link to={`eventId=${id}`} className={classes} onClick={this.onShowPopup}>
-        {name}
-      </Link>
+      <div>
+        <Link
+          to={`eventId=${id}`}
+          className={classes}
+          onMouseOver={this.mouseOverEvent}
+          onMouseOut={this.mouseOutEvent}
+          onClick={this.onShowPopup}>
+          {name}
+        </Link>
+        { this.state.isTooltipShown ?
+
+          <div className="tooltip">
+            <h3>{this.state.name}</h3>
+            <p>Event place: {city}</p>
+            <p>Event date: {new Date(startDate).toDateString()}</p>
+          </div>
+          :
+          <div />
+        }
+      </div>
     );
   }
 }

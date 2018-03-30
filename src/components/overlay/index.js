@@ -19,7 +19,9 @@ class Overlay extends Component {
   render() {
     const classes = `${this.props.class} modal-header`;
     const contentStyle = {
-      maxWidth: '300px', width: '90%',
+      maxWidth: '300px',
+      width: '90%',
+      borderRadius: '5px',
     };
     return (
       <ModalPopup

@@ -31,17 +31,21 @@
   border-radius: 15px 15px 15px 15px;
   transition: all 0.3s;
 }
+
 .table-footer {
   height: 120px;
 }
+
 .footer-info-box:after {
   clear: both;
   content: "";
   display: block;
 }
+
 .footer-info-box.total {
   color: #8dc424;
 }
+
 .footer-info-box {
   font-size: 20px;
   padding-top: 20px;
@@ -57,6 +61,28 @@
   align-items: center;
   border-bottom: 15px solid #e2e2e2;
   font-size: 14px;
+  position: sticky;
+  background-color: white;
+  top: 50px;
+}
+
+.month-name{
+  font-family: "Roboto", Arial, sans-serif;
+  cursor: pointer;
+  padding: 0px 10px;
+  display: inline-block;
+  margin: 10px 10px;
+  text-transform: uppercase;
+  line-height: 2em;
+  min-width: 100px;
+  letter-spacing: 1.5px;
+  outline: none;
+  position: relative;
+  font-size: 14px;
+  border: 3px solid #cfcece;
+  background-color: #8DC424;
+  border-radius: 15px 15px 15px 15px;
+  transition: all 0.3s;
 }
 
 .table-header-item {
@@ -124,6 +150,16 @@
   position: sticky;
   background: #39c2d7;
   top: 0px;
+}
+
+.buttons-box:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.prev-week-button, .next-week-button {
+  float: right;
 }
 
 .refresh-button {
@@ -195,4 +231,29 @@ h1 {
 
 .app-intro {
   font-size: large;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 10px;
+  border-top-left-radius: 10px;
+  width: 250px;
+  height: 60px;
+  font-size: 16px;
+  background: #c5c5c5;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.tooltip:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -10px;
+  left: 1px;
+  margin-right: -15px;
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent #c5c5c5 transparent;
 }

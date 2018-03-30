@@ -31,10 +31,10 @@ class EventPopup extends Component {
           {city && <span>Location: {city}</span>}
         </div>
         <div className="popup-startDate">
-          {startDate && <span>Date: {startDate}</span>}
+          {startDate && <span>Date: {new Date(startDate).toDateString()}</span>}
         </div>
         <div className="popup-endDate">
-          {endDate && <span>Date: {endDate}</span>}
+          {endDate && <span>Date: {new Date(endDate).toDateString()}</span>}
         </div>
         <div className="popup-url">
           {url &&

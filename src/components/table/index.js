@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { getEventsList } from '../../middleware/eventAPI';
+import { setMonthToEvents } from '../../actions/tableActions';
 import Button from './button';
 import Header from './header';
 import TableFooter from './footer';
 import TableBody from './tableBody';
 
-import { months, weekDays } from '../../helpers/consts';
+import { months, weekDays, fullMonths } from '../../helpers/consts';
 
 class Table extends Component {
   constructor() {
@@ -15,6 +16,9 @@ class Table extends Component {
     this.state = {
       view: 'months',
       display: months,
+      currentMonth: new Date().getMonth(),
+      nextMonth: new Date().getMonth() + 1,
+      prevMonth: new Date().getMonth() - 1,
     };
   }
 
@@ -23,16 +27,29 @@ class Table extends Component {
   };
 
   getWeeksView = () => {
+    this.setState((prevState, props) => ({
+      nextMonth: this.state.currentMonth + 1,
+      prevMonth: this.state.currentMonth - 1,
+    }));
+    this.props.onSetMonth(this.state.currentMonth);
     this.changeView('weeks');
   };
 
-  headerCalc = (view, date = new Date()) => {
-    if (view === 'weeks') {
-      const year = date.getFullYear();
-      const month = date.getMonth();
+  headerCalc = (view) => {
+    if (view !== 'months') {
+      const data = {
+        year: new Date().getFullYear(),
+      };
+      if (view === 'weeks') {
+        data.month = this.state.currentMonth;
+      } else if (view === 'nextweeks') {
+        data.month = this.state.nextMonth;
+      } else if (view === 'prevweeks') {
+        data.month = this.state.prevMonth;
+      }
 
-      const firstWeekDay = new Date(year, month, 1).getDay();
-      const lastDay = new Date(year, month + 1, 0).getDate();
+      const firstWeekDay = new Date(data.year, data.month, 1).getDay();
+      const lastDay = new Date(data.year, data.month + 1, 0).getDate();
 
       const weekDaysArr = [];
       let currentWeekDay = firstWeekDay;
@@ -42,17 +59,35 @@ class Table extends Component {
         weekDaysArr[i] = `${i + 1} ${weekDays[weekDay]}`;
         currentWeekDay += 1;
       }
-
       return weekDaysArr;
     }
-
     return months;
   };
 
   changeView = (newView) => {
-    if (this.state.view !== newView) {
-      this.setState({ view: newView });
-      this.setState({ display: this.headerCalc(newView) });
+    this.setState({ view: newView });
+    this.setState({ display: this.headerCalc(newView) });
+  };
+
+  getNextWeeksView = () => {
+    if (this.state.nextMonth !== 12) {
+      this.setState((prevState, props) => ({
+        nextMonth: prevState.nextMonth + 1,
+        prevMonth: this.state.nextMonth - 1,
+      }));
+      this.props.onSetMonth(this.state.nextMonth);
+      this.changeView('nextweeks');
+    }
+  };
+
+  getPrevWeeksView = () => {
+    if (this.state.prevMonth !== -1) {
+      this.setState((prevState, props) => ({
+        nextMonth: prevState.nextMonth - 1,
+        prevMonth: prevState.prevMonth - 1,
+      }));
+      this.props.onSetMonth(this.state.prevMonth);
+      this.changeView('prevweeks');
     }
   };
 
@@ -71,11 +106,28 @@ class Table extends Component {
           />
           <Button
             onClick={this.getMonthsView}
-            value="Months"
+            value="Current year"
           />
           <Button
             onClick={this.getWeeksView}
-            value="Weeks"
+            value="Current month"
+          />
+          <span className="month-name">
+            {
+            this.props.month !== '' ?
+            fullMonths[this.props.month] :
+            fullMonths[this.state.currentMonth]
+            }
+          </span>
+          <Button
+            onClick={this.getNextWeeksView}
+            value="next month"
+            class="next-week-button"
+          />
+          <Button
+            onClick={this.getPrevWeeksView}
+            value="prev month"
+            class="prev-week-button"
           />
         </div>
         <div className="table">
@@ -93,10 +145,21 @@ class Table extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  onGetEvents: () => {
-    dispatch(getEventsList());
-  },
-});
+function mapStateToProps(state) {
+  return {
+    month: state.table.monthDisplayed,
+  };
+}
 
-export default connect(null, mapDispatchToProps)(Table);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onGetEvents: () => {
+      dispatch(getEventsList());
+    },
+    onSetMonth: (month) => {
+      dispatch(setMonthToEvents(month));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Table);
