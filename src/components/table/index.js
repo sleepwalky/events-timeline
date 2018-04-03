@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 
 import { getEventsList } from '../../middleware/eventAPI';
 import { setMonthToEvents } from '../../actions/tableActions';
+import { filterEvents, setfilterForEvents } from '../../actions/eventActions';
 import Button from './button';
 import Header from './header';
 import TableFooter from './footer';
@@ -19,6 +22,7 @@ class Table extends Component {
       currentMonth: new Date().getMonth(),
       nextMonth: new Date().getMonth() + 1,
       prevMonth: new Date().getMonth() - 1,
+      selectedOptions: '',
     };
   }
 
@@ -27,7 +31,7 @@ class Table extends Component {
   };
 
   getWeeksView = () => {
-    this.setState((prevState, props) => ({
+    this.setState(() => ({
       nextMonth: this.state.currentMonth + 1,
       prevMonth: this.state.currentMonth - 1,
     }));
@@ -71,8 +75,8 @@ class Table extends Component {
 
   getNextWeeksView = () => {
     if (this.state.nextMonth !== 12) {
-      this.setState((prevState, props) => ({
-        nextMonth: prevState.nextMonth + 1,
+      this.setState(() => ({
+        nextMonth: this.state.nextMonth + 1,
         prevMonth: this.state.nextMonth - 1,
       }));
       this.props.onSetMonth(this.state.nextMonth);
@@ -82,9 +86,9 @@ class Table extends Component {
 
   getPrevWeeksView = () => {
     if (this.state.prevMonth !== -1) {
-      this.setState((prevState, props) => ({
-        nextMonth: prevState.nextMonth - 1,
-        prevMonth: prevState.prevMonth - 1,
+      this.setState(() => ({
+        nextMonth: this.state.nextMonth - 1,
+        prevMonth: this.state.prevMonth - 1,
       }));
       this.props.onSetMonth(this.state.prevMonth);
       this.changeView('prevweeks');
@@ -93,6 +97,15 @@ class Table extends Component {
 
   refreshEventsTable = () => {
     this.props.onGetEvents();
+  };
+  handleChange = (selectedOption) => {
+    const options = [];
+    selectedOption.forEach((item) => {
+      options.push(item.value);
+    });
+    this.setState({ selectedOptions: options.join(',') });
+    this.props.onSetEventFilters(options);
+    this.props.onFilterEvent(options);
   };
 
   render() {
@@ -104,6 +117,21 @@ class Table extends Component {
             value="Refresh"
             class="refresh-button"
           />
+            <Select
+              className="filter"
+              placeholder="Select technologies..."
+              value={this.state.selectedOptions}
+              name="form-field-name"
+              multi
+              closeOnSelect={false}
+              onChange={this.handleChange}
+              options={[
+                { value: 'js', label: 'Javascript' },
+                { value: 'react', label: 'React' },
+                { value: 'css', label: 'CSS' },
+                { value: 'html', label: 'HTML' },
+              ]}
+            />
           <Button
             onClick={this.getMonthsView}
             value="Current year"
@@ -114,9 +142,9 @@ class Table extends Component {
           />
           <span className="month-name">
             {
-            this.props.month !== '' ?
-            fullMonths[this.props.month] :
-            fullMonths[this.state.currentMonth]
+              this.props.month !== '' ?
+                fullMonths[this.props.month] :
+                fullMonths[this.state.currentMonth]
             }
           </span>
           <Button
@@ -129,11 +157,12 @@ class Table extends Component {
             value="prev month"
             class="prev-week-button"
           />
+
         </div>
+        <Header
+          view={this.state.display}
+        />
         <div className="table">
-          <Header
-            view={this.state.display}
-          />
           <TableBody
             cells={this.state.display}
             view={this.state.view}
@@ -158,6 +187,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     onSetMonth: (month) => {
       dispatch(setMonthToEvents(month));
+    },
+    onFilterEvent: (param) => {
+      dispatch(filterEvents(param));
+    },
+    onSetEventFilters: (filter) => {
+      dispatch(setfilterForEvents(filter));
     },
   };
 };

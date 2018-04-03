@@ -16,7 +16,7 @@ class Event extends Component {
     const url = window.location.pathname.split('/')[1].split('=');
     const param = url[0];
     const value = url[1];
-    if (param === 'eventId') {
+    if ((param === 'eventId') && (parseInt(value, 10) === this.props.id)) {
       const data = {
         display: true,
       };
@@ -41,9 +41,33 @@ class Event extends Component {
     this.setState({ isTooltipShown: false });
   };
 
+  parseEventName = (name) => {
+    const fullstringname = name.replace(/ /g, '').toLowerCase();
+    if (fullstringname.indexOf('meetup') !== -1 || fullstringname.indexOf('meet-up') !== -1) {
+      return { name: 'Global meetup', className: 'meetup' };
+    } else if (fullstringname.indexOf('talk') !== -1) {
+      return { name: 'Talk', className: 'talk' };
+    } else if (fullstringname.indexOf('rollingscopes') !== -1) {
+      return { name: 'Rolling scope', className: 'rs' };
+    } else if (fullstringname.indexOf('itday') !== -1) {
+      return { name: 'IT Day', className: 'itday' };
+    } else if (fullstringname.indexOf('hackathon') !== -1) {
+      return { name: 'Hackathon', className: 'hackayhon' };
+    } else if (fullstringname.indexOf('truestory') !== -1) {
+      return { name: 'True story', className: 'truestory' };
+    }
+    return { name: 'Other event', className: 'otherevent' };
+  };
+
   render() {
-    const { id, name, className, city, startDate } = this.props;
-    const classes = `${className} event`;
+    const {
+      id,
+      name,
+      city,
+      startDate,
+    } = this.props;
+    const data = this.parseEventName(name);
+    const classes = `${data.className} event`;
     return (
       <div>
         <Link
@@ -52,12 +76,12 @@ class Event extends Component {
           onMouseOver={this.mouseOverEvent}
           onMouseOut={this.mouseOutEvent}
           onClick={this.onShowPopup}>
-          {name}
+          {data.name}
         </Link>
         { this.state.isTooltipShown ?
 
           <div className="tooltip">
-            <h3>{this.state.name}</h3>
+            <h4>{name}</h4>
             <p>Event place: {city}</p>
             <p>Event date: {new Date(startDate).toDateString()}</p>
           </div>

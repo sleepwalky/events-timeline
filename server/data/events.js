@@ -29,6 +29,8 @@ async function getEvents() {
         url,
         startDate,
         endDate,
+        backgroundImageUrl,
+        topics,
       } = item;
 
       return {
@@ -38,6 +40,8 @@ async function getEvents() {
         url,
         startDate,
         endDate,
+        backgroundImageUrl,
+        topics,
       };
     });
   } catch (err) {

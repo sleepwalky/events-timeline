@@ -11,7 +11,7 @@
   text-align: left;
 }
 
-.popup .close {
+.popup-close {
   cursor: pointer;
   position: absolute;
   display: block;
@@ -35,15 +35,23 @@
   left: 30px;
   bottom: 30px;
   position: fixed;
-  width: 300px;
+  width: 400px;
   
 }
 .popup a:enabled{
   color: #D76834;
 }
 
-.popup .url-title:after{
-  content: ' ';
+.event-img{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
+
+.event-image-box{
+  width: 100%;
+  height: 200px;
+}
+
 
 

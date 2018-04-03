@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   const { value, onClick } = props;
-  const classes = `${props.class} button`;
+  const classes = `button${props.class ? (' ' + props.class) : ''}`;
   return (
     <button
       className={classes}
@@ -17,7 +17,6 @@ const Button = (props) => {
 Button.propTypes = {
   value: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  class: PropTypes.string,
 };
 
 export default Button;

@@ -57,7 +57,7 @@ class TableBody extends Component {
         renderingEvents.push(this.addToEventsArr(event));
       }
 
-      if ((this.props.view === 'weeks' || this.props.view === 'nextweeks' || this.props.view === 'prevweeks')  && day === timeInd + 1) {
+      if ((this.props.view === 'weeks' || this.props.view === 'nextweeks' || this.props.view === 'prevweeks') && day === timeInd + 1) {
         renderingEvents.push(this.addToEventsArr(event));
       }
     });
@@ -75,6 +75,7 @@ class TableBody extends Component {
       endDate={event.endDate}
       city={event.city}
       url={event.url}
+      backgroundImageUrl={event.backgroundImageUrl}
     />
   );
 
@@ -121,7 +122,9 @@ class TableBody extends Component {
 
 function mapStateToProps(state) {
   return {
-    events: state.event.eventsList,
+    events: state.event.filteredEvents.length === 0 && state.event.eventsFilter.length === 0 ?
+      state.event.eventsList :
+      state.event.filteredEvents,
     month: state.table.monthDisplayed,
   };
 }

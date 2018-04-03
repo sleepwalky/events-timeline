@@ -44,7 +44,7 @@ class Popup extends Component {
           display: this.props.display,
         }}
       >
-        <a className="modal-close" onClick={this.clearPopup}>
+        <a className="popup-close" onClick={this.clearPopup}>
           &times;
         </a>
         {popupContent}

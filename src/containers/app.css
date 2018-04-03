@@ -16,13 +16,13 @@
   font-family: "Roboto", Arial, sans-serif;
   color: #000000;
   cursor: pointer;
-  padding: 0px 10px;
+  padding: 0px 5px;
   display: inline-block;
+  float: left;
   margin: 10px 10px;
   text-transform: uppercase;
   line-height: 2em;
-  min-width: 100px;
-  letter-spacing: 1.5px;
+  width: 140px;
   outline: none;
   position: relative;
   font-size: 14px;
@@ -61,7 +61,6 @@
   align-items: center;
   border-bottom: 15px solid #e2e2e2;
   font-size: 14px;
-  position: sticky;
   background-color: white;
   top: 50px;
 }
@@ -69,13 +68,13 @@
 .month-name{
   font-family: "Roboto", Arial, sans-serif;
   cursor: pointer;
-  padding: 0px 10px;
+  padding: 0px 5px;
+  float: left;
   display: inline-block;
   margin: 10px 10px;
   text-transform: uppercase;
   line-height: 2em;
-  min-width: 100px;
-  letter-spacing: 1.5px;
+  width: 120px;
   outline: none;
   position: relative;
   font-size: 14px;
@@ -167,24 +166,32 @@
   float: left;
 }
 
-.js {
+.meetup {
   background: #66bbcb;
 }
 
-.react {
+.talk {
   background: #d285a5;
 }
 
-.global {
+.rs {
   background: #d76834;
 }
 
-.nodejs {
+.itday {
   background: #475ab1;
 }
 
-.angular {
+.hackayhon {
   background: #8dc424;
+}
+
+.truestory {
+  background: #ffd000;
+}
+
+.otherevent {
+  background: #ca9cff;
 }
 
 .app {
@@ -237,11 +244,11 @@ h1 {
   position: absolute;
   margin-top: 10px;
   border-top-left-radius: 10px;
-  width: 250px;
-  height: 60px;
+  width: 300px;
+  max-height: 150px;
   font-size: 16px;
   background: #c5c5c5;
-  padding: 10px;
+  padding: 10px 5px;
   z-index: 1000;
 }
 
@@ -256,4 +263,30 @@ h1 {
   border-style: solid;
   border-width: 0 15px 15px 15px;
   border-color: transparent transparent #c5c5c5 transparent;
+}
+.filter{
+  max-width: 500px;
+  min-width: 250px;
+  float: left;
+  margin: 10px 10px;
+  display: inline-flex;
+  text-align: left;
+}
+
+@media screen  and (max-width: 1300px){
+  .next-week-button{
+    float: none;
+  }
+  .prev-week-button{
+    float: none;
+  }
+  .filter{
+    float: none;
+  }
+  .button{
+    float: none;
+  }
+  .month-name{
+    float: none;
+  }
 }

@@ -4,7 +4,12 @@ import { connect } from 'react-redux';
 import { hideOverlay } from '../../actions/overlayActions';
 import './overlay.css';
 
-// store.dispatch({ type: 'SHOW_OVERLAY', class:'error', title:'Hello', content:'This is a content', open: true});
+/* store.dispatch({
+ type: 'SHOW_OVERLAY',
+ class:'error',
+ title:'Hello',
+ content:'This is a content',
+ open: true}); */
 
 class Overlay extends Component {
   constructor(props) {
