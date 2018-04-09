@@ -20,14 +20,13 @@
     "serve-favicon": "^2.4.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "nodemon ./server/www",
+    "start": "nodemon ./server/www",
     "lint": "eslint ."
   },
-  "proxy": "http://127.0.0.1:9000/",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
