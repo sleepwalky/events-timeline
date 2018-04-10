@@ -122,6 +122,7 @@ class TableBody extends Component {
 
 TableBody.propTypes = {
   onGetEvents: PropTypes.func.isRequired,
+  showOverlay: PropTypes.func.isRequired,
   month: PropTypes.any,
   view: PropTypes.string,
   events: PropTypes.array,

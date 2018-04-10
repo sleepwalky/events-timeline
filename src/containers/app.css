@@ -60,6 +60,7 @@
   padding-left: 130px;
   display: flex;
   align-items: center;
+  position: sticky;
   border-bottom: 15px solid #e2e2e2;
   font-size: 14px;
   background-color: white;
