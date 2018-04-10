@@ -3,7 +3,6 @@ export const LOAD_EVENTS_LIST_SUCCESS = 'LOAD_EVENTS_LIST_SUCCESS';
 export const SET_EVENT_PROFILE = 'SET_EVENT_PROFILE';
 export const SET_EVENT_PROFILE_BY_ID = 'SET_EVENT_PROFILE_BY_ID';
 export const FILTER_EVENTS = 'FILTER_EVENTS';
-export const SET_EVENTS_FILTER = 'SET_EVENTS_FILTER';
 
 export function getEventsSuccess(events) {
   return {
@@ -19,23 +18,16 @@ export function setEventProfile(data) {
   };
 }
 
-export function setEventProfileById(eventId) {
+export function setEventProfileById(eventData) {
   return {
     type: SET_EVENT_PROFILE_BY_ID,
-    eventId,
+    eventData,
   };
 }
 
-export function filterEvents(param) {
+export function filterEvents(filter) {
   return {
     type: FILTER_EVENTS,
-    param,
-  };
-}
-
-export function setfilterForEvents(filters) {
-  return {
-    type: SET_EVENTS_FILTER,
-    filters,
+    filter,
   };
 }

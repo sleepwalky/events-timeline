@@ -1,41 +1,45 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import store from '../../store';
 import { hidePopup } from '../../actions/popupActions';
 import './popup.css';
-import EventPopup from './eventPopup';
+import EventPopup from '../../containers/popup/eventPopup';
 
 class Popup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      initScroll: false,
-    };
-    this.clearPopup = this.clearPopup.bind(this);
-  }
-
-  componentDidMount() {
-    (document).addEventListener('scroll', () => {
-      if (this.state.initScroll) {
-        this.clearPopup();
-      } else {
-        this.setState({ initScroll: true });
-      }
-    }, false);
-  }
-
-  clearPopup = () => {
+  clearEventPopup = () => {
     const isDisplayed = store.getState().popup.display;
     if (isDisplayed === 'block') {
       this.props.onHidePopup();
-      window.history.pushState({}, null, window.location.origin);
+      const pathname = window.location.search;
+      const params = pathname.split('?')[1];
+      let newPathName = '';
+      if (params !== '') {
+        const paramsLength = params.split('&').length;
+        params.split('&').forEach((param, index) => {
+          const paramName = param.split('=')[0];
+          if (paramName === 'eventId') {
+            let forReplace = param;
+            if (paramsLength > 1) {
+              if (index === 0) {
+                forReplace = `${param}&`;
+              } else {
+                forReplace = `&${param}`;
+              }
+            }
+            newPathName = pathname.replace(`${forReplace}`, '');
+          }
+        });
+      }
+      window.history.pushState({}, null, newPathName);
     }
   };
-
   render() {
     let popupContent;
     if (this.props.component === 'event') {
-      popupContent = <EventPopup />;
+      popupContent = (<EventPopup
+        eventProfile={this.props.eventProfile}
+      />);
     }
     return (
       <div
@@ -44,7 +48,7 @@ class Popup extends Component {
           display: this.props.display,
         }}
       >
-        <a className="popup-close" onClick={this.clearPopup}>
+        <a className="popup-close" onClick={this.clearEventPopup}>
           &times;
         </a>
         {popupContent}
@@ -53,10 +57,18 @@ class Popup extends Component {
   }
 }
 
+Popup.propTypes = {
+  onHidePopup: PropTypes.func.isRequired,
+  component: PropTypes.string,
+  eventProfile: PropTypes.object,
+  display: PropTypes.string,
+};
+
 function mapStateToProps(state) {
   return {
     component: state.popup.component,
     display: state.popup.display,
+    eventProfile: state.event.eventProfile,
   };
 }
 

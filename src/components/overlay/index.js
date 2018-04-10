@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import ModalPopup from 'reactjs-popup';
 import { connect } from 'react-redux';
 import { hideOverlay } from '../../actions/overlayActions';
@@ -22,10 +23,10 @@ class Overlay extends Component {
   }
 
   render() {
-    const classes = `${this.props.class} modal-header`;
+    const classes = `${this.props.extraClass} modal-header`;
     const contentStyle = {
-      maxWidth: '300px',
-      width: '90%',
+      maxWidth: this.props.extraClass !== 'filter' ? '300px' : '800px',
+      width: '100%',
       borderRadius: '5px',
     };
     return (
@@ -54,12 +55,20 @@ class Overlay extends Component {
   }
 }
 
+Overlay.propTypes = {
+  onHideOverlay: PropTypes.func.isRequired,
+  extraClass: PropTypes.string,
+  open: PropTypes.bool,
+  title: PropTypes.string,
+  content: PropTypes.any,
+};
+
 function mapStateToProps(state) {
   return {
     title: state.overlay.title,
     content: state.overlay.content,
     open: state.overlay.open,
-    class: state.overlay.class,
+    extraClass: state.overlay.extraClass,
   };
 }
 

@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import Event from '../event';
+import Event from './event';
+import Spinner from '../../containers/spinner';
 import { getEventsList } from '../../middleware/eventAPI';
+import { showOverlay } from '../../actions/overlayActions';
+import Body from '../../containers/table/tableBody';
 
 class TableBody extends Component {
   componentDidMount() {
+    const filterData = {
+      extraClass: 'spinner',
+      title: 'Loading data...',
+      content: <Spinner />,
+      open: true,
+    };
+    this.props.showOverlay(filterData);
     this.props.onGetEvents();
   }
 
-  sortAllEvents = (events) => {
+  sortAllEvents = events => {
     const sortedEvents = {};
 
-    events.forEach((event) => {
+    events.forEach(event => {
       const place = event.city ? event.city.toLowerCase() : 'no_city';
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
@@ -23,10 +34,10 @@ class TableBody extends Component {
     return sortedEvents;
   };
 
-  sortMonthEvents = (events) => {
+  sortMonthEvents = events => {
     const sortedEvents = {};
 
-    events.forEach(((event) => {
+    events.forEach((event => {
       const place = event.city ? event.city.toLowerCase() : 'no_city';
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
@@ -48,7 +59,7 @@ class TableBody extends Component {
 
     const renderingEvents = [];
 
-    events[place].forEach((event) => {
+    events[place].forEach(event => {
       const eventDate = new Date(event.startDate);
       const month = eventDate.getMonth();
       const day = eventDate.getDate();
@@ -79,10 +90,10 @@ class TableBody extends Component {
     />
   );
 
-  getRowNamesList = (events) => {
+  getRowNamesList = events => {
     const rowNames = [];
 
-    events.forEach((event) => {
+    events.forEach(event => {
       const place = event.city ? event.city : 'No_city';
       if (rowNames.indexOf(place) === -1) {
         rowNames.push(place);
@@ -99,30 +110,27 @@ class TableBody extends Component {
       this.sortMonthEvents(this.props.events);
 
     return (
-      <div className="table-body">
-        {rowNames.map(placeName => (
-          <div
-            key={placeName}
-            className="table-body-row"
-          >
-            <span className="table-row-name">{placeName}</span>
-            {this.props.cells.map((c, ind) =>
-                  (<div
-                    key={`${c}${ind}`}
-                    className="table-cell"
-                  >
-                    {this.renderEvents(sortedEvents, ind, placeName.toLowerCase())}
-                  </div>))}
-          </div>
-            ))}
-      </div>
+      <Body
+        rowNames={rowNames}
+        sortedEvents={sortedEvents}
+        cells={this.props.cells}
+        renderEvents={this.renderEvents}
+      />
     );
   }
 }
 
+TableBody.propTypes = {
+  onGetEvents: PropTypes.func.isRequired,
+  month: PropTypes.any,
+  view: PropTypes.string,
+  events: PropTypes.array,
+  cells: PropTypes.array,
+};
+
 function mapStateToProps(state) {
   return {
-    events: state.event.filteredEvents.length === 0 && state.event.eventsFilter.length === 0 ?
+    events: state.event.filteredEvents.length === 0 && state.filter.filters.length === 0 ?
       state.event.eventsList :
       state.event.filteredEvents,
     month: state.table.monthDisplayed,
@@ -132,6 +140,9 @@ function mapStateToProps(state) {
 const mapDispatchToProps = dispatch => ({
   onGetEvents: () => {
     dispatch(getEventsList());
+  },
+  showOverlay: data => {
+    dispatch(showOverlay(data));
   },
 });
 

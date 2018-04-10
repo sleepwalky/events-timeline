@@ -4,7 +4,7 @@ const initialState = {
   title: '',
   content: '',
   open: null,
-  class: '',
+  extraClass: '',
 };
 
 function overlayReducer(state = initialState, action) {
@@ -13,7 +13,7 @@ function overlayReducer(state = initialState, action) {
       return Object.assign({}, state, {
         title: action.data.title,
         content: action.data.content,
-        class: action.data.class,
+        extraClass: action.data.extraClass,
         open: action.data.open,
       });
     case HIDE_OVERLAY:

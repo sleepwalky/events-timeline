@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 .app {
@@ -135,6 +136,7 @@
 
 .event {
   width: 100%;
+  cursor: pointer;
   border: 1px solid #fff;
   font-size: 11px;
   color: #f9f9f9;
@@ -180,6 +182,9 @@
 
 .itday {
   background: #475ab1;
+}
+.openday{
+  background: black;
 }
 
 .hackayhon {
@@ -264,14 +269,7 @@ h1 {
   border-width: 0 15px 15px 15px;
   border-color: transparent transparent #c5c5c5 transparent;
 }
-.filter{
-  max-width: 500px;
-  min-width: 250px;
-  float: left;
-  margin: 10px 10px;
-  display: inline-flex;
-  text-align: left;
-}
+
 
 @media screen  and (max-width: 1300px){
   .next-week-button{
@@ -289,4 +287,12 @@ h1 {
   .month-name{
     float: none;
   }
+}
+
+.clear-filter {
+  display: none;
+}
+
+.spinner-img {
+  width: 100%;
 }

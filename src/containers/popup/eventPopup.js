@@ -1,19 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-import { hidePopup } from '../../actions/popupActions';
+import PropTypes from 'prop-types';
 
 class EventPopup extends Component {
-  constructor(props) {
-    super(props);
-    this.closePopup = this.closePopup.bind(this);
-  }
-
-  closePopup() {
-    this.props.onHideEventPopup();
-    window.history.pushState({}, null, window.location.origin);
-  }
-
   render() {
     const {
       name,
@@ -22,7 +10,7 @@ class EventPopup extends Component {
       endDate,
       url,
       backgroundImageUrl,
-    } = this.props;
+    } = this.props.eventProfile;
     return (
       <div>
         {backgroundImageUrl ?
@@ -45,7 +33,7 @@ class EventPopup extends Component {
           </div>
           <div className="popup-url">
             {url &&
-            <a id="event-url" target="_blank" onClick={this.closePopup} href={url}>More information >></a>}
+            <a id="event-url" target="_blank" href={url}>More information >></a>}
           </div>
         </div>
       </div>
@@ -53,23 +41,14 @@ class EventPopup extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    name: state.event.eventProfile.name,
-    city: state.event.eventProfile.city,
-    startDate: state.event.eventProfile.startDate,
-    endDate: state.event.eventProfile.endDate,
-    url: state.event.eventProfile.url,
-    backgroundImageUrl: state.event.eventProfile.backgroundImageUrl,
-  };
-}
+EventPopup.propTypes = {
+  eventProfile: PropTypes.object.isRequired,
+  name: PropTypes.string,
+  city: PropTypes.string,
+  startDate: PropTypes.string,
+  endDate: PropTypes.string,
+  url: PropTypes.string,
+  backgroundImageUrl: PropTypes.string,
+};
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onHideEventPopup: () => {
-      dispatch(hidePopup());
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(EventPopup);
+export default EventPopup;

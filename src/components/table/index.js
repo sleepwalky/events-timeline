@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
 
 import { getEventsList } from '../../middleware/eventAPI';
 import { setMonthToEvents } from '../../actions/tableActions';
-import { filterEvents, setfilterForEvents } from '../../actions/eventActions';
-import Button from './button';
-import Header from './header';
-import TableFooter from './footer';
+import Button from '../../containers/button';
+import Header from '../../containers/table/header';
+import TableFooter from '../../containers/table/footer';
 import TableBody from './tableBody';
+import Filter from './filter';
+import Spinner from '../../containers/spinner';
+import { showOverlay } from '../../actions/overlayActions';
 
 import { months, weekDays, fullMonths } from '../../helpers/consts';
 
@@ -22,10 +23,8 @@ class Table extends Component {
       currentMonth: new Date().getMonth(),
       nextMonth: new Date().getMonth() + 1,
       prevMonth: new Date().getMonth() - 1,
-      selectedOptions: '',
     };
   }
-
   getMonthsView = () => {
     this.changeView('months');
   };
@@ -39,7 +38,7 @@ class Table extends Component {
     this.changeView('weeks');
   };
 
-  headerCalc = (view) => {
+  headerCalc = view => {
     if (view !== 'months') {
       const data = {
         year: new Date().getFullYear(),
@@ -68,7 +67,7 @@ class Table extends Component {
     return months;
   };
 
-  changeView = (newView) => {
+  changeView = newView => {
     this.setState({ view: newView });
     this.setState({ display: this.headerCalc(newView) });
   };
@@ -96,18 +95,24 @@ class Table extends Component {
   };
 
   refreshEventsTable = () => {
+    const filterData = {
+      extraClass: 'spinner',
+      title: 'Refreshing data...',
+      content: <Spinner />,
+      open: true,
+    };
+    this.props.showOverlay(filterData);
     this.props.onGetEvents();
   };
-  handleChange = (selectedOption) => {
-    const options = [];
-    selectedOption.forEach((item) => {
-      options.push(item.value);
-    });
-    this.setState({ selectedOptions: options.join(',') });
-    this.props.onSetEventFilters(options);
-    this.props.onFilterEvent(options);
+  selectTopics = () => {
+    const filterData = {
+      extraClass: 'filter',
+      title: 'Set filters',
+      content: <Filter />,
+      open: true,
+    };
+    this.props.showOverlay(filterData);
   };
-
   render() {
     return (
       <div>
@@ -115,23 +120,12 @@ class Table extends Component {
           <Button
             onClick={this.refreshEventsTable}
             value="Refresh"
-            class="refresh-button"
+            extraClass="refresh-button"
           />
-            <Select
-              className="filter"
-              placeholder="Select technologies..."
-              value={this.state.selectedOptions}
-              name="form-field-name"
-              multi
-              closeOnSelect={false}
-              onChange={this.handleChange}
-              options={[
-                { value: 'js', label: 'Javascript' },
-                { value: 'react', label: 'React' },
-                { value: 'css', label: 'CSS' },
-                { value: 'html', label: 'HTML' },
-              ]}
-            />
+          <Button
+            onClick={this.selectTopics}
+            value="Filter"
+          />
           <Button
             onClick={this.getMonthsView}
             value="Current year"
@@ -150,12 +144,12 @@ class Table extends Component {
           <Button
             onClick={this.getNextWeeksView}
             value="next month"
-            class="next-week-button"
+            extraClass="next-week-button"
           />
           <Button
             onClick={this.getPrevWeeksView}
             value="prev month"
-            class="prev-week-button"
+            extraClass="prev-week-button"
           />
 
         </div>
@@ -177,24 +171,29 @@ class Table extends Component {
 function mapStateToProps(state) {
   return {
     month: state.table.monthDisplayed,
+    eventProfile: state.event.eventProfile,
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     onGetEvents: () => {
       dispatch(getEventsList());
     },
-    onSetMonth: (month) => {
+    onSetMonth: month => {
       dispatch(setMonthToEvents(month));
     },
-    onFilterEvent: (param) => {
-      dispatch(filterEvents(param));
-    },
-    onSetEventFilters: (filter) => {
-      dispatch(setfilterForEvents(filter));
+    showOverlay: data => {
+      dispatch(showOverlay(data));
     },
   };
+};
+
+Table.propTypes = {
+  onSetMonth: PropTypes.func.isRequired,
+  onGetEvents: PropTypes.func.isRequired,
+  showOverlay: PropTypes.func.isRequired,
+  month: PropTypes.any,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Table);

@@ -7,6 +7,11 @@ import logo from '../logo.svg';
 import './app.css';
 
 class App extends Component {
+//  componentDidMount() {
+//    window.addEventListener('popstate', () => {
+//      window.location.reload();
+//    });
+//  }
   render() {
     return (
       <div className="app">
