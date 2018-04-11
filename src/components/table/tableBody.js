@@ -24,7 +24,7 @@ class TableBody extends Component {
     const sortedEvents = {};
 
     events.forEach(event => {
-      const place = event.city ? event.city.toLowerCase() : 'no_city';
+      const place = event.city ? event.city.toLowerCase() : 'global';
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
@@ -38,7 +38,7 @@ class TableBody extends Component {
     const sortedEvents = {};
 
     events.forEach((event => {
-      const place = event.city ? event.city.toLowerCase() : 'no_city';
+      const place = event.city ? event.city.toLowerCase() : 'global';
       if (!sortedEvents[place]) {
         sortedEvents[place] = [];
       }
@@ -64,11 +64,11 @@ class TableBody extends Component {
       const month = eventDate.getMonth();
       const day = eventDate.getDate();
 
-      if (this.props.view === 'months' && month === timeInd) {
+      if (this.props.view === 'year' && month === timeInd) {
         renderingEvents.push(this.addToEventsArr(event));
       }
 
-      if ((this.props.view === 'weeks' || this.props.view === 'nextweeks' || this.props.view === 'prevweeks') && day === timeInd + 1) {
+      if ((this.props.view === 'month' || this.props.view === 'nextmonth' || this.props.view === 'prevmonth') && day === timeInd + 1) {
         renderingEvents.push(this.addToEventsArr(event));
       }
     });
@@ -91,21 +91,21 @@ class TableBody extends Component {
   );
 
   getRowNamesList = events => {
-    const rowNames = [];
+    const rowNames = ['GLOBAL'];
 
     events.forEach(event => {
-      const place = event.city ? event.city : 'No_city';
+      const place = event.city ? event.city : 'global';
       if (rowNames.indexOf(place) === -1) {
         rowNames.push(place);
       }
     });
-    rowNames.unshift('GLOBAL');
+
     return rowNames;
   };
 
   render() {
     const rowNames = this.getRowNamesList(this.props.events);
-    const sortedEvents = this.props.view === 'months' ?
+    const sortedEvents = this.props.view === 'year' ?
       this.sortAllEvents(this.props.events) :
       this.sortMonthEvents(this.props.events);
 

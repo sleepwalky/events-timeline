@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+  font-family: 'Oswald', sans-serif;
 }
 
 .app {
@@ -11,82 +11,123 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  text-align: center;
 }
 
-.button {
-  font-family: "Roboto", Arial, sans-serif;
-  color: #000000;
-  cursor: pointer;
-  padding: 0px 5px;
-  display: inline-block;
-  float: left;
-  margin: 10px 10px;
+.epam-logo {
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.epam-logo img {
+  width: 72px;
+}
+
+.app-header {
+  height: 60px;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  background: #464547;
+  display: flex;
+  align-items: center;
+}
+
+.app-title {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0 18px;
   text-transform: uppercase;
-  line-height: 2em;
-  width: 140px;
-  outline: none;
+}
+.buttons-box {
+  /*position: sticky;*/
+  /*background: #39c2d7;*/
+  /*top: 0px;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  margin-left: 300px;
+  background: #464547;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-box-part {
+  display: flex;
+  align-items: center;
+}
+
+.sub-buttons {
+  margin-right: 50px;
+}
+/*.buttons-box:after {*/
+/*clear: both;*/
+/*content: '';*/
+/*display: block;*/
+/*}*/
+
+.prev-month-button, .next-month-button {
+  float: right;
+}
+
+.refresh-button {
   position: relative;
-  font-size: 14px;
-  border: 3px solid #cfcece;
-  background-color: #ffffff;
-  border-radius: 15px 15px 15px 15px;
-  transition: all 0.3s;
-}
-
-.table-footer {
-  height: 120px;
-}
-
-.footer-info-box:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.footer-info-box.total {
-  color: #8dc424;
-}
-
-.footer-info-box {
-  font-size: 20px;
-  padding-top: 20px;
   float: left;
-  margin-left: 20px;
-  width: 250px;
-  text-align: left;
+}
+.button {
+  /*font-family: "Roboto", Arial, sans-serif;*/
+  /*color: #000000;*/
+  /*cursor: pointer;*/
+  /*padding: 0px 5px;*/
+  /*display: inline-block;*/
+  /*float: left;*/
+  /*margin: 10px 10px;*/
+  /*text-transform: uppercase;*/
+  /*line-height: 2em;*/
+  /*width: 140px;*/
+  /*outline: none;*/
+  /*position: relative;*/
+  /*font-size: 14px;*/
+  /*border: 3px solid #cfcece;*/
+  /*background-color: #ffffff;*/
+  /*border-radius: 15px 15px 15px 15px;*/
+  /*transition: all 0.3s;*/
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  color: #e2e2e2;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #000;
+}
+
+.button-active {
+  color: #39C2D7;
 }
 
 .table-header {
   padding-left: 130px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   position: sticky;
   border-bottom: 15px solid #e2e2e2;
   font-size: 14px;
   background-color: white;
-  top: 50px;
-}
-
-.month-name{
-  font-family: "Roboto", Arial, sans-serif;
-  cursor: pointer;
-  padding: 0px 5px;
-  float: left;
-  display: inline-block;
-  margin: 10px 10px;
-  text-transform: uppercase;
-  line-height: 2em;
-  width: 120px;
-  outline: none;
-  position: relative;
-  font-size: 14px;
-  border: 3px solid #cfcece;
-  background-color: #8DC424;
-  border-radius: 15px 15px 15px 15px;
-  transition: all 0.3s;
+  top: 60px;
 }
 
 .table-header-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   padding: 10px 2px;
   text-align: center;
@@ -98,11 +139,41 @@
   border-left: 2px solid #e2e2e2;
 }
 
+
+.month-name{
+  /*font-family: "Roboto", Arial, sans-serif;*/
+  /*font-family: "Source Sans Pro", "Trebuchet MS", sans-serif;*/
+  /*cursor: pointer;*/
+  /*padding: 0px 5px;*/
+  /*float: left;*/
+  /*display: inline-block;*/
+  /*margin: 10px 10px;*/
+  /*text-transform: uppercase;*/
+  /*line-height: 2em;*/
+  /*width: 120px;*/
+  /*outline: none;*/
+  /*position: relative;*/
+  /*font-size: 14px;*/
+  /*border: 3px solid #cfcece;*/
+  /*background-color: #8DC424;*/
+  width: 120px;
+  background: #39C2D7;
+  color: white;
+  /*margin: 10px 0*/
+  /*border-radius: 15px 15px 15px 15px;*/
+  /*transition: all 0.3s;*/
+}
+
+.sub-menu {
+
+}
+
 .table-body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: left;
+  margin-top: 60px;
 }
 
 .table-body-row {
@@ -148,25 +219,27 @@
   padding: 4px 2px;
 }
 
-.buttons-box {
-  position: sticky;
-  background: #39c2d7;
-  top: 0px;
+.table-footer {
+  height: 120px;
 }
 
-.buttons-box:after {
+.footer-info-box:after {
   clear: both;
-  content: '';
+  content: "";
   display: block;
 }
 
-.prev-week-button, .next-week-button {
-  float: right;
+.footer-info-box.total {
+  color: #8dc424;
 }
 
-.refresh-button {
-  position: relative;
+.footer-info-box {
+  font-size: 20px;
+  padding-top: 20px;
   float: left;
+  margin-left: 20px;
+  width: 250px;
+  text-align: left;
 }
 
 .meetup {
@@ -198,34 +271,6 @@
 
 .otherevent {
   background: #ca9cff;
-}
-
-.app {
-  text-align: center;
-}
-
-.epam-logo {
-  padding: 0 18px;
-  display: flex;
-  flex-direction: column;
-}
-
-.epam-logo img {
-  width: 72px;
-}
-
-.app-header {
-  height: 60px;
-  background: #464547;
-  display: flex;
-  align-items: center;
-}
-
-.app-title {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 0 18px;
-  text-transform: uppercase;
 }
 
 .line {
@@ -273,10 +318,10 @@ h1 {
 
 
 @media screen  and (max-width: 1300px){
-  .next-week-button{
+  .next-month-button{
     float: none;
   }
-  .prev-week-button{
+  .prev-month-button{
     float: none;
   }
   .filter{

@@ -5,12 +5,12 @@ const Button = props => {
   const { value, onClick } = props;
   const classes = `button${props.extraClass ? (` ${props.extraClass}`) : ''}`;
   return (
-    <button
+    <div
       className={classes}
       onClick={onClick}
     >
       {value}
-    </button>
+    </div>
   );
 };
 

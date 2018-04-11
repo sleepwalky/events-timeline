@@ -7,7 +7,7 @@ const places = [
   'Mogilev',
 ];
 
-const months = [
+const monthsNames = [
   'Jan',
   'Feb',
   'Mar',
@@ -46,4 +46,4 @@ const weekDays = [
   'Fri',
   'Sat',
 ];
-export { places, months, weekDays, fullMonths };
+export { places, monthsNames, weekDays, fullMonths };
