@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 import { getEventsList } from '../../middleware/eventAPI';
 import { setMonthToEvents, setNextPrevMonthToEvents, setViewToTable, setDisplayToTable } from '../../actions/tableActions';
 import { filterEventsByMonth, setEventsSummary } from '../../actions/eventActions';
-import Button from '../../containers/button';
-import Header from '../../containers/table/header';
-import TableFooter from '../../containers/table/footer';
+import Button from '../../components/button';
+import Header from '../../components/table/header';
+import TableFooter from '../../components/table/footer';
 import TableBody from './tableBody';
 import Filter from './filter';
-import Spinner from '../../containers/spinner';
+import Spinner from '../../components/spinner';
 import { showOverlay } from '../../actions/overlayActions';
 
 import { months, weekDays, fullMonths } from '../../helpers/consts';

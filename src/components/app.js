@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Table from '../components/table';
-import Popup from '../components/popup';
-import Overlay from '../components/overlay';
+import Table from '../containers/table';
+import Popup from '../containers/popup';
+import Overlay from '../containers/overlay';
 import logo from '../logo.svg';
 import './app.css';
 

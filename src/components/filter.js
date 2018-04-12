@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../containers/button';
+import Button from './/button';
 
 class FilterBody extends Component {
   render() {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { showPopup } from '../../actions/popupActions';
 import { setEventProfile } from '../../actions/eventActions';
-import EventCell from '../../containers/table/eventCell';
+import EventCell from '../../components/table/eventCell';
 
 class Event extends Component {
   constructor(props) {

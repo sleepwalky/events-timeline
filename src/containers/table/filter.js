@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import FilterBody from '../../containers/filter';
+import FilterBody from '../../components/filter';
 import { filterEvents, setEventProfileById, setEventsSummary, filterEventsByMonth } from '../../actions/eventActions';
 import { setFilters, filterTopics } from '../../actions/filterActions';
 import { hideOverlay } from '../../actions/overlayActions';

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import store from '../../store';
 import { hidePopup } from '../../actions/popupActions';
 import './popup.css';
-import EventPopup from '../../containers/popup/eventPopup';
+import EventPopup from '../../components/popup/eventPopup';
 
 class Popup extends Component {
   clearEventPopup = () => {
