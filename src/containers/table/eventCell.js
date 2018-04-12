@@ -11,6 +11,7 @@ class EventCell extends Component {
         mouseOutEvent,
         onShowPopup,
         eventType,
+        eventTypeShort,
         isTooltipShown,
         name,
         city,
@@ -24,7 +25,12 @@ class EventCell extends Component {
           onMouseOut={mouseOutEvent}
           onClick={onShowPopup}
         >
-          {eventType}
+          <span>
+            {eventType}
+          </span>
+          <span>
+            {eventTypeShort}
+          </span>
         </div>
         {isTooltipShown
         ? <Tooltip name={name} city={city} startDate={startDate} />
@@ -42,6 +48,7 @@ EventCell.propTypes = {
   mouseOutEvent: PropTypes.func.isRequired,
   onShowPopup: PropTypes.func.isRequired,
   eventType: PropTypes.string.isRequired,
+  eventTypeShort: PropTypes.string.isRequired,
   isTooltipShown: PropTypes.bool,
   name: PropTypes.string.isRequired,
   city: PropTypes.string,

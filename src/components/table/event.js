@@ -53,21 +53,21 @@ class Event extends Component {
   parseEventName = name => {
     const fullstringname = name.replace(/ /g, '').toLowerCase();
     if (fullstringname.indexOf('meetup') !== -1 || fullstringname.indexOf('meet-up') !== -1) {
-      return { name: 'Global meetup', className: 'meetup' };
+      return { name: 'Global meetup', className: 'meetup', shortName: 'GM' };
     } else if (fullstringname.indexOf('talk') !== -1) {
-      return { name: 'Talk', className: 'talk' };
+      return { name: 'Talk', className: 'talk', shortName: 'TK' };
     } else if (fullstringname.indexOf('rollingscopes') !== -1) {
-      return { name: 'Rolling scope', className: 'rs' };
+      return { name: 'Rolling scope', className: 'meetup', shortName: 'RS' };
     } else if (fullstringname.indexOf('openday') !== -1) {
-      return { name: 'Open Day', className: 'openday' };
+      return { name: 'Open Day', className: 'openday', shortName: 'OD' };
     } else if (fullstringname.indexOf('itday') !== -1) {
-      return { name: 'IT Day', className: 'itday' };
+      return { name: 'IT Day', className: 'meetup', shortName: 'ITD' };
     } else if (fullstringname.indexOf('hackathon') !== -1) {
-      return { name: 'Hackathon', className: 'hackayhon' };
+      return { name: 'Hackathon', className: 'hackathon', shortName: 'HA' };
     } else if (fullstringname.indexOf('truestory') !== -1) {
-      return { name: 'True story', className: 'truestory' };
+      return { name: 'Global meetup', className: 'meetup', shortName: 'GM' };
     }
-    return { name: 'Other event', className: 'otherevent' };
+    return { name: 'Other event', className: 'otherevent', shortName: 'OE' };
   };
 
   render() {
@@ -85,6 +85,7 @@ class Event extends Component {
         startDate={startDate}
         extraClass={classes}
         eventType={eventType.name}
+        eventTypeShort={eventType.shortName}
         isTooltipShown={this.state.isTooltipShown}
         mouseOutEvent={this.mouseOutEvent}
         mouseOverEvent={this.mouseOverEvent}

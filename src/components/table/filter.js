@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import FilterBody from '../../containers/filter';
-import { filterEvents, setEventProfileById } from '../../actions/eventActions';
+import { filterEvents, setEventProfileById, setEventsSummary, filterEventsByMonth } from '../../actions/eventActions';
 import { setFilters, filterTopics } from '../../actions/filterActions';
 import { hideOverlay } from '../../actions/overlayActions';
 
@@ -138,6 +138,7 @@ class Filter extends Component {
     if (paramsString === '' || paramsString === undefined) {
       newPathName = `${pathname}?filter=${chosenTopics.join(',')}`;
       history.pushState({}, null, newPathName);
+      this.setSummary(this.props.month, chosenTopics.length);
     } else {
       this.setHistoryState(paramsString, pathname, history, chosenTopics);
     }
@@ -173,7 +174,19 @@ class Filter extends Component {
       id: this.getUrlParam('eventId'),
       isFiltered: isFilteredEvents,
     };
+    this.setSummary(this.props.month, chosenTopics.length);
     this.props.onSetEventProfileById(eventData);
+  };
+  setSummary = (displayedMonth, topicLen) => {
+    this.props.onFilterEventsByMonth({
+      month: displayedMonth,
+      isFiltered: topicLen > 0,
+    });
+    this.props.onSetEventsSummary({
+      displayed: displayedMonth,
+      isFiltered: topicLen > 0,
+      view: this.props.view,
+    });
   };
   clearFilter = () => {
     const wrapper = findElement('.selected-topics');
@@ -208,11 +221,15 @@ class Filter extends Component {
 
 Filter.propTypes = {
   onFilterTopics: PropTypes.func.isRequired,
+  onFilterEventsByMonth: PropTypes.func.isRequired,
+  onSetEventsSummary: PropTypes.func.isRequired,
   onSetEventFilters: PropTypes.func.isRequired,
   onFilterEvent: PropTypes.func.isRequired,
   onHideOverlay: PropTypes.func.isRequired,
   onSetEventProfileById: PropTypes.func.isRequired,
   filter: PropTypes.array,
+  month: PropTypes.any,
+  view: PropTypes.string,
 };
 
 function mapStateToProps(state) {
@@ -220,6 +237,8 @@ function mapStateToProps(state) {
     filter: state.filter.filteredTopics.length > 0 || state.filter.searchFilter !== ''
       ? state.filter.filteredTopics
       : state.filter.topicsList,
+    month: state.table.displayedMonth,
+    view: state.table.view,
   };
 }
 
@@ -231,11 +250,17 @@ const mapDispatchToProps = dispatch => {
     onSetEventFilters: filters => {
       dispatch(setFilters(filters));
     },
+    onSetEventsSummary: data => {
+      dispatch(setEventsSummary(data));
+    },
     onHideOverlay: () => {
       dispatch(hideOverlay());
     },
     onFilterTopics: filter => {
       dispatch(filterTopics(filter));
+    },
+    onFilterEventsByMonth: month => {
+      dispatch(filterEventsByMonth(month));
     },
     onSetEventProfileById: data => {
       dispatch(setEventProfileById(data));

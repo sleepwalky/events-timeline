@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getEventsSuccess, filterEvents, setEventProfileById } from '../actions/eventActions';
+import { getEventsSuccess, filterEvents, setEventProfileById, setEventsSummary } from '../actions/eventActions';
 import { hideOverlay, showOverlay } from '../actions/overlayActions';
 import { setFilters } from '../actions/filterActions';
 import { showPopup } from '../actions/popupActions';
@@ -20,7 +20,7 @@ function getUrlParam(name) {
     return paramValue;
   }
 }
-export const getEventsList = () => dispatch => {
+export const getEventsList = params => dispatch => {
   return axios.get('/events').then(response => {
     dispatch(getEventsSuccess(response.data));
     dispatch(hideOverlay());
@@ -38,11 +38,16 @@ export const getEventsList = () => dispatch => {
       };
       const eventData = {
         id: eventId,
-        isFiltered: filterData ? true : false,
+        isFiltered: filterData,
       };
       dispatch(setEventProfileById(eventData));
       dispatch(showPopup(data));
     }
+    dispatch(setEventsSummary({
+      displayed: params.displayed ? params.displayed : new Date().getMonth(),
+      isFiltered: filterData,
+      view: params.view,
+    }));
   }).catch(error => {
     dispatch(showOverlay({
       extraClass: 'error',

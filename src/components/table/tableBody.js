@@ -17,7 +17,7 @@ class TableBody extends Component {
       open: true,
     };
     this.props.showOverlay(filterData);
-    this.props.onGetEvents();
+    this.props.onGetEvents({ view: this.props.view });
   }
 
   sortAllEvents = events => {
@@ -102,12 +102,17 @@ class TableBody extends Component {
     rowNames.unshift('GLOBAL');
     return rowNames;
   };
-
   render() {
-    const rowNames = this.getRowNamesList(this.props.events);
+    let eventsArray = '';
+    if (this.props.currentMonth === this.props.month) {
+      eventsArray = this.props.events;
+    } else {
+      eventsArray = this.props.monthlyEvents;
+    }
+    const rowNames = this.getRowNamesList(eventsArray);
     const sortedEvents = this.props.view === 'months' ?
-      this.sortAllEvents(this.props.events) :
-      this.sortMonthEvents(this.props.events);
+      this.sortAllEvents(eventsArray) :
+      this.sortMonthEvents(eventsArray);
 
     return (
       <Body
@@ -125,6 +130,8 @@ TableBody.propTypes = {
   showOverlay: PropTypes.func.isRequired,
   month: PropTypes.any,
   view: PropTypes.string,
+  currentMonth: PropTypes.any,
+  monthlyEvents: PropTypes.array,
   events: PropTypes.array,
   cells: PropTypes.array,
 };
@@ -134,13 +141,15 @@ function mapStateToProps(state) {
     events: state.event.filteredEvents.length === 0 && state.filter.filters.length === 0 ?
       state.event.eventsList :
       state.event.filteredEvents,
-    month: state.table.monthDisplayed,
+    monthlyEvents: state.event.filteredByMonth,
+    month: state.table.displayedMonth,
+    currentMonth: state.table.currentMonth,
   };
 }
 
 const mapDispatchToProps = dispatch => ({
-  onGetEvents: () => {
-    dispatch(getEventsList());
+  onGetEvents: data => {
+    dispatch(getEventsList(data));
   },
   showOverlay: data => {
     dispatch(showOverlay(data));

@@ -35,6 +35,7 @@
 
 .table-footer {
   height: 120px;
+  padding-top: 20px;
 }
 
 .footer-info-box:after {
@@ -47,12 +48,16 @@
   color: #8dc424;
 }
 
+.total {
+  width: 200px;
+}
+
 .footer-info-box {
   font-size: 20px;
-  padding-top: 20px;
   float: left;
   margin-left: 20px;
-  width: 250px;
+  margin-right: 50px;
+  max-width: 250px;
   text-align: left;
 }
 
@@ -88,6 +93,7 @@
 
 .table-header-item {
   flex: 1;
+  overflow: hidden;
   padding: 10px 2px;
   text-align: center;
   color: #2c2c2c;
@@ -126,6 +132,7 @@
 .table-cell {
   flex: 1;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
   border-right: 1px solid #e2e2e2;
@@ -170,11 +177,19 @@
 }
 
 .meetup {
-  background: #66bbcb;
+  background: #0386d4;
+}
+
+.sum-meetup {
+  color: #0386d4;
 }
 
 .talk {
-  background: #d285a5;
+  background: #76cdd8;
+}
+
+.sum-talk{
+  color: #76cdd8;
 }
 
 .rs {
@@ -184,12 +199,21 @@
 .itday {
   background: #475ab1;
 }
+
 .openday{
-  background: black;
+  background: #c8de3d;
 }
 
-.hackayhon {
-  background: #8dc424;
+.sum-openday{
+  color: #c8de3d;
+}
+
+.hackathon {
+  background: #f9954f;
+}
+
+.sum-hackathon {
+  color: #f9954f;
 }
 
 .truestory {
@@ -198,6 +222,9 @@
 
 .otherevent {
   background: #ca9cff;
+}
+.sum-otherevent {
+  color: #ca9cff;
 }
 
 .app {
@@ -271,6 +298,9 @@ h1 {
   border-color: transparent transparent #c5c5c5 transparent;
 }
 
+.event span:last-child {
+  display: none;
+}
 
 @media screen  and (max-width: 1300px){
   .next-week-button{
@@ -287,6 +317,18 @@ h1 {
   }
   .month-name{
     float: none;
+  }
+  .event span:first-child {
+    display: none;
+  }
+  .event span:last-child {
+    display: inline-block;
+  }
+}
+
+@media screen  and (max-width: 777px) {
+  .event span:last-child {
+    display: none;
   }
 }
 

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { getEventsList } from '../../middleware/eventAPI';
-import { setMonthToEvents } from '../../actions/tableActions';
+import { setMonthToEvents, setNextPrevMonthToEvents, setViewToTable, setDisplayToTable } from '../../actions/tableActions';
+import { filterEventsByMonth, setEventsSummary } from '../../actions/eventActions';
 import Button from '../../containers/button';
 import Header from '../../containers/table/header';
 import TableFooter from '../../containers/table/footer';
@@ -15,26 +16,26 @@ import { showOverlay } from '../../actions/overlayActions';
 import { months, weekDays, fullMonths } from '../../helpers/consts';
 
 class Table extends Component {
-  constructor() {
-    super();
-    this.state = {
-      view: 'months',
-      display: months,
-      currentMonth: new Date().getMonth(),
-      nextMonth: new Date().getMonth() + 1,
-      prevMonth: new Date().getMonth() - 1,
-    };
-  }
+  setStateForTable = (setDisplayedMonth, setCurrentMonth, setView) => {
+    this.props.onFilterEventsByMonth({
+      month: setDisplayedMonth,
+      isFiltered: this.props.isEventsFiltered,
+    });
+    this.props.onSetMonth(setCurrentMonth);
+    this.props.onSetNextPrevMonth();
+    this.props.onSetEventsSummary({
+      displayed: setCurrentMonth,
+      isFiltered: this.props.isEventsFiltered,
+      view: setView,
+    });
+  };
   getMonthsView = () => {
+    this.setStateForTable(null, this.props.currentMonth, 'months');
     this.changeView('months');
   };
 
   getWeeksView = () => {
-    this.setState(() => ({
-      nextMonth: this.state.currentMonth + 1,
-      prevMonth: this.state.currentMonth - 1,
-    }));
-    this.props.onSetMonth(this.state.currentMonth);
+    this.setStateForTable(this.props.currentMonth, this.props.currentMonth, 'weeks');
     this.changeView('weeks');
   };
 
@@ -44,11 +45,11 @@ class Table extends Component {
         year: new Date().getFullYear(),
       };
       if (view === 'weeks') {
-        data.month = this.state.currentMonth;
+        data.month = this.props.currentMonth;
       } else if (view === 'nextweeks') {
-        data.month = this.state.nextMonth;
+        data.month = this.props.nextMonth;
       } else if (view === 'prevweeks') {
-        data.month = this.state.prevMonth;
+        data.month = this.props.prevMonth;
       }
 
       const firstWeekDay = new Date(data.year, data.month, 1).getDay();
@@ -68,28 +69,20 @@ class Table extends Component {
   };
 
   changeView = newView => {
-    this.setState({ view: newView });
-    this.setState({ display: this.headerCalc(newView) });
+    this.props.onSetTableView(newView);
+    this.props.onSetTableDisplay(this.headerCalc(newView));
   };
 
   getNextWeeksView = () => {
-    if (this.state.nextMonth !== 12) {
-      this.setState(() => ({
-        nextMonth: this.state.nextMonth + 1,
-        prevMonth: this.state.nextMonth - 1,
-      }));
-      this.props.onSetMonth(this.state.nextMonth);
+    if (this.props.nextMonth !== 12) {
+      this.setStateForTable(this.props.nextMonth, this.props.nextMonth, 'weeks');
       this.changeView('nextweeks');
     }
   };
 
   getPrevWeeksView = () => {
-    if (this.state.prevMonth !== -1) {
-      this.setState(() => ({
-        nextMonth: this.state.nextMonth - 1,
-        prevMonth: this.state.prevMonth - 1,
-      }));
-      this.props.onSetMonth(this.state.prevMonth);
+    if (this.props.prevMonth !== -1) {
+      this.setStateForTable(this.props.prevMonth, this.props.prevMonth, 'weeks');
       this.changeView('prevweeks');
     }
   };
@@ -102,7 +95,7 @@ class Table extends Component {
       open: true,
     };
     this.props.showOverlay(filterData);
-    this.props.onGetEvents();
+    this.props.onGetEvents({ view: this.props.view, displayed: this.props.month });
   };
   selectTopics = () => {
     const filterData = {
@@ -138,7 +131,7 @@ class Table extends Component {
             {
               this.props.month !== '' ?
                 fullMonths[this.props.month] :
-                fullMonths[this.state.currentMonth]
+                fullMonths[this.props.currentMonth]
             }
           </span>
           <Button
@@ -154,14 +147,16 @@ class Table extends Component {
 
         </div>
         <Header
-          view={this.state.display}
+          view={this.props.display}
         />
         <div className="table">
           <TableBody
-            cells={this.state.display}
-            view={this.state.view}
+            cells={this.props.display}
+            view={this.props.view}
           />
-          <TableFooter />
+          <TableFooter
+            result={this.props.summary}
+          />
         </div>
       </div>
     );
@@ -170,18 +165,40 @@ class Table extends Component {
 
 function mapStateToProps(state) {
   return {
-    month: state.table.monthDisplayed,
+    month: state.table.displayedMonth,
+    view: state.table.view,
+    display: state.table.display,
+    currentMonth: state.table.currentMonth,
+    nextMonth: state.table.nextMonth,
+    prevMonth: state.table.prevMonth,
     eventProfile: state.event.eventProfile,
+    summary: state.event.summary,
+    isEventsFiltered: state.filter.filters.length > 0,
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onGetEvents: () => {
-      dispatch(getEventsList());
+    onGetEvents: data => {
+      dispatch(getEventsList(data));
+    },
+    onSetEventsSummary: data => {
+      dispatch(setEventsSummary(data));
     },
     onSetMonth: month => {
       dispatch(setMonthToEvents(month));
+    },
+    onSetNextPrevMonth: () => {
+      dispatch(setNextPrevMonthToEvents());
+    },
+    onSetTableView: view => {
+      dispatch(setViewToTable(view));
+    },
+    onSetTableDisplay: display => {
+      dispatch(setDisplayToTable(display));
+    },
+    onFilterEventsByMonth: month => {
+      dispatch(filterEventsByMonth(month));
     },
     showOverlay: data => {
       dispatch(showOverlay(data));
@@ -191,9 +208,21 @@ const mapDispatchToProps = dispatch => {
 
 Table.propTypes = {
   onSetMonth: PropTypes.func.isRequired,
+  onSetNextPrevMonth: PropTypes.func.isRequired,
+  onSetTableView: PropTypes.func.isRequired,
+  onSetTableDisplay: PropTypes.func.isRequired,
   onGetEvents: PropTypes.func.isRequired,
   showOverlay: PropTypes.func.isRequired,
+  onFilterEventsByMonth: PropTypes.func.isRequired,
+  onSetEventsSummary: PropTypes.func.isRequired,
   month: PropTypes.any,
+  isEventsFiltered: PropTypes.bool,
+  currentMonth: PropTypes.any,
+  nextMonth: PropTypes.any,
+  prevMonth: PropTypes.any,
+  summary: PropTypes.any,
+  view: PropTypes.string,
+  display: PropTypes.array,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Table);
