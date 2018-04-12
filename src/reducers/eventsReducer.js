@@ -101,49 +101,52 @@ function getSummary(state, action) {
   }
 }
 
-function eventReducer(state = initialState, action) {
-  let events = '';
-  let summaryInfo = '';
-  let filteredById = '';
+function parseEvents(events) {
   const parsedArray = [];
+  events.forEach(entity => {
+    if (entity.events) {
+      entity.events.forEach(event => {
+        if (checkElemtntInArray(parsedArray, event.id)) {
+          parsedArray.push(event);
+        }
+      });
+    } else {
+      if (checkElemtntInArray(parsedArray, entity.id)) {
+        parsedArray.push(entity);
+      }
+    }
+  });
+  return parsedArray;
+}
+
+function eventReducer(state = initialState, action) {
+  let filteredById = '';
   let arrayForFilter = '';
   switch (action.type) {
     case LOAD_EVENTS_LIST_SUCCESS:
-      action.events.forEach(entity => {
-        if (entity.events) {
-          entity.events.forEach(event => {
-            if (checkElemtntInArray(parsedArray, event.id)) {
-              parsedArray.push(event);
-            }
-          });
-        } else {
-          if (checkElemtntInArray(parsedArray, entity.id)) {
-            parsedArray.push(entity);
-          }
-        }
-      });
-
-      return Object.assign({}, state, { eventsList: parsedArray });
+      return Object.assign({}, state, { eventsList: parseEvents(action.events) });
     case SET_EVENT_PROFILE:
       return Object.assign({}, state, { eventProfile: action.data });
     case SET_EVENT_PROFILE_BY_ID:
       filteredById = (state.filteredEvents.length === 0 && action.eventData.isFiltered === false)
         ? state.eventsList.filter(item => item.id.toString() === action.eventData.id)
         : state.filteredEvents.filter(item => item.id.toString() === action.eventData.id);
-      events = filteredById.length > 0 ? filteredById[0] : noEventFound;
-      return Object.assign({}, state, { eventProfile: events });
+      return Object.assign({}, state, {
+        eventProfile: filteredById.length > 0 ? filteredById[0] : noEventFound,
+      });
     case FILTER_EVENTS:
-      events = filterEventArray(action.filter, state.eventsList);
-      return Object.assign({}, state, { filteredEvents: events });
+      return Object.assign({}, state, {
+        filteredEvents: filterEventArray(action.filter, state.eventsList),
+      });
     case SET_EVENTS_SUMMARY:
-      summaryInfo = getSummary(state, action);
-      return Object.assign({}, state, { summary: summaryInfo });
+      return Object.assign({}, state, { summary: getSummary(state, action) });
     case FILTER_EVENTS_BY_MONTH:
       arrayForFilter = state.filteredEvents.length >= 0 && action.data.isFiltered === true
         ? state.filteredEvents
         : state.eventsList;
-      events = filterEventArrayByMonth(action.data.month, arrayForFilter);
-      return Object.assign({}, state, { filteredByMonth: events });
+      return Object.assign({}, state, {
+        filteredByMonth: filterEventArrayByMonth(action.data.month, arrayForFilter),
+      });
     default: {
       return state;
     }
