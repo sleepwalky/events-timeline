@@ -38,14 +38,14 @@ export const getEventsList = params => dispatch => {
       };
       const eventData = {
         id: eventId,
-        isFiltered: filterData,
+        isFiltered: filterData ? true : false,
       };
       dispatch(setEventProfileById(eventData));
       dispatch(showPopup(data));
     }
     dispatch(setEventsSummary({
       displayed: params.displayed ? params.displayed : new Date().getMonth(),
-      isFiltered: filterData,
+      isFiltered: filterData ? true : false,
       view: params.view,
     }));
   }).catch(error => {
