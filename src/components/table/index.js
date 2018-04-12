@@ -144,11 +144,10 @@ class Table extends Component {
             value="prev month"
             extraClass="prev-week-button"
           />
-
+          <Header
+            view={this.props.display}
+          />
         </div>
-        <Header
-          view={this.props.display}
-        />
         <div className="table">
           <TableBody
             cells={this.props.display}
