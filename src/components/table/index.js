@@ -75,14 +75,14 @@ class Table extends Component {
 
   getNextWeeksView = () => {
     if (this.props.nextMonth !== 12) {
-      this.setStateForTable(this.props.nextMonth, this.props.nextMonth, 'weeks');
+      this.setStateForTable(this.props.nextMonth, this.props.nextMonth, 'nextweeks');
       this.changeView('nextweeks');
     }
   };
 
   getPrevWeeksView = () => {
     if (this.props.prevMonth !== -1) {
-      this.setStateForTable(this.props.prevMonth, this.props.prevMonth, 'weeks');
+      this.setStateForTable(this.props.prevMonth, this.props.prevMonth, 'prevweeks');
       this.changeView('prevweeks');
     }
   };
@@ -127,6 +127,11 @@ class Table extends Component {
             onClick={this.getWeeksView}
             value="Current month"
           />
+          <Button
+            onClick={this.getNextWeeksView}
+            value="next month"
+            extraClass="next-week-button"
+          />
           <span className="month-name">
             {
               this.props.month !== '' ?
@@ -134,11 +139,6 @@ class Table extends Component {
                 fullMonths[this.props.currentMonth]
             }
           </span>
-          <Button
-            onClick={this.getNextWeeksView}
-            value="next month"
-            extraClass="next-week-button"
-          />
           <Button
             onClick={this.getPrevWeeksView}
             value="prev month"
