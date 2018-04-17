@@ -11,7 +11,6 @@ import TableBody from './tableBody';
 import Filter from './filter';
 import Spinner from '../../containers/spinner';
 import { showOverlay } from '../../actions/overlayActions';
-// import { addActiveClass, removeActiveClass } from '../../actions/headerActions';
 
 import { monthsNames, weekDays, fullMonths } from '../../helpers/consts';
 
@@ -20,7 +19,6 @@ class Table extends Component {
     super();
     this.state = {
       view: 'year',
-      activeButton: 'year',
       display: monthsNames,
       currentMonth: new Date().getMonth(),
       nextMonth: new Date().getMonth() + 1,
@@ -70,12 +68,9 @@ class Table extends Component {
   };
 
   changeView = newView => {
-    // this.setState({ view: newView });
-    // this.setState({ display: this.headerCalc(newView) });
     this.setState({
       view: newView,
       display: this.headerCalc(newView),
-      activeButton: newView,
     });
   };
 
@@ -99,9 +94,13 @@ class Table extends Component {
       this.props.onSetMonth(this.state.prevMonth);
       this.changeView('prevmonth');
     }
-    // else {
-    //   this.props.(filterData);
-    // }
+  };
+
+  isMonthView = () => {
+    const { view } = this.state;
+    return view === 'month' ||
+      view === 'nextmonth' ||
+      view === 'prevmonth';
   };
 
   refreshEventsTable = () => {
@@ -130,18 +129,18 @@ class Table extends Component {
           <div className="main-buttons button-box-part">
             <Button
               onClick={this.getMonthsView}
-              value="current year"
-              extraClass={this.state.activeButton === 'year' ? 'button-active' : ''}
+              value="year"
+              extraClass={this.state.view === 'year' ? 'button-active' : ''}
             />
             <Button
               onClick={this.getWeeksView}
-              value="current month"
-              extraClass={this.state.activeButton === 'month' ? 'button-active' : ''}
+              value="month"
+              extraClass={this.isMonthView() ? 'button-active' : ''}
             />
             <Button
-              onClick={this.getNextMonthView}
-              value="next month"
-              extraClass="next-month-button"
+              onClick={this.getPrevMonthView}
+              value="prev month"
+              extraClass="prev-month-button"
             />
             <span className="month-name button">
               {
@@ -151,9 +150,9 @@ class Table extends Component {
               }
             </span>
             <Button
-              onClick={this.getPrevMonthView}
-              value="prev month"
-              extraClass="prev-month-button"
+              onClick={this.getNextMonthView}
+              value="next month"
+              extraClass="next-month-button"
             />
           </div>
           <div className="sub-buttons button-box-part">
@@ -201,12 +200,6 @@ const mapDispatchToProps = dispatch => {
     showOverlay: data => {
       dispatch(showOverlay(data));
     },
-    // addActiveClass: button => {
-    //   dispatch(addActiveClass(button));
-    // },
-    // removeActiveClass: button => {
-    //   dispatch(removeActiveClass(button));
-    // },
   };
 };
 
@@ -215,7 +208,6 @@ Table.propTypes = {
   onGetEvents: PropTypes.func.isRequired,
   showOverlay: PropTypes.func.isRequired,
   month: PropTypes.any,
-  activeButton: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Table);

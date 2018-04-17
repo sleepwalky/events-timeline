@@ -3,7 +3,6 @@
   font-size: 16px;
   text-align: left;
   color: blue;
-  
 }
 
 .popup .content {
@@ -25,7 +24,6 @@
   border: 1px solid #CFCECE;
 }
 
-
 .popup{
   display: none;
   background-color: #CFCECE;
@@ -36,7 +34,6 @@
   bottom: 30px;
   position: fixed;
   width: 400px;
-  
 }
 .popup a:enabled{
   color: #D76834;

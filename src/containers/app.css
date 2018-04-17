@@ -32,6 +32,7 @@
   background: #464547;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 .app-title {
@@ -41,9 +42,6 @@
   text-transform: uppercase;
 }
 .buttons-box {
-  /*position: sticky;*/
-  /*background: #39c2d7;*/
-  /*top: 0px;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -53,6 +51,7 @@
   background: #464547;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 
 .button-box-part {
@@ -63,11 +62,6 @@
 .sub-buttons {
   margin-right: 50px;
 }
-/*.buttons-box:after {*/
-/*clear: both;*/
-/*content: '';*/
-/*display: block;*/
-/*}*/
 
 .prev-month-button, .next-month-button {
   float: right;
@@ -77,24 +71,8 @@
   position: relative;
   float: left;
 }
+
 .button {
-  /*font-family: "Roboto", Arial, sans-serif;*/
-  /*color: #000000;*/
-  /*cursor: pointer;*/
-  /*padding: 0px 5px;*/
-  /*display: inline-block;*/
-  /*float: left;*/
-  /*margin: 10px 10px;*/
-  /*text-transform: uppercase;*/
-  /*line-height: 2em;*/
-  /*width: 140px;*/
-  /*outline: none;*/
-  /*position: relative;*/
-  /*font-size: 14px;*/
-  /*border: 3px solid #cfcece;*/
-  /*background-color: #ffffff;*/
-  /*border-radius: 15px 15px 15px 15px;*/
-  /*transition: all 0.3s;*/
   height: 100%;
   display: flex;
   align-items: center;
@@ -103,6 +81,7 @@
   color: #e2e2e2;
   cursor: pointer;
   text-transform: uppercase;
+  user-select: none
 }
 
 .button:hover {
@@ -122,6 +101,7 @@
   font-size: 14px;
   background-color: white;
   top: 60px;
+  z-index: 10;
 }
 
 .table-header-item {
@@ -139,33 +119,15 @@
   border-left: 2px solid #e2e2e2;
 }
 
-
 .month-name{
-  /*font-family: "Roboto", Arial, sans-serif;*/
-  /*font-family: "Source Sans Pro", "Trebuchet MS", sans-serif;*/
-  /*cursor: pointer;*/
-  /*padding: 0px 5px;*/
-  /*float: left;*/
-  /*display: inline-block;*/
-  /*margin: 10px 10px;*/
-  /*text-transform: uppercase;*/
-  /*line-height: 2em;*/
-  /*width: 120px;*/
-  /*outline: none;*/
-  /*position: relative;*/
-  /*font-size: 14px;*/
-  /*border: 3px solid #cfcece;*/
-  /*background-color: #8DC424;*/
   width: 120px;
   background: #39C2D7;
   color: white;
-  /*margin: 10px 0*/
-  /*border-radius: 15px 15px 15px 15px;*/
-  /*transition: all 0.3s;*/
+  cursor: auto;
 }
 
-.sub-menu {
-
+.month-name:hover {
+  background: #39C2D7;
 }
 
 .table-body {
@@ -257,6 +219,7 @@
 .itday {
   background: #475ab1;
 }
+
 .openday{
   background: black;
 }
@@ -287,20 +250,45 @@ h1 {
   margin-bottom: 5px;
 }
 
+h4 {
+  color: #fff;
+  font-weight: normal
+}
+
 .app-intro {
   font-size: large;
+}
+
+.event-item {
+  position: relative;
 }
 
 .tooltip {
   position: absolute;
   margin-top: 10px;
-  border-top-left-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 300px;
   max-height: 150px;
   font-size: 16px;
-  background: #c5c5c5;
-  padding: 10px 5px;
+  background: #e7e7e7;
   z-index: 1000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tooltip-right {
+  right: 0;
+  left: auto;
+  transform: translateX(0);
+}
+
+.tooltip-header {
+  background: #464547;
+  padding: 5px 5px;
+}
+
+.tooltip-body {
+  padding: 5px 5px 10px;
 }
 
 .tooltip:before {
@@ -309,13 +297,17 @@ h1 {
   height: 0;
   position: absolute;
   top: -10px;
-  left: 1px;
-  margin-right: -15px;
+  left: 50%;
+  margin-left: -15px;
   border-style: solid;
   border-width: 0 15px 15px 15px;
-  border-color: transparent transparent #c5c5c5 transparent;
+  border-color: transparent transparent #464547 transparent;
 }
 
+.tooltip-right:before {
+  right: 0;
+  left: auto;
+}
 
 @media screen  and (max-width: 1300px){
   .next-month-button{

@@ -94,7 +94,7 @@ class TableBody extends Component {
     const rowNames = ['GLOBAL'];
 
     events.forEach(event => {
-      const place = event.city ? event.city : 'global';
+      const place = event.city ? event.city : 'GLOBAL';
       if (rowNames.indexOf(place) === -1) {
         rowNames.push(place);
       }

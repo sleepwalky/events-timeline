@@ -13,6 +13,7 @@ class Event extends Component {
       isTooltipShown: false,
     };
   }
+
   onShowPopup = () => {
     let newPathName;
     const pathname = window.location.search;
@@ -40,14 +41,6 @@ class Event extends Component {
     };
     this.props.onSetEventProfile(this.props);
     this.props.onShowPopup(data);
-  };
-
-  mouseOverEvent = () => {
-    this.setState({ isTooltipShown: true });
-  };
-
-  mouseOutEvent = () => {
-    this.setState({ isTooltipShown: false });
   };
 
   parseEventName = name => {
@@ -86,8 +79,6 @@ class Event extends Component {
         extraClass={classes}
         eventType={eventType.name}
         isTooltipShown={this.state.isTooltipShown}
-        mouseOutEvent={this.mouseOutEvent}
-        mouseOverEvent={this.mouseOverEvent}
         onShowPopup={this.onShowPopup}
       />
     );
