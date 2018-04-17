@@ -5,23 +5,24 @@ class EventPopup extends Component {
   render() {
     const {
       name,
-      city,
+      city = 'GLOBAL EVENT',
       startDate,
       endDate,
       url,
       backgroundImageUrl,
     } = this.props.eventProfile;
     return (
-      <div>
-        {backgroundImageUrl ?
+      <div className="popup-inner-box">
+        <div className="header">
+          {name}
+        </div>
         <div className="event-image-box">
-          <img src={backgroundImageUrl} className="event-img" alt="" />
-        </div> : ''
-        }
-        <div>
-          <div className="popup-name">
-            <span><b>Event name: </b> {name}</span>
-          </div>
+          {backgroundImageUrl ?
+            <img src={backgroundImageUrl} className="event-img" alt="" />
+            : ''
+          }
+        </div>
+        <div className="content">
           <div className="popup-city">
             {city && <span><b>Location: </b> {city}</span>}
           </div>
