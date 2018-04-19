@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../spinner.svg';
 
-class FilterBody extends Component {
+class Spinner extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class FilterBody extends Component {
   }
 }
 
-export default FilterBody;
+export default Spinner;
