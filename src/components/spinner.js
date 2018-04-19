@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../spinner-2.gif';
+import logo from '../spinner.svg';
 
 class FilterBody extends Component {
   render() {
