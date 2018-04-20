@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 class TableFooter extends Component {
   render() {
     const {
-      talks,
+      talk,
       openday,
       meetup,
-      ccupdate,
-      others,
+      hackathon,
+      otherevent,
     } = this.props.result;
     return (
       <div className="table-footer">
@@ -17,7 +17,7 @@ class TableFooter extends Component {
         </div>
         <div>
           <div className="footer-info-box sum-talk">
-            {talks} Talks
+            {talk} Talks
           </div>
           <div className="footer-info-box sum-meetup">
             {meetup} Global Meetup
@@ -26,10 +26,10 @@ class TableFooter extends Component {
             {openday} Open Days
           </div>
           <div className="footer-info-box sum-hackathon ">
-            {ccupdate} CC Updates
+            {hackathon} CC Updates
           </div>
           <div className="footer-info-box sum-otherevent ">
-            {others} Other Events
+            {otherevent} Other Events
           </div>
         </div>
       </div>
@@ -38,11 +38,11 @@ class TableFooter extends Component {
 }
 
 TableFooter.propTypes = {
-  talks: PropTypes.object,
+  talk: PropTypes.object,
   meetup: PropTypes.object,
   openday: PropTypes.string,
-  ccupdate: PropTypes.string,
-  others: PropTypes.string,
+  hackathon: PropTypes.string,
+  otherevent: PropTypes.string,
   result: PropTypes.object,
 };
 

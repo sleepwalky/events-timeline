@@ -32,10 +32,8 @@ class EventCell extends Component {
             {eventTypeShort}
           </span>
         </div>
-        {isTooltipShown
-        ? <Tooltip name={name} city={city} startDate={startDate} />
-        :
-        <div />
+        {isTooltipShown &&
+          <Tooltip name={name} city={city} startDate={startDate} />
         }
       </div>
     );

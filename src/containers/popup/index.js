@@ -1,37 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import store from '../../store';
 import { hidePopup } from '../../actions/popupActions';
 import './popup.css';
 import EventPopup from '../../components/popup/eventPopup';
+import { setUrlParam } from '../../helpers/urlHelper';
 
 class Popup extends Component {
   clearEventPopup = () => {
-    const isDisplayed = store.getState().popup.display;
-    if (isDisplayed === 'block') {
+    if (this.props.display === 'block') {
       this.props.onHidePopup();
-      const pathname = window.location.search;
-      const params = pathname.split('?')[1];
-      let newPathName = '';
-      if (params !== '') {
-        const paramsLength = params.split('&').length;
-        params.split('&').forEach((param, index) => {
-          const paramName = param.split('=')[0];
-          if (paramName === 'eventId') {
-            let forReplace = param;
-            if (paramsLength > 1) {
-              if (index === 0) {
-                forReplace = `${param}&`;
-              } else {
-                forReplace = `&${param}`;
-              }
-            }
-            newPathName = pathname.replace(`${forReplace}`, '');
-          }
-        });
-      }
-      window.history.pushState({}, null, newPathName);
+      setUrlParam('eventId', null);
     }
   };
   render() {

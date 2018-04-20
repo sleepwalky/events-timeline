@@ -13,10 +13,10 @@ class EventPopup extends Component {
     } = this.props.eventProfile;
     return (
       <div>
-        {backgroundImageUrl ?
+        {backgroundImageUrl &&
         <div className="event-image-box">
           <img src={backgroundImageUrl} className="event-img" alt="" />
-        </div> : ''
+        </div>
         }
         <div>
           <div className="popup-name">
@@ -33,7 +33,7 @@ class EventPopup extends Component {
           </div>
           <div className="popup-url">
             {url &&
-            <a id="event-url" target="_blank" href={url}>More information >></a>}
+            <a id="event-url" target="_blank" href={url}>Read more</a>}
           </div>
         </div>
       </div>

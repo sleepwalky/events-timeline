@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { showPopup } from '../../actions/popupActions';
 import { setEventProfile } from '../../actions/eventActions';
 import EventCell from '../../components/table/eventCell';
+import { setUrlParam } from '../../helpers/urlHelper';
+import { parseEventName } from '../../helpers/eventHelper';
 
 class Event extends Component {
   constructor(props) {
@@ -14,27 +16,7 @@ class Event extends Component {
     };
   }
   onShowPopup = () => {
-    let newPathName;
-    const pathname = window.location.search;
-    const params = pathname.split('?')[1];
-    if (params === '' || params === undefined) {
-      newPathName = `${pathname}?eventId=${this.props.id}`;
-    } else {
-      let isEventIdExist = false;
-      if (params.split('&').length > 0) {
-        params.split('&').forEach(param => {
-          const paramName = param.split('=')[0];
-          if (paramName === 'eventId') {
-            isEventIdExist = true;
-            newPathName = pathname.replace(param, `eventId=${this.props.id}`);
-          }
-        });
-      }
-      if (!isEventIdExist) {
-        newPathName = `${pathname}&eventId=${this.props.id}`;
-      }
-    }
-    window.history.pushState({}, null, newPathName);
+    setUrlParam('eventId', this.props.id);
     const data = {
       display: true,
     };
@@ -49,34 +31,13 @@ class Event extends Component {
   mouseOutEvent = () => {
     this.setState({ isTooltipShown: false });
   };
-
-  parseEventName = name => {
-    const fullstringname = name.replace(/ /g, '').toLowerCase();
-    if (fullstringname.indexOf('meetup') !== -1 || fullstringname.indexOf('meet-up') !== -1) {
-      return { name: 'Global meetup', className: 'meetup', shortName: 'GM' };
-    } else if (fullstringname.indexOf('talk') !== -1) {
-      return { name: 'Talk', className: 'talk', shortName: 'TK' };
-    } else if (fullstringname.indexOf('rollingscopes') !== -1) {
-      return { name: 'Rolling scope', className: 'meetup', shortName: 'RS' };
-    } else if (fullstringname.indexOf('openday') !== -1) {
-      return { name: 'Open Day', className: 'openday', shortName: 'OD' };
-    } else if (fullstringname.indexOf('itday') !== -1) {
-      return { name: 'IT Day', className: 'meetup', shortName: 'ITD' };
-    } else if (fullstringname.indexOf('hackathon') !== -1) {
-      return { name: 'Hackathon', className: 'hackathon', shortName: 'HA' };
-    } else if (fullstringname.indexOf('truestory') !== -1) {
-      return { name: 'Global meetup', className: 'meetup', shortName: 'GM' };
-    }
-    return { name: 'Other event', className: 'otherevent', shortName: 'OE' };
-  };
-
   render() {
     const {
       name,
       city,
       startDate,
     } = this.props;
-    const eventType = this.parseEventName(name);
+    const eventType = parseEventName(name);
     const classes = `${eventType.className} event`;
     return (
       <EventCell
