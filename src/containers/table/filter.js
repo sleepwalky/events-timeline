@@ -2,22 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import FilterBody from '../../containers/filter';
-import { filterEvents, setEventProfileById } from '../../actions/eventActions';
+import FilterBody from '../../components/filter';
+import { filterEvents, setEventProfileById, setEventsSummary, filterEventsByMonth } from '../../actions/eventActions';
 import { setFilters, filterTopics } from '../../actions/filterActions';
 import { hideOverlay } from '../../actions/overlayActions';
-
-function findElement(name) {
-  return document.querySelector(name);
-}
-
-function findAllElements(name) {
-  return document.querySelectorAll(name);
-}
-
-function createElement(name) {
-  return document.createElement(name);
-}
+import { setUrlParam } from '../../helpers/urlHelper';
 
 class Filter extends Component {
   componentDidMount() {
@@ -26,61 +15,53 @@ class Filter extends Component {
       params.split('&').forEach(param => {
         const paramName = param.split('=')[0];
         if (paramName === 'filter') {
-          this.setTopic(param.split('='));
+          this.findTopicName(param.split('='));
         }
       });
     }
-    findElement('.search-input').addEventListener('keyup', event => {
+    document.querySelector('.search-input').addEventListener('keyup', event => {
       const currentSearchValue = event.currentTarget.value;
       this.props.onFilterTopics(currentSearchValue);
     });
   }
-  setTopic = parameter => {
+  findTopicName = parameter => {
     const values = decodeURI(parameter[1]).split(',');
     values.forEach(value => {
-      const input = findElement(`.filter-item input[value='${value}']`);
+      const input = document.querySelector(`.filter-item input[value='${value}']`);
       if (input) {
         input.checked = true;
-        const label = findElement(`label[name='${value}']`);
+        const label = document.querySelector(`label[name='${value}']`);
         if (label) {
-          this.chooseTopic(label);
+          this.setTopic(label);
         }
       }
     });
   };
-  getUrlParam = name => {
-    const params = window.location.search.split('?')[1];
-    if (params !== '' && params !== undefined) {
-      let paramValue = '';
-      params.split('&').forEach(param => {
-        const paramName = param.split('=')[0];
-        if (paramName === 'filter' && name === 'filter') {
-          paramValue = param.split('=')[1] !== '' ? param.split('=')[1].split(',') : [];
-        }
-        if (paramName === 'eventId' && name === 'eventId') {
-          paramValue = param.split('=')[1] ? param.split('=')[1] : null;
-        }
-      });
-      return paramValue;
-    }
+  checkSelectedElements = (elements, currentElement) => {
+    let checked = false;
+    let element = '';
+    elements.forEach(node => {
+      if (node.querySelector('label').textContent === currentElement) {
+        checked = true;
+        element = node;
+      }
+    });
+    return {
+      isChecked: checked,
+      nodeElement: element,
+    };
   };
-  chooseTopic = event => {
+  setTopic = event => {
     const currentElement = event.currentTarget ? event.currentTarget : event;
-    const wrapper = findElement('.selected-topics');
+    const wrapper = document.querySelector('.selected-topics');
     const cloneLabel = currentElement.cloneNode(true);
-    let isChecked = false;
-    let nodeElement = '';
-    wrapper.querySelectorAll('.chosen-filter').forEach(node => {
-      if (node.querySelector('label').textContent === currentElement.innerHTML) {
-        isChecked = true;
-        nodeElement = node;
-      }
-    });
-    if (!isChecked) {
-      const chooseTopicDIV = createElement('div');
-      const deleteTopicDIV = createElement('div');
-      const spanFirst = createElement('span');
-      const spanSecond = createElement('span');
+    const chosenElements = wrapper.querySelectorAll('.chosen-filter');
+    const checkedData = this.checkSelectedElements(chosenElements, currentElement.innerHTML);
+    if (!checkedData.isChecked) {
+      const chooseTopicDIV = document.createElement('div');
+      const deleteTopicDIV = document.createElement('div');
+      const spanFirst = document.createElement('span');
+      const spanSecond = document.createElement('span');
       deleteTopicDIV.appendChild(spanFirst);
       deleteTopicDIV.appendChild(spanSecond);
       cloneLabel.appendChild(deleteTopicDIV);
@@ -98,9 +79,9 @@ class Filter extends Component {
           closeEvent.srcElement.parentNode.parentNode.remove();
         }
         if (wrapper.querySelectorAll('.chosen-filter').length > 0) {
-          findElement('.clear-filter').style.display = 'inline-block';
+          document.querySelector('.clear-filter').style.display = 'inline-block';
         } else {
-          findElement('.clear-filter').style.display = 'none';
+          document.querySelector('.clear-filter').style.display = 'none';
         }
         const deletedValue = deletedNode.querySelector('label').htmlFor;
         const selectedCheckbox = document.getElementById(`${deletedValue}`);
@@ -109,84 +90,55 @@ class Filter extends Component {
         }
       }, false);
     } else {
-      nodeElement.remove();
+      checkedData.nodeElement.remove();
     }
     this.checkSelectedTopics(wrapper);
   };
   checkSelectedTopics = wrapper => {
     if (wrapper.querySelectorAll('.chosen-filter').length > 0) {
-      findElement('.clear-filter').style.display = 'inline-block';
-      findElement('.no-filters').style.display = 'none';
+      document.querySelector('.clear-filter').style.display = 'inline-block';
+      document.querySelector('.no-filters').style.display = 'none';
     } else {
-      findElement('.clear-filter').style.display = 'none';
-      findElement('.no-filters').style.display = 'inline-block';
+      document.querySelector('.clear-filter').style.display = 'none';
+      document.querySelector('.no-filters').style.display = 'inline-block';
     }
   };
   applyFilter = () => {
     const chosenTopics = [];
-    const { history } = window;
-    const selectedTopics = findAllElements('.chosen-filter label');
+    const selectedTopics = document.querySelectorAll('.chosen-filter label');
     selectedTopics.forEach(item => {
       chosenTopics.push(item.getAttribute('name'));
     });
     this.props.onFilterTopics(null);
     this.props.onSetEventFilters(chosenTopics);
     this.props.onFilterEvent(chosenTopics);
-    const pathname = window.location.search;
-    const paramsString = pathname.split('?')[1];
-    let newPathName = '';
-    if (paramsString === '' || paramsString === undefined) {
-      newPathName = `${pathname}?filter=${chosenTopics.join(',')}`;
-      history.pushState({}, null, newPathName);
-    } else {
-      this.setHistoryState(paramsString, pathname, history, chosenTopics);
-    }
+    setUrlParam('filter', chosenTopics.join(',').length > 0 ? chosenTopics.join(',') : null);
+    this.setSummary(this.props.month, chosenTopics.length);
     this.props.onHideOverlay();
   };
-  setHistoryState = (params, pathname, history, chosenTopics) => {
-    const filterString = chosenTopics.length > 0 ? `filter=${chosenTopics.join(',')}` : '';
-    const paramsCount = params.split('&').length;
-    let isFilterExist = false;
-    let isFilteredEvents = true;
-    if (paramsCount > 0) {
-      params.split('&').forEach((param, index) => {
-        const paramName = param.split('=')[0];
-        let filterForReplace = param;
-        if (paramName === 'filter') {
-          isFilterExist = true;
-          if (paramsCount !== 1 && filterString === '') {
-            isFilteredEvents = false;
-            filterForReplace = (index === 0) ? `${param}&` : `&${param}`;
-          }
-          const newPathName = pathname.replace(filterForReplace, `${encodeURI(filterString)}`);
-          history.pushState({}, null, newPathName);
-        }
-      });
-    }
-    if (!isFilterExist) {
-      if (chosenTopics.length > 0) {
-        const newPathName = `${pathname}&filter=${chosenTopics.join(',')}`;
-        history.pushState({}, null, newPathName);
-      }
-    }
-    const eventData = {
-      id: this.getUrlParam('eventId'),
-      isFiltered: isFilteredEvents,
-    };
-    this.props.onSetEventProfileById(eventData);
+  setSummary = (displayedMonth, topicLen) => {
+    this.props.onFilterEventsByMonth({
+      month: displayedMonth,
+      isFiltered: topicLen > 0,
+    });
+    this.props.onSetEventsSummary({
+      displayed: displayedMonth,
+      isFiltered: topicLen > 0,
+      view: this.props.view,
+    });
   };
   clearFilter = () => {
-    const wrapper = findElement('.selected-topics');
+    const wrapper = document.querySelector('.selected-topics');
     if (wrapper.querySelectorAll('.chosen-filter').length > 0) {
       wrapper.querySelectorAll('.chosen-filter').forEach(node => {
         node.remove();
       });
-      const selectedTopics = findAllElements('.filter-item input');
+      const selectedTopics = document.querySelectorAll('.filter-item input');
       selectedTopics.forEach(input => {
         input.checked = false;
       });
-      findElement('.clear-filter').style.display = 'none';
-      findElement('.no-filters').style.display = 'inline-block';
+      document.querySelector('.clear-filter').style.display = 'none';
+      document.querySelector('.no-filters').style.display = 'inline-block';
     }
   };
   closeFilter = () => {
@@ -199,7 +151,7 @@ class Filter extends Component {
         topics={this.props.filter}
         applyFilter={this.applyFilter}
         closeFilter={this.closeFilter}
-        chooseTopic={this.chooseTopic}
+        setTopic={this.setTopic}
         clearFilter={this.clearFilter}
       />
     );
@@ -208,11 +160,15 @@ class Filter extends Component {
 
 Filter.propTypes = {
   onFilterTopics: PropTypes.func.isRequired,
+  onFilterEventsByMonth: PropTypes.func.isRequired,
+  onSetEventsSummary: PropTypes.func.isRequired,
   onSetEventFilters: PropTypes.func.isRequired,
   onFilterEvent: PropTypes.func.isRequired,
   onHideOverlay: PropTypes.func.isRequired,
   onSetEventProfileById: PropTypes.func.isRequired,
   filter: PropTypes.array,
+  month: PropTypes.any,
+  view: PropTypes.string,
 };
 
 function mapStateToProps(state) {
@@ -220,6 +176,8 @@ function mapStateToProps(state) {
     filter: state.filter.filteredTopics.length > 0 || state.filter.searchFilter !== ''
       ? state.filter.filteredTopics
       : state.filter.topicsList,
+    month: state.table.displayedMonth,
+    view: state.table.view,
   };
 }
 
@@ -231,11 +189,17 @@ const mapDispatchToProps = dispatch => {
     onSetEventFilters: filters => {
       dispatch(setFilters(filters));
     },
+    onSetEventsSummary: data => {
+      dispatch(setEventsSummary(data));
+    },
     onHideOverlay: () => {
       dispatch(hideOverlay());
     },
     onFilterTopics: filter => {
       dispatch(filterTopics(filter));
+    },
+    onFilterEventsByMonth: month => {
+      dispatch(filterEventsByMonth(month));
     },
     onSetEventProfileById: data => {
       dispatch(setEventProfileById(data));

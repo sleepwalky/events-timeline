@@ -21,7 +21,7 @@ class EventCell extends Component {
   };
 
   mouseOutEvent = () => {
-    this.setState({isTooltipShown: false});
+    this.setState({ isTooltipShown: false });
   };
 
   render() {
@@ -29,6 +29,7 @@ class EventCell extends Component {
       {
         extraClass,
         onShowPopup,
+        eventTypeShort,
         eventType,
         name,
         city,
@@ -37,23 +38,25 @@ class EventCell extends Component {
     return (
       <div className="event-item">
         <div
-          ref={(eventElem) => this.eventElem = eventElem}
+          ref={eventElem => this.eventElem = eventElem}
           className={extraClass}
           onMouseOver={this.mouseOverEvent}
           onMouseOut={this.mouseOutEvent}
           onClick={onShowPopup}
         >
-          {eventType}
+          <span>
+            {eventType}
+          </span>
+          <span>
+            {eventTypeShort}
+          </span>
         </div>
-        {this.state.isTooltipShown
-        ?
+        {this.state.isTooltipShown &&
           <Tooltip name={name}
             city={city}
             startDate={startDate}
             extraClass={this.state.tooltipExtraClass}
           />
-        :
-          <div />
         }
       </div>
     );
@@ -64,7 +67,7 @@ EventCell.propTypes = {
   extraClass: PropTypes.string,
   onShowPopup: PropTypes.func.isRequired,
   eventType: PropTypes.string.isRequired,
-  isTooltipShown: PropTypes.bool,
+  eventTypeShort: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   city: PropTypes.string,
   startDate: PropTypes.string,

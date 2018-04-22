@@ -109,6 +109,7 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+  overflow: hidden;
   padding: 10px 2px;
   text-align: center;
   color: #2c2c2c;
@@ -205,11 +206,19 @@
 }
 
 .meetup {
-  background: #66bbcb;
+  background: #0386d4;
+}
+
+.sum-meetup {
+  color: #0386d4;
 }
 
 .talk {
-  background: #d285a5;
+  background: #76cdd8;
+}
+
+.sum-talk{
+  color: #76cdd8;
 }
 
 .rs {
@@ -221,11 +230,19 @@
 }
 
 .openday{
-  background: black;
+  background: #c8de3d;
 }
 
-.hackayhon {
-  background: #8dc424;
+.sum-openday{
+  color: #c8de3d;
+}
+
+.hackathon {
+  background: #f9954f;
+}
+
+.sum-hackathon {
+  color: #f9954f;
 }
 
 .truestory {
@@ -234,6 +251,9 @@
 
 .otherevent {
   background: #ca9cff;
+}
+.sum-otherevent {
+  color: #ca9cff;
 }
 
 .line {
@@ -298,16 +318,22 @@ h4 {
   position: absolute;
   top: -10px;
   left: 50%;
-  margin-left: -15px;
+  margin-left: -10px;
   border-style: solid;
-  border-width: 0 15px 15px 15px;
+  border-width: 0 10px 10px 10px;
   border-color: transparent transparent #464547 transparent;
 }
 
 .tooltip-right:before {
   right: 0;
+  margin-left: 0;
   left: auto;
 }
+
+/*.event span:last-child {*/
+  /*display: none;*/
+/*}*/
+
 
 @media screen  and (max-width: 1300px){
   .next-month-button{
@@ -324,6 +350,18 @@ h4 {
   }
   .month-name{
     float: none;
+  }
+  .event span:first-child {
+    display: none;
+  }
+  .event span:last-child {
+    display: inline-block;
+  }
+}
+
+@media screen  and (max-width: 777px) {
+  .event span:last-child {
+    display: none;
   }
 }
 

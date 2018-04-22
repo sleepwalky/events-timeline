@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../containers/button';
+import Button from './button';
 
 class FilterBody extends Component {
   render() {
@@ -8,7 +8,7 @@ class FilterBody extends Component {
       topics,
       applyFilter,
       closeFilter,
-      chooseTopic,
+      setTopic,
       clearFilter,
     } = this.props;
     return (
@@ -30,14 +30,14 @@ class FilterBody extends Component {
               (
                 <p key={`${item}-${index}`} className="uui-checkbox filter-item">
                   <input type="checkbox" id={`${item}-${index}`} value={item} />
-                  <label htmlFor={`${item}-${index}`} name={item} onClick={chooseTopic}>{item}</label>
+                  <label htmlFor={`${item}-${index}`} name={item} onClick={setTopic}>{item}</label>
                 </p>
               ),
             )
           }
         </div>
         <Button value="Apply" onClick={applyFilter} />
-        <Button value="Close" class="close-filter" onClick={closeFilter} />
+        <Button value="Close" className="close-filter" onClick={closeFilter} />
       </div>
     );
   }
@@ -47,7 +47,7 @@ FilterBody.propTypes = {
   topics: PropTypes.array,
   applyFilter: PropTypes.func,
   closeFilter: PropTypes.func,
-  chooseTopic: PropTypes.func,
+  setTopic: PropTypes.func,
   clearFilter: PropTypes.func,
 };
 

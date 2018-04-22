@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../../containers/popup/popup.css';
 
 class EventPopup extends Component {
   render() {
@@ -13,13 +14,12 @@ class EventPopup extends Component {
     } = this.props.eventProfile;
     return (
       <div className="popup-inner-box">
-        <div className="header">
-          {name}
-        </div>
+        {/*<div className="header">*/}
+          {/*{name}*/}
+        {/*</div>*/}
         <div className="event-image-box">
-          {backgroundImageUrl ?
+          {backgroundImageUrl &&
             <img src={backgroundImageUrl} className="event-img" alt="" />
-            : ''
           }
         </div>
         <div className="content">
@@ -34,7 +34,7 @@ class EventPopup extends Component {
           </div>
           <div className="popup-url">
             {url &&
-            <a id="event-url" target="_blank" href={url}>More information >></a>}
+            <a id="event-url" target="_blank" href={url}>Read more</a>}
           </div>
         </div>
       </div>

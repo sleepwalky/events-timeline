@@ -3,7 +3,7 @@ import eventsReducer from './eventsReducer';
 import overlayReducer from './overlayReducer';
 import popupReducer from './popupReducer';
 import tableReducer from './tableReducer';
-import filterReducer from './topicsFilterReducer';
+import filterReducer from './filterReducer';
 
 const reducers = combineReducers({
   event: eventsReducer,

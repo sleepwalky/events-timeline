@@ -1,3 +1,4 @@
+// TODO: file was removed to another folder
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -13,7 +14,6 @@ class Event extends Component {
       isTooltipShown: false,
     };
   }
-
   onShowPopup = () => {
     let newPathName;
     const pathname = window.location.search;
@@ -42,6 +42,16 @@ class Event extends Component {
     this.props.onSetEventProfile(this.props);
     this.props.onShowPopup(data);
   };
+
+  // TODO: removed by me
+  mouseOverEvent = () => {
+    this.setState({ isTooltipShown: true });
+  };
+
+  mouseOutEvent = () => {
+    this.setState({ isTooltipShown: false });
+  };
+  // end
 
   parseEventName = name => {
     const fullstringname = name.replace(/ /g, '').toLowerCase();
@@ -79,6 +89,8 @@ class Event extends Component {
         extraClass={classes}
         eventType={eventType.name}
         isTooltipShown={this.state.isTooltipShown}
+        mouseOutEvent={this.mouseOutEvent}  // TODO: removed by me
+        mouseOverEvent={this.mouseOverEvent} // TODO: removed by me
         onShowPopup={this.onShowPopup}
       />
     );

@@ -1,12 +1,21 @@
 .modal-header {
-  width: 100%;
-  display: inline-block;
-  font-size: 20px;
-  padding: 5px;
-  font-family: "Helvetica Neue";
-  color: #666666;
-  border-bottom: 1px solid #666666;
-  text-align: left;
+  /*width: 100%;*/
+  /*display: inline-block;*/
+  /*font-size: 20px;*/
+  /*padding: 5px;*/
+  /*font-family: "Helvetica Neue";*/
+  /*color: #666666;*/
+  /*border-bottom: 1px solid #666666;*/
+  /*text-align: left;*/
+
+width: 100%;
+position: fixed;
+top: 0;
+font-size: 22px;
+text-align: center;
+color: #fff;
+background: #464547;
+padding: 12px 30px;
 }
 
 .info:before{
