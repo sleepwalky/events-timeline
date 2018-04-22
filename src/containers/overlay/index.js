@@ -34,10 +34,10 @@ class Overlay extends Component {
               &times;
             </a>
             <div className={classes}>
-              <span>{this.props.title}</span>
+              {this.props.title}
             </div>
             <div className="modal-content">
-              <span>{this.props.content}</span>
+              {this.props.content}
             </div>
 
           </div>

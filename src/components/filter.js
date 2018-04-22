@@ -19,7 +19,7 @@ class FilterBody extends Component {
           </span>
         </div>
         <div>
-          <Button value="Clear filter" extraClass="clear-filter" onClick={clearFilter} />
+          <Button value="Clear filter" extraClass="clear-filter filter-btn" onClick={clearFilter} />
         </div>
         <div className="selected-topics">
           <span className="no-filters">NOTHING SELECTED</span>
@@ -36,8 +36,7 @@ class FilterBody extends Component {
             )
           }
         </div>
-        <Button value="Apply" onClick={applyFilter} />
-        <Button value="Close" className="close-filter" onClick={closeFilter} />
+        <Button value="Apply" onClick={applyFilter} extraClass="popup-footer-btn filter-btn" />
       </div>
     );
   }
