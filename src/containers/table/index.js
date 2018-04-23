@@ -16,17 +16,6 @@ import { showOverlay } from '../../actions/overlayActions';
 import { monthsNames, weekDays, fullMonths } from '../../helpers/consts';
 
 class Table extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     view: 'year',
-  //     display: monthsNames,
-  //     currentMonth: new Date().getMonth(),
-  //     nextMonth: new Date().getMonth() + 1,
-  //     prevMonth: new Date().getMonth() - 1,
-  //   };
-  // }
-
   setStateForTable = (setDisplayedMonth, setCurrentMonth, setView) => {
     this.props.onFilterEventsByMonth({
       month: setDisplayedMonth,

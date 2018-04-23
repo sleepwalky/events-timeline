@@ -302,6 +302,13 @@ h4 {
   transform: translateX(0);
 }
 
+.tooltip-bottom {
+  margin: 0 10px 0 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  left: -10px;
+}
+
 .tooltip-header {
   background: #464547;
   padding: 5px 5px;
@@ -328,6 +335,17 @@ h4 {
   right: 0;
   margin-left: 0;
   left: auto;
+}
+
+.tooltip-bottom:before {
+  right: 0;
+  bottom: 0;
+  margin-left: 0;
+  margin-right: -10px;
+  left: auto;
+  top: auto;
+  border-color: transparent transparent transparent #f1f1f1;
+  border-width: 10px 0 10px 10px;
 }
 
 @media screen  and (max-width: 1300px){

@@ -11,9 +11,14 @@ class EventCell extends Component {
     };
   }
   mouseOverEvent = () => {
-    const elemRightPosition = this.eventElem.getBoundingClientRect().right;
+    let style = '';
+    const elemPosition = this.eventElem.getBoundingClientRect();
+    const elemRightPosition = elemPosition.right;
+    const elemBottomPosition = elemPosition.bottom;
     const offsetRight = document.body.clientWidth - elemRightPosition;
-    const style = offsetRight > 200 ? '' : 'tooltip-right';
+    const offsetBottom = document.body.clientHeight - elemBottomPosition;
+    style += offsetRight > 200 ? '' : ' tooltip-right';
+    style += offsetBottom > 100 ? '' : ' tooltip-bottom';
     this.setState({
       isTooltipShown: true,
       tooltipExtraClass: style,

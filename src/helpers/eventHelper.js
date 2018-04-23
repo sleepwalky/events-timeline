@@ -58,7 +58,6 @@ const parseEventName = name => {
   return { name: 'Other event', className: 'otherevent', shortName: 'OE' };
 };
 
-
 const getSummaryInfo = events => {
   const summary = {
     talk: 0,
@@ -77,12 +76,12 @@ const getSummaryInfo = events => {
 
 const getSummary = (state, action) => {
   if (action.data.isFiltered) {
-    if (action.data.view === 'months') {
+    if (action.data.view === 'year') {
       return getSummaryInfo(state.filteredEvents);
     }
     return getSummaryInfo(filterEventArrayByMonth(action.data.displayed, state.filteredEvents));
   } else {
-    if (action.data.view === 'weeks' || action.data.view === 'nextweeks' || action.data.view === 'prevweeks') {
+    if (action.data.view === 'month' || action.data.view === 'nextmonth' || action.data.view === 'prevmonth') {
       return getSummaryInfo(filterEventArrayByMonth(action.data.displayed, state.eventsList));
     }
     return getSummaryInfo(filterEventArrayByMonth(null, state.eventsList));

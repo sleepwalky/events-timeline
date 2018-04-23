@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import ModalPopup from 'reactjs-popup';
 import { connect } from 'react-redux';
 import { hideOverlay } from '../../actions/overlayActions';
+import { setUrlParam } from '../../helpers/urlHelper';
 import './overlay.css';
 
 class Overlay extends Component {
-  constructor(props) {
-    super(props);
-    this.closeOverlay = this.closeOverlay.bind(this);
-  }
-
-  closeOverlay() {
+  closeOverlay = () => {
+    if (this.props.extraClass === 'popup') {
+      setUrlParam('eventId', null);
+    }
     this.props.onHideOverlay();
-  }
+  };
 
   render() {
     const classes = `${this.props.extraClass} modal-header`;
@@ -39,7 +38,6 @@ class Overlay extends Component {
             <div className="modal-content">
               {this.props.content}
             </div>
-
           </div>
         )}
       </ModalPopup>
