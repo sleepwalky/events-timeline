@@ -122,12 +122,12 @@ class Table extends Component {
             <Button
               onClick={this.getYearView}
               value="year"
-              extraClass={this.props.view === 'year' && 'button-active'}
+              extraClass={this.props.view === 'year' ? 'button-active' : ''}
             />
             <Button
               onClick={this.getMonthView}
               value="month"
-              extraClass={this.isMonthView() && 'button-active'}
+              extraClass={this.isMonthView() ? 'button-active' : ''}
             />
             <Button
               onClick={this.getPrevMonthView}
