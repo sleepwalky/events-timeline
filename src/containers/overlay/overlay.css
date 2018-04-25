@@ -73,7 +73,13 @@
   font-size: 18px;
 }
 
+.popup-footer-btn:hover {
+  background: #76a521;
+}
+
 .popup-footer-btn a {
+  display: block;
+  width: 100%;
   color: #fff;
   text-decoration: none;
 }
@@ -127,7 +133,7 @@
 }
 
 .button.filter-btn:hover {
-  background: #8dc424;
+  background: #76a521;
 }
 
 .uui-checkbox input {

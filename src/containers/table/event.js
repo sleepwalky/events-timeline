@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { showOverlay } from '../../actions/overlayActions';
 import EventPopup from '../../components/popup/eventPopup';
-import { setEventProfile } from '../../actions/eventActions';
 import EventCell from '../../components/table/eventCell';
 import { setUrlParam } from '../../helpers/urlHelper';
 import { parseEventName } from '../../helpers/eventHelper';
@@ -54,7 +53,6 @@ class Event extends Component {
 
 Event.propTypes = {
   id: PropTypes.any,
-  onSetEventProfile: PropTypes.func.isRequired,
   name: PropTypes.string,
   city: PropTypes.string,
   startDate: PropTypes.string,
@@ -65,9 +63,6 @@ function mapDispatchToProps(dispatch) {
   return {
     showOverlay: data => {
       dispatch(showOverlay(data));
-    },
-    onSetEventProfile: data => {
-      dispatch(setEventProfile(data));
     },
   };
 }
