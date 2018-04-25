@@ -7,7 +7,6 @@ class FilterBody extends Component {
     const {
       topics,
       applyFilter,
-      closeFilter,
       setTopic,
       clearFilter,
     } = this.props;
@@ -45,7 +44,6 @@ class FilterBody extends Component {
 FilterBody.propTypes = {
   topics: PropTypes.array,
   applyFilter: PropTypes.func,
-  closeFilter: PropTypes.func,
   setTopic: PropTypes.func,
   clearFilter: PropTypes.func,
 };
