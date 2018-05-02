@@ -1,9 +1,11 @@
 import axios from 'axios';
+import React from 'react';
 import { getEventsSuccess, filterEvents, setEventProfileById, setEventsSummary } from '../actions/eventActions';
 import { hideOverlay, showOverlay } from '../actions/overlayActions';
 import { setFilters } from '../actions/filterActions';
-import { showPopup } from '../actions/popupActions';
 import { getUrlValueByName } from '../helpers/urlHelper';
+import EventPopup from '../components/popup/eventPopup';
+import store from '../store';
 
 export const getEventsList = params => dispatch => {
   return axios.get('/events').then(response => {
@@ -18,15 +20,21 @@ export const getEventsList = params => dispatch => {
     }
     const eventId = getUrlValueByName('eventId');
     if (eventId) {
-      const data = {
-        display: true,
-      };
       const eventData = {
         id: eventId,
         isFiltered: !!filterData,
       };
       dispatch(setEventProfileById(eventData));
-      dispatch(showPopup(data));
+      const { eventProfile } = store.getState().event;
+      const data = {
+        extraClass: 'popup',
+        title: eventProfile.name,
+        content: <EventPopup
+          eventProfile={eventProfile}
+        />,
+        open: true,
+      };
+      dispatch(showOverlay(data));
     }
     dispatch(setEventsSummary({
       displayed: params.displayed ? params.displayed : new Date().getMonth(),

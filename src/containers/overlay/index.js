@@ -3,24 +3,22 @@ import PropTypes from 'prop-types';
 import ModalPopup from 'reactjs-popup';
 import { connect } from 'react-redux';
 import { hideOverlay } from '../../actions/overlayActions';
+import { setUrlParam } from '../../helpers/urlHelper';
 import './overlay.css';
 
 class Overlay extends Component {
-  constructor(props) {
-    super(props);
-    this.closeOverlay = this.closeOverlay.bind(this);
-  }
-
-  closeOverlay() {
+  closeOverlay = () => {
+    if (this.props.extraClass === 'popup') {
+      setUrlParam('eventId', null);
+    }
     this.props.onHideOverlay();
-  }
+  };
 
   render() {
     const classes = `${this.props.extraClass} modal-header`;
     const contentStyle = {
-      maxWidth: this.props.extraClass !== 'filter' ? '300px' : '800px',
+      maxWidth: this.props.extraClass === 'spinner' ? '300px' : '800px',
       width: '100%',
-      borderRadius: '5px',
     };
     return (
       <ModalPopup
@@ -35,12 +33,11 @@ class Overlay extends Component {
               &times;
             </a>
             <div className={classes}>
-              <span>{this.props.title}</span>
+              {this.props.title}
             </div>
             <div className="modal-content">
-              <span>{this.props.content}</span>
+              {this.props.content}
             </div>
-
           </div>
         )}
       </ModalPopup>

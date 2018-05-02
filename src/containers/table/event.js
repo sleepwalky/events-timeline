@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
-import { showPopup } from '../../actions/popupActions';
-import { setEventProfile } from '../../actions/eventActions';
+import { showOverlay } from '../../actions/overlayActions';
+import EventPopup from '../../components/popup/eventPopup';
 import EventCell from '../../components/table/eventCell';
 import { setUrlParam } from '../../helpers/urlHelper';
 import { parseEventName } from '../../helpers/eventHelper';
@@ -15,22 +14,20 @@ class Event extends Component {
       isTooltipShown: false,
     };
   }
-  onShowPopup = () => {
+
+  showPopup = () => {
     setUrlParam('eventId', this.props.id);
     const data = {
-      display: true,
+      extraClass: 'popup',
+      title: this.props.name,
+      content: <EventPopup
+        eventProfile={this.props}
+      />,
+      open: true,
     };
-    this.props.onSetEventProfile(this.props);
-    this.props.onShowPopup(data);
+    this.props.showOverlay(data);
   };
 
-  mouseOverEvent = () => {
-    this.setState({ isTooltipShown: true });
-  };
-
-  mouseOutEvent = () => {
-    this.setState({ isTooltipShown: false });
-  };
   render() {
     const {
       name,
@@ -48,9 +45,7 @@ class Event extends Component {
         eventType={eventType.name}
         eventTypeShort={eventType.shortName}
         isTooltipShown={this.state.isTooltipShown}
-        mouseOutEvent={this.mouseOutEvent}
-        mouseOverEvent={this.mouseOverEvent}
-        onShowPopup={this.onShowPopup}
+        onShowPopup={this.showPopup}
       />
     );
   }
@@ -58,20 +53,16 @@ class Event extends Component {
 
 Event.propTypes = {
   id: PropTypes.any,
-  onSetEventProfile: PropTypes.func.isRequired,
-  onShowPopup: PropTypes.func.isRequired,
   name: PropTypes.string,
   city: PropTypes.string,
   startDate: PropTypes.string,
+  showOverlay: PropTypes.func.isRequired,
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    onShowPopup: data => {
-      dispatch(showPopup(data));
-    },
-    onSetEventProfile: data => {
-      dispatch(setEventProfile(data));
+    showOverlay: data => {
+      dispatch(showOverlay(data));
     },
   };
 }

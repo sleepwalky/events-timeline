@@ -7,7 +7,6 @@ class FilterBody extends Component {
     const {
       topics,
       applyFilter,
-      closeFilter,
       setTopic,
       clearFilter,
     } = this.props;
@@ -19,7 +18,7 @@ class FilterBody extends Component {
           </span>
         </div>
         <div>
-          <Button value="Clear filter" extraClass="clear-filter" onClick={clearFilter} />
+          <Button value="Clear filter" extraClass="clear-filter filter-btn" onClick={clearFilter} />
         </div>
         <div className="selected-topics">
           <span className="no-filters">NOTHING SELECTED</span>
@@ -36,8 +35,7 @@ class FilterBody extends Component {
             )
           }
         </div>
-        <Button value="Apply" onClick={applyFilter} />
-        <Button value="Close" className="close-filter" onClick={closeFilter} />
+        <Button value="Apply" onClick={applyFilter} extraClass="popup-footer-btn filter-btn" />
       </div>
     );
   }
@@ -46,7 +44,6 @@ class FilterBody extends Component {
 FilterBody.propTypes = {
   topics: PropTypes.array,
   applyFilter: PropTypes.func,
-  closeFilter: PropTypes.func,
   setTopic: PropTypes.func,
   clearFilter: PropTypes.func,
 };

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Table from '../containers/table';
-import Popup from '../containers/popup';
 import Overlay from '../containers/overlay';
 import logo from '../logo.svg';
 import './app.css';
@@ -21,7 +20,6 @@ class App extends Component {
         </header>
         <main>
           <Table />
-          <Popup />
           <Overlay />
         </main>
       </div>

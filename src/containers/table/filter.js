@@ -79,7 +79,7 @@ class Filter extends Component {
           closeEvent.srcElement.parentNode.parentNode.remove();
         }
         if (wrapper.querySelectorAll('.chosen-filter').length > 0) {
-          document.querySelector('.clear-filter').style.display = 'inline-block';
+          document.querySelector('.clear-filter').style.display = 'block';
         } else {
           document.querySelector('.clear-filter').style.display = 'none';
         }
@@ -96,7 +96,7 @@ class Filter extends Component {
   };
   checkSelectedTopics = wrapper => {
     if (wrapper.querySelectorAll('.chosen-filter').length > 0) {
-      document.querySelector('.clear-filter').style.display = 'inline-block';
+      document.querySelector('.clear-filter').style.display = 'block';
       document.querySelector('.no-filters').style.display = 'none';
     } else {
       document.querySelector('.clear-filter').style.display = 'none';

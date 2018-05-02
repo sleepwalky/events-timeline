@@ -13,7 +13,7 @@ import Filter from './filter';
 import Spinner from '../../components/spinner';
 import { showOverlay } from '../../actions/overlayActions';
 
-import { months, weekDays, fullMonths } from '../../helpers/consts';
+import { monthsNames, weekDays, fullMonths } from '../../helpers/consts';
 
 class Table extends Component {
   setStateForTable = (setDisplayedMonth, setCurrentMonth, setView) => {
@@ -29,26 +29,27 @@ class Table extends Component {
       view: setView,
     });
   };
-  getMonthsView = () => {
-    this.setStateForTable(null, this.props.currentMonth, 'months');
-    this.changeView('months');
+
+  getYearView = () => {
+    this.setStateForTable(null, this.props.currentMonth, 'year');
+    this.changeView('year');
   };
 
-  getWeeksView = () => {
-    this.setStateForTable(this.props.currentMonth, this.props.currentMonth, 'weeks');
-    this.changeView('weeks');
+  getMonthView = () => {
+    this.setStateForTable(this.props.currentMonth, this.props.currentMonth, 'month');
+    this.changeView('month');
   };
 
   headerCalc = view => {
-    if (view !== 'months') {
+    if (view !== 'year') {
       const data = {
         year: new Date().getFullYear(),
       };
-      if (view === 'weeks') {
+      if (view === 'month') {
         data.month = this.props.currentMonth;
-      } else if (view === 'nextweeks') {
+      } else if (view === 'nextmonth') {
         data.month = this.props.nextMonth;
-      } else if (view === 'prevweeks') {
+      } else if (view === 'prevmonth') {
         data.month = this.props.prevMonth;
       }
 
@@ -65,7 +66,7 @@ class Table extends Component {
       }
       return weekDaysArr;
     }
-    return months;
+    return monthsNames;
   };
 
   changeView = newView => {
@@ -73,28 +74,35 @@ class Table extends Component {
     this.props.onSetTableDisplay(this.headerCalc(newView));
   };
 
-  getNextWeeksView = () => {
+  getNextMonthView = () => {
     if (this.props.nextMonth !== 12) {
-      this.setStateForTable(this.props.nextMonth, this.props.nextMonth, 'nextweeks');
-      this.changeView('nextweeks');
+      this.setStateForTable(this.props.nextMonth, this.props.nextMonth, 'nextmonth');
+      this.changeView('nextmonth');
     }
   };
 
-  getPrevWeeksView = () => {
+  getPrevMonthView = () => {
     if (this.props.prevMonth !== -1) {
-      this.setStateForTable(this.props.prevMonth, this.props.prevMonth, 'prevweeks');
-      this.changeView('prevweeks');
+      this.setStateForTable(this.props.prevMonth, this.props.prevMonth, 'prevmonth');
+      this.changeView('prevmonth');
     }
+  };
+
+  isMonthView = () => {
+    const { view } = this.props;
+    return view === 'month' ||
+      view === 'nextmonth' ||
+      view === 'prevmonth';
   };
 
   refreshEventsTable = () => {
-    const filterData = {
+    const spinnerData = {
       extraClass: 'spinner',
       title: 'Refreshing data...',
       content: <Spinner />,
       open: true,
     };
-    this.props.showOverlay(filterData);
+    this.props.showOverlay(spinnerData);
     this.props.onGetEvents({ view: this.props.view, displayed: this.props.month });
   };
   selectTopics = () => {
@@ -110,44 +118,50 @@ class Table extends Component {
     return (
       <div>
         <div className="buttons-box">
-          <Button
-            onClick={this.refreshEventsTable}
-            value="Refresh"
-            extraClass="refresh-button"
-          />
-          <Button
-            onClick={this.selectTopics}
-            value="Filter"
-          />
-          <Button
-            onClick={this.getMonthsView}
-            value="Current year"
-          />
-          <Button
-            onClick={this.getWeeksView}
-            value="Current month"
-          />
-          <Button
-            onClick={this.getNextWeeksView}
-            value="next month"
-            extraClass="next-week-button"
-          />
-          <span className="month-name">
-            {
-              this.props.month !== '' ?
-                fullMonths[this.props.month] :
-                fullMonths[this.props.currentMonth]
-            }
-          </span>
-          <Button
-            onClick={this.getPrevWeeksView}
-            value="prev month"
-            extraClass="prev-week-button"
-          />
-          <Header
-            view={this.props.display}
-          />
+          <div className="main-buttons button-box-part">
+            <Button
+              onClick={this.getYearView}
+              value="year"
+              extraClass={this.props.view === 'year' ? 'button-active' : ''}
+            />
+            <Button
+              onClick={this.getMonthView}
+              value="month"
+              extraClass={this.isMonthView() ? 'button-active' : ''}
+            />
+            <Button
+              onClick={this.getPrevMonthView}
+              value="prev month"
+              extraClass="prev-month-button"
+            />
+            <span className="month-name button">
+              {
+                this.props.month !== '' ?
+                  fullMonths[this.props.month] :
+                  fullMonths[this.props.currentMonth]
+              }
+            </span>
+            <Button
+              onClick={this.getNextMonthView}
+              value="next month"
+              extraClass="next-month-button"
+            />
+          </div>
+          <div className="sub-buttons button-box-part">
+            <Button
+              onClick={this.refreshEventsTable}
+              value="refresh"
+              extraClass="refresh-button"
+            />
+            <Button
+              onClick={this.selectTopics}
+              value="filter"
+            />
+          </div>
         </div>
+        <Header
+          view={this.props.display}
+        />
         <div className="table">
           <TableBody
             cells={this.props.display}

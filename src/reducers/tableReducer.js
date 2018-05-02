@@ -1,10 +1,10 @@
 import { SET_MONTH, SET_DISPLAY_TO_TABLE, SET_NEXT_PREV_MONTH, SET_VIEW_TO_TABLE } from '../actions/tableActions';
-import { months } from '../helpers/consts';
+import { monthsNames } from '../helpers/consts';
 
 const initialState = {
   displayedMonth: new Date().getMonth(),
-  view: 'months',
-  display: months,
+  view: 'year',
+  display: monthsNames,
   currentMonth: new Date().getMonth(),
   nextMonth: new Date().getMonth() + 1,
   prevMonth: new Date().getMonth() - 1,
